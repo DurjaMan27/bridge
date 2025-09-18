@@ -1,0 +1,327 @@
+==================================================
+PGX STATE DEBUGGING INFORMATION
+==================================================
+Current player: 1
+Observation shape: (480,)
+Terminated: False
+Rewards: [0. 0. 0. 0.]
+Last bid: -1
+Last bidder: -1
+Call X: False
+Call XX: False
+Dealer: 2
+Shuffled players: [0 2 1 3]
+Vul NS: False
+Vul EW: True
+
+=== OBSERVATION BREAKDOWN ===
+Vulnerability (obs[0:4]): [ True False False  True]
+  NS: True, EW: False, Both: False, Neither: True
+Passed before opening (obs[4:8]): [False False False False]
+  Player 0: Did not pass
+  Player 1: Did not pass
+  Player 2: Did not pass
+  Player 3: Did not pass
+
+Bidding history (obs[8:428]):
+  Against 1C (obs[8:20]): [False False False False False False False False False False False False]
+  Against 1D (obs[20:32]): [False False False False False False False False False False False False]
+  Against 1H (obs[32:44]): [False False False False False False False False False False False False]
+  Against 1S (obs[44:56]): [False False False False False False False False False False False False]
+  Against 1NT (obs[56:68]): [False False False False False False False False False False False False]
+  Against 2C (obs[68:80]): [False False False False False False False False False False False False]
+  Against 2D (obs[80:92]): [False False False False False False False False False False False False]
+  Against 2H (obs[92:104]): [False False False False False False False False False False False False]
+  Against 2S (obs[104:116]): [False False False False False False False False False False False False]
+  Against 2NT (obs[116:128]): [False False False False False False False False False False False False]
+  Against 3C (obs[128:140]): [False False False False False False False False False False False False]
+  Against 3D (obs[140:152]): [False False False False False False False False False False False False]
+  Against 3H (obs[152:164]): [False False False False False False False False False False False False]
+  Against 3S (obs[164:176]): [False False False False False False False False False False False False]
+  Against 3NT (obs[176:188]): [False False False False False False False False False False False False]
+  Against 4C (obs[188:200]): [False False False False False False False False False False False False]
+  Against 4D (obs[200:212]): [False False False False False False False False False False False False]
+  Against 4H (obs[212:224]): [False False False False False False False False False False False False]
+  Against 4S (obs[224:236]): [False False False False False False False False False False False False]
+  Against 4NT (obs[236:248]): [False False False False False False False False False False False False]
+  Against 5C (obs[248:260]): [False False False False False False False False False False False False]
+  Against 5D (obs[260:272]): [False False False False False False False False False False False False]
+  Against 5H (obs[272:284]): [False False False False False False False False False False False False]
+  Against 5S (obs[284:296]): [False False False False False False False False False False False False]
+  Against 5NT (obs[296:308]): [False False False False False False False False False False False False]
+  Against 6C (obs[308:320]): [False False False False False False False False False False False False]
+  Against 6D (obs[320:332]): [False False False False False False False False False False False False]
+  Against 6H (obs[332:344]): [False False False False False False False False False False False False]
+  Against 6S (obs[344:356]): [False False False False False False False False False False False False]
+  Against 6NT (obs[356:368]): [False False False False False False False False False False False False]
+  Against 7C (obs[368:380]): [False False False False False False False False False False False False]
+  Against 7D (obs[380:392]): [False False False False False False False False False False False False]
+  Against 7H (obs[392:404]): [False False False False False False False False False False False False]
+  Against 7S (obs[404:416]): [False False False False False False False False False False False False]
+  Against 7NT (obs[416:428]): [False False False False False False False False False False False False]
+
+Hand cards (obs[428:480]): [ True False False  True False False False False False False  True False
+ False False False False False False False  True False  True False False
+  True  True False  True False  True False False False False False  True
+ False False  True False False False False False  True False False False
+ False  True False False]
+  Hand cards as integers: [1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 1 0 1 0 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0]
+  Decoded hand: ['AC', 'JC', '4C', '8D', '6D', '3D', '2D', 'KH', 'JH', '5H', '2H', '9S', '4S']
+
+Legal actions: ['Pass', '1C', '1D', '1H', '1S', '1NT', '2C', '2D', '2H', '2S', '2NT', '3C', '3D', '3H', '3S', '3NT', '4C', '4D', '4H', '4S', '4NT', '5C', '5D', '5H', '5S', '5NT', '6C', '6D', '6H', '6S', '6NT', '7C', '7D', '7H', '7S', '7NT']
+Running baseline vs. baseline evaluation
+This will print detailed state information for debugging.
+==================================================
+STATE STRUCTURE: State(current_player=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, observation=Traced<ShapedArray(bool[1,480])>with<DynamicJaxprTrace(level=2/0)>, rewards=Traced<ShapedArray(float32[1,4])>with<DynamicJaxprTrace(level=2/0)>, terminated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, truncated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, legal_action_mask=Traced<ShapedArray(bool[1,38])>with<DynamicJaxprTrace(level=2/0)>, _step_count=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _turn=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _shuffled_players=Traced<ShapedArray(int32[1,4])>with<DynamicJaxprTrace(level=2/0)>, _hand=Traced<ShapedArray(int32[1,52])>with<DynamicJaxprTrace(level=2/0)>, _bidding_history=Traced<ShapedArray(int32[1,319])>with<DynamicJaxprTrace(level=2/0)>, _dealer=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_NS=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_EW=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bid=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bidder=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _call_x=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _call_xx=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_NS=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_EW=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _pass_num=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>)
+==================================================
+EVALUATION RESULTS:
+IMP: 24.0 +/- nan
+
+
+
+
+Loading dds results from dds_results/test_000.npy ...
+Running baseline vs. baseline evaluation
+This will print detailed state information for debugging.
+==================================================
+STATE STRUCTURE: State(current_player=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, observation=Traced<ShapedArray(bool[1,480])>with<DynamicJaxprTrace(level=2/0)>, rewards=Traced<ShapedArray(float32[1,4])>with<DynamicJaxprTrace(level=2/0)>, terminated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, truncated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, legal_action_mask=Traced<ShapedArray(bool[1,38])>with<DynamicJaxprTrace(level=2/0)>, _step_count=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _turn=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _shuffled_players=Traced<ShapedArray(int32[1,4])>with<DynamicJaxprTrace(level=2/0)>, _hand=Traced<ShapedArray(int32[1,52])>with<DynamicJaxprTrace(level=2/0)>, _bidding_history=Traced<ShapedArray(int32[1,319])>with<DynamicJaxprTrace(level=2/0)>, _dealer=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_NS=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_EW=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bid=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bidder=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _call_x=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _call_xx=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_NS=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_EW=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _pass_num=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>)
+=== BASELINE AGENT TURN ===
+Current player: 1
+Legal actions: [ True False False  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True]
+Last bid: -1
+Last bidder: -1
+Baseline agent selected action: 37
+=== BASELINE AGENT TURN ===
+Current player: 3
+Legal actions: [ True  True False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False]
+Last bid: 34
+Last bidder: 1
+Baseline agent selected action: 37
+=== BASELINE AGENT TURN ===
+Current player: 3
+Legal actions: [ True False False  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True]
+Last bid: -1
+Last bidder: -1
+Baseline agent selected action: 37
+=== BASELINE AGENT TURN ===
+Current player: 1
+Legal actions: [ True  True False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False]
+Last bid: 34
+Last bidder: 3
+Baseline agent selected action: 37
+==================================================
+EVALUATION RESULTS:
+IMP: 24.0 +/- nan
+Win rate: 1.02025-09-17 18:54:09,974 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.00027680397033691406 sec
+2025-09-17 18:54:09,975 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-17 18:54:09,979 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.003553152084350586 sec
+2025-09-17 18:54:09,980 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-17 18:54:09,980 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-17 18:54:09,998 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.01764988899230957 sec
+2025-09-17 18:54:10,002 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003428459167480469 sec
+2025-09-17 18:54:10,003 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.0015821456909179688 sec
+2025-09-17 18:54:10,003 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-17 18:54:10,009 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.00506591796875 sec
+2025-09-17 18:54:10,010 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-17 18:54:10,010 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-17 18:54:10,043 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.03256106376647949 sec
+2025-09-17 18:54:10,047 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003600120544433594 sec
+2025-09-17 18:54:10,048 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002791881561279297 sec
+2025-09-17 18:54:10,048 [DEBUG] Finished tracing + transforming clip for pjit in 0.0013148784637451172 sec
+2025-09-17 18:54:10,049 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005450248718261719 sec
+2025-09-17 18:54:10,050 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003330707550048828 sec
+2025-09-17 18:54:10,050 [DEBUG] Finished tracing + transforming clip for pjit in 0.0016391277313232422 sec
+2025-09-17 18:54:10,051 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0008478164672851562 sec
+2025-09-17 18:54:10,052 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001850128173828125 sec
+2025-09-17 18:54:10,053 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
+2025-09-17 18:54:10,053 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001480579376220703 sec
+2025-09-17 18:54:10,054 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0073778629302978516 sec
+2025-09-17 18:54:10,056 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002560615539550781 sec
+2025-09-17 18:54:10,058 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002300739288330078 sec
+2025-09-17 18:54:10,059 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00011324882507324219 sec
+2025-09-17 18:54:10,059 [DEBUG] Finished tracing + transforming _where for pjit in 0.00041413307189941406 sec
+2025-09-17 18:54:10,059 [DEBUG] Finished tracing + transforming _take for pjit in 0.003816843032836914 sec
+2025-09-17 18:54:10,062 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00021409988403320312 sec
+2025-09-17 18:54:10,064 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020599365234375 sec
+2025-09-17 18:54:10,065 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00012803077697753906 sec
+2025-09-17 18:54:10,066 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016307830810546875 sec
+2025-09-17 18:54:10,067 [DEBUG] Finished tracing + transforming fn for pjit in 0.00035500526428222656 sec
+2025-09-17 18:54:10,067 [DEBUG] Finished tracing + transforming fn for pjit in 0.0004260540008544922 sec
+2025-09-17 18:54:10,068 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005030632019042969 sec
+2025-09-17 18:54:10,070 [DEBUG] Finished tracing + transforming _squeeze for pjit in 8.916854858398438e-05 sec
+2025-09-17 18:54:10,085 [DEBUG] Finished tracing + transforming _take for pjit in 0.0008339881896972656 sec
+2025-09-17 18:54:10,088 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000186920166015625 sec
+2025-09-17 18:54:10,088 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016021728515625 sec
+2025-09-17 18:54:10,089 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014495849609375 sec
+2025-09-17 18:54:10,089 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001399517059326172 sec
+2025-09-17 18:54:10,090 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0031769275665283203 sec
+2025-09-17 18:54:10,095 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.0003638267517089844 sec
+2025-09-17 18:54:10,102 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014209747314453125 sec
+2025-09-17 18:54:10,103 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.079673767089844e-05 sec
+2025-09-17 18:54:10,103 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000209808349609375 sec
+2025-09-17 18:54:10,104 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001430511474609375 sec
+2025-09-17 18:54:10,104 [DEBUG] Finished tracing + transforming ravel for pjit in 7.104873657226562e-05 sec
+2025-09-17 18:54:10,104 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002880096435546875 sec
+2025-09-17 18:54:10,109 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001480579376220703 sec
+2025-09-17 18:54:10,110 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.511543273925781e-05 sec
+2025-09-17 18:54:10,113 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
+2025-09-17 18:54:10,116 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000186920166015625 sec
+2025-09-17 18:54:10,116 [DEBUG] Finished tracing + transforming op for pjit in 0.00020813941955566406 sec
+2025-09-17 18:54:10,116 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002028942108154297 sec
+2025-09-17 18:54:10,117 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0016341209411621094 sec
+2025-09-17 18:54:10,118 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0007348060607910156 sec
+2025-09-17 18:54:10,127 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002071857452392578 sec
+2025-09-17 18:54:10,128 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014901161193847656 sec
+2025-09-17 18:54:10,128 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001709461212158203 sec
+2025-09-17 18:54:10,130 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021195411682128906 sec
+2025-09-17 18:54:10,130 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016379356384277344 sec
+2025-09-17 18:54:10,160 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.00026798248291015625 sec
+2025-09-17 18:54:10,161 [DEBUG] SECOND STATE STRUCTURE: 
+State(current_player=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, observation=Traced<ShapedArray(bool[1,480])>with<DynamicJaxprTrace(level=2/0)>, rewards=Traced<ShapedArray(float32[1,4])>with<DynamicJaxprTrace(level=2/0)>, terminated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, truncated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, legal_action_mask=Traced<ShapedArray(bool[1,38])>with<DynamicJaxprTrace(level=2/0)>, _step_count=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _turn=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _shuffled_players=Traced<ShapedArray(int32[1,4])>with<DynamicJaxprTrace(level=2/0)>, _hand=Traced<ShapedArray(int32[1,52])>with<DynamicJaxprTrace(level=2/0)>, _bidding_history=Traced<ShapedArray(int32[1,319])>with<DynamicJaxprTrace(level=2/0)>, _dealer=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_NS=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_EW=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bid=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bidder=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _call_x=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _call_xx=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_NS=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_EW=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _pass_num=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>)
+2025-09-18 09:21:23,829 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.0002448558807373047 sec
+2025-09-18 09:21:23,829 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-18 09:21:23,830 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.0012128353118896484 sec
+2025-09-18 09:21:23,831 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-18 09:21:23,831 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-18 09:21:23,842 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.011178970336914062 sec
+2025-09-18 09:21:23,844 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00028705596923828125 sec
+2025-09-18 09:21:23,844 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.0010356903076171875 sec
+2025-09-18 09:21:23,845 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-18 09:21:23,847 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.001729726791381836 sec
+2025-09-18 09:21:23,847 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-18 09:21:23,847 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-18 09:21:23,854 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.006675243377685547 sec
+2025-09-18 09:21:23,857 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0010368824005126953 sec
+2025-09-18 09:21:23,858 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00030803680419921875 sec
+2025-09-18 09:21:23,858 [DEBUG] Finished tracing + transforming clip for pjit in 0.001934051513671875 sec
+2025-09-18 09:21:23,859 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002880096435546875 sec
+2025-09-18 09:21:23,859 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002608299255371094 sec
+2025-09-18 09:21:23,859 [DEBUG] Finished tracing + transforming clip for pjit in 0.0011017322540283203 sec
+2025-09-18 09:21:23,860 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001728534698486328 sec
+2025-09-18 09:21:23,861 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015783309936523438 sec
+2025-09-18 09:21:23,861 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014209747314453125 sec
+2025-09-18 09:21:23,861 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013208389282226562 sec
+2025-09-18 09:21:23,862 [DEBUG] Finished tracing + transforming _randint for pjit in 0.006626129150390625 sec
+2025-09-18 09:21:23,865 [DEBUG] Finished tracing + transforming fn for pjit in 0.00021505355834960938 sec
+2025-09-18 09:21:23,865 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016307830810546875 sec
+2025-09-18 09:21:23,865 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00010085105895996094 sec
+2025-09-18 09:21:23,865 [DEBUG] Finished tracing + transforming _where for pjit in 0.00037598609924316406 sec
+2025-09-18 09:21:23,866 [DEBUG] Finished tracing + transforming _take for pjit in 0.00167083740234375 sec
+2025-09-18 09:21:23,868 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.0002009868621826172 sec
+2025-09-18 09:21:23,869 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001900196075439453 sec
+2025-09-18 09:21:23,870 [DEBUG] Finished tracing + transforming ravel for pjit in 0.0001239776611328125 sec
+2025-09-18 09:21:23,871 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
+2025-09-18 09:21:23,872 [DEBUG] Finished tracing + transforming fn for pjit in 0.0004100799560546875 sec
+2025-09-18 09:21:23,873 [DEBUG] Finished tracing + transforming fn for pjit in 0.0005471706390380859 sec
+2025-09-18 09:21:23,874 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003840923309326172 sec
+2025-09-18 09:21:23,876 [DEBUG] Finished tracing + transforming _squeeze for pjit in 7.510185241699219e-05 sec
+2025-09-18 09:21:23,890 [DEBUG] Finished tracing + transforming _take for pjit in 0.0007700920104980469 sec
+2025-09-18 09:21:23,892 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014591217041015625 sec
+2025-09-18 09:21:23,893 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013709068298339844 sec
+2025-09-18 09:21:23,893 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014591217041015625 sec
+2025-09-18 09:21:23,894 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001361370086669922 sec
+2025-09-18 09:21:23,894 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0027511119842529297 sec
+2025-09-18 09:21:23,897 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.0002779960632324219 sec
+2025-09-18 09:21:23,903 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001468658447265625 sec
+2025-09-18 09:21:23,905 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.103515625e-05 sec
+2025-09-18 09:21:23,905 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002701282501220703 sec
+2025-09-18 09:21:23,906 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001468658447265625 sec
+2025-09-18 09:21:23,906 [DEBUG] Finished tracing + transforming ravel for pjit in 7.104873657226562e-05 sec
+2025-09-18 09:21:23,907 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.00029206275939941406 sec
+2025-09-18 09:21:23,910 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012803077697753906 sec
+2025-09-18 09:21:23,912 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.487701416015625e-05 sec
+2025-09-18 09:21:23,915 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001556873321533203 sec
+2025-09-18 09:21:23,917 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002090930938720703 sec
+2025-09-18 09:21:23,918 [DEBUG] Finished tracing + transforming op for pjit in 0.00022912025451660156 sec
+2025-09-18 09:21:23,918 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002181529998779297 sec
+2025-09-18 09:21:23,919 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0018000602722167969 sec
+2025-09-18 09:21:23,920 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006659030914306641 sec
+2025-09-18 09:21:23,929 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002181529998779297 sec
+2025-09-18 09:21:23,930 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016307830810546875 sec
+2025-09-18 09:21:23,931 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017905235290527344 sec
+2025-09-18 09:21:23,932 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002288818359375 sec
+2025-09-18 09:21:23,933 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016999244689941406 sec
+2025-09-18 09:21:23,974 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.000392913818359375 sec
+2025-09-18 09:21:23,975 [DEBUG] SECOND STATE STRUCTURE: 
+State(current_player=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, observation=Traced<ShapedArray(bool[1,480])>with<DynamicJaxprTrace(level=2/0)>, rewards=Traced<ShapedArray(float32[1,4])>with<DynamicJaxprTrace(level=2/0)>, terminated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, truncated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, legal_action_mask=Traced<ShapedArray(bool[1,38])>with<DynamicJaxprTrace(level=2/0)>, _step_count=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _turn=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _shuffled_players=Traced<ShapedArray(int32[1,4])>with<DynamicJaxprTrace(level=2/0)>, _hand=Traced<ShapedArray(int32[1,52])>with<DynamicJaxprTrace(level=2/0)>, _bidding_history=Traced<ShapedArray(int32[1,319])>with<DynamicJaxprTrace(level=2/0)>, _dealer=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_NS=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_EW=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bid=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bidder=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _call_x=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _call_xx=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_NS=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_EW=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _pass_num=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>)
+2025-09-18 09:21:23,979 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002617835998535156 sec
+2025-09-18 09:22:08,503 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.0003142356872558594 sec
+2025-09-18 09:22:08,503 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-18 09:22:08,505 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.0015912055969238281 sec
+2025-09-18 09:22:08,506 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-18 09:22:08,506 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-18 09:22:08,519 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.013471126556396484 sec
+2025-09-18 09:22:08,521 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002751350402832031 sec
+2025-09-18 09:22:08,521 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.0009148120880126953 sec
+2025-09-18 09:22:08,522 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2025-09-18 09:22:08,524 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.0019299983978271484 sec
+2025-09-18 09:22:08,524 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2025-09-18 09:22:08,524 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2025-09-18 09:22:08,534 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.009938955307006836 sec
+2025-09-18 09:22:08,537 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002949237823486328 sec
+2025-09-18 09:22:08,538 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00025010108947753906 sec
+2025-09-18 09:22:08,538 [DEBUG] Finished tracing + transforming clip for pjit in 0.0011551380157470703 sec
+2025-09-18 09:22:08,538 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002620220184326172 sec
+2025-09-18 09:22:08,539 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00022912025451660156 sec
+2025-09-18 09:22:08,539 [DEBUG] Finished tracing + transforming clip for pjit in 0.0009691715240478516 sec
+2025-09-18 09:22:08,540 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001289844512939453 sec
+2025-09-18 09:22:08,540 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013208389282226562 sec
+2025-09-18 09:22:08,540 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013208389282226562 sec
+2025-09-18 09:22:08,541 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012302398681640625 sec
+2025-09-18 09:22:08,541 [DEBUG] Finished tracing + transforming _randint for pjit in 0.00486302375793457 sec
+2025-09-18 09:22:08,543 [DEBUG] Finished tracing + transforming fn for pjit in 0.00021409988403320312 sec
+2025-09-18 09:22:08,544 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015115737915039062 sec
+2025-09-18 09:22:08,544 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 9.012222290039062e-05 sec
+2025-09-18 09:22:08,544 [DEBUG] Finished tracing + transforming _where for pjit in 0.0003421306610107422 sec
+2025-09-18 09:22:08,545 [DEBUG] Finished tracing + transforming _take for pjit in 0.001600027084350586 sec
+2025-09-18 09:22:08,546 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00014495849609375 sec
+2025-09-18 09:22:08,547 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015425682067871094 sec
+2025-09-18 09:22:08,548 [DEBUG] Finished tracing + transforming ravel for pjit in 9.417533874511719e-05 sec
+2025-09-18 09:22:08,549 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013589859008789062 sec
+2025-09-18 09:22:08,549 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002677440643310547 sec
+2025-09-18 09:22:08,550 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002968311309814453 sec
+2025-09-18 09:22:08,550 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003199577331542969 sec
+2025-09-18 09:22:08,552 [DEBUG] Finished tracing + transforming _squeeze for pjit in 9.393692016601562e-05 sec
+2025-09-18 09:22:08,571 [DEBUG] Finished tracing + transforming _take for pjit in 0.0007650852203369141 sec
+2025-09-18 09:22:08,574 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014495849609375 sec
+2025-09-18 09:22:08,574 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001380443572998047 sec
+2025-09-18 09:22:08,575 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013494491577148438 sec
+2025-09-18 09:22:08,575 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012803077697753906 sec
+2025-09-18 09:22:08,575 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0026929378509521484 sec
+2025-09-18 09:22:08,579 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.0003159046173095703 sec
+2025-09-18 09:22:08,585 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001361370086669922 sec
+2025-09-18 09:22:08,586 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.6743621826171875e-05 sec
+2025-09-18 09:22:08,587 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019407272338867188 sec
+2025-09-18 09:22:08,587 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013399124145507812 sec
+2025-09-18 09:22:08,588 [DEBUG] Finished tracing + transforming ravel for pjit in 6.818771362304688e-05 sec
+2025-09-18 09:22:08,588 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002739429473876953 sec
+2025-09-18 09:22:08,591 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000125885009765625 sec
+2025-09-18 09:22:08,593 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.20159912109375e-05 sec
+2025-09-18 09:22:08,596 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001590251922607422 sec
+2025-09-18 09:22:08,598 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00018596649169921875 sec
+2025-09-18 09:22:08,599 [DEBUG] Finished tracing + transforming op for pjit in 0.0002009868621826172 sec
+2025-09-18 09:22:08,599 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019812583923339844 sec
+2025-09-18 09:22:08,599 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0015690326690673828 sec
+2025-09-18 09:22:08,601 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006268024444580078 sec
+2025-09-18 09:22:08,609 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020503997802734375 sec
+2025-09-18 09:22:08,610 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014901161193847656 sec
+2025-09-18 09:22:08,611 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016570091247558594 sec
+2025-09-18 09:22:08,612 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002040863037109375 sec
+2025-09-18 09:22:08,613 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001571178436279297 sec
+2025-09-18 09:22:08,642 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0002560615539550781 sec
+2025-09-18 09:22:08,642 [DEBUG] SECOND STATE STRUCTURE: 
+State(current_player=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, observation=Traced<ShapedArray(bool[1,480])>with<DynamicJaxprTrace(level=2/0)>, rewards=Traced<ShapedArray(float32[1,4])>with<DynamicJaxprTrace(level=2/0)>, terminated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, truncated=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, legal_action_mask=Traced<ShapedArray(bool[1,38])>with<DynamicJaxprTrace(level=2/0)>, _step_count=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _turn=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _shuffled_players=Traced<ShapedArray(int32[1,4])>with<DynamicJaxprTrace(level=2/0)>, _hand=Traced<ShapedArray(int32[1,52])>with<DynamicJaxprTrace(level=2/0)>, _bidding_history=Traced<ShapedArray(int32[1,319])>with<DynamicJaxprTrace(level=2/0)>, _dealer=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_NS=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _vul_EW=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bid=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _last_bidder=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>, _call_x=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _call_xx=Traced<ShapedArray(bool[1])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_NS=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _first_denomination_EW=Traced<ShapedArray(int32[1,5])>with<DynamicJaxprTrace(level=2/0)>, _pass_num=Traced<ShapedArray(int32[1])>with<DynamicJaxprTrace(level=2/0)>)
+2025-09-18 09:22:08,644 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00018596649169921875 sec

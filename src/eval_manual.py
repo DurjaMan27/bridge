@@ -7,6 +7,8 @@ import pickle
 from src.duplicate import duplicate_step, Table_info
 from src.models import make_forward_pass
 from src.utils import single_play_step_two_policy_commpetitive_deterministic
+from src.agent_client import make_http_agent_client
+from src.callback_baseline import make_callback_baseline_agent
 from baseline import BaselineAgent
 import logging
 
@@ -39,13 +41,18 @@ def make_simple_duplicate_evaluate(
     team2_activation,
     team2_model_type,
     num_eval_envs,
+    team1_server_url = None,
+    team2_server_url = None,
 ):
     first_time_1 = False
     first_time_2 = False
     first_time_3 = False
 
     if team1_model_type == "baseline":
-        team1_forward_pass = None
+        if team1_server_url:
+            team1_agent_fn = make_callback_baseline_agent(team1_server_url)
+        else:
+            team1_forward_pass = None
     else:
         team1_forward_pass = make_forward_pass(
             activation=team1_activation,
@@ -53,7 +60,8 @@ def make_simple_duplicate_evaluate(
         )
 
     if team2_model_type == "baseline":
-        team2_forward_pass = None
+        if team1_server_url:
+            team2_agent_fn = make_callback_baseline_agent(team2_server_url)
     else:
         team2_forward_pass = make_forward_pass(
             activation=team2_activation,
@@ -113,7 +121,9 @@ def make_simple_duplicate_evaluate(
 
             nonlocal first_time_1, first_time_3
 
-            if team1_model_type == "baseline":
+            if team1_model_type == "baseline" and team1_server_url:
+                return team1_agent_fn(state)
+            elif team1_model_type == "baseline":
 
                 jax.debug.print("=== BASELINE AGENT TURN ===")
                 jax.debug.print("Current player: {}", state.current_player)
@@ -161,7 +171,9 @@ def make_simple_duplicate_evaluate(
                 return (masked_pi.mode(), pi.probs)
             
         def opp_make_action(state):
-            if team2_model_type == "baseline":
+            if team2_model_type == "baseline" and team2_server_url:
+                return team2_agent_fn(state)
+            elif team2_model_type == "baseline":
                 # legal_mask = state.legal_action_mask[0]
 
                 baseline_agent = BaselineAgent()

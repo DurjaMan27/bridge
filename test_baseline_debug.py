@@ -2,13 +2,15 @@ import jax
 import numpy as np
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
+import subprocess
+import time
 
 def decode_state_for_baseline(state):
-    
+
     ACTION_TO_STRING = {
-      0: "Pass",
-      1: "Double",
-      2: "Redouble",
+        0: "Pass",
+        1: "Double",
+        2: "Redouble",
     }
 
     BID_LEVELS = ['1', '2', '3', '4', '5', '6', '7']
@@ -43,18 +45,18 @@ def decode_state_for_baseline(state):
     print(f"Vul EW: {concrete_state._vul_EW}")
 
     print(f"\n=== OBSERVATION BREAKDOWN ===")
-    
+
     # Vulnerability (obs[0:4])
     vul = obs[0:4]
     print(f"Vulnerability (obs[0:4]): {vul}")
     print(f"  NS: {vul[0]}, EW: {vul[1]}, Both: {vul[2]}, Neither: {vul[3]}")
-    
+
     # Per player, did this player pass before the opening bid? (obs[4:8])
     passed_before_opening = obs[4:8]
     print(f"Passed before opening (obs[4:8]): {passed_before_opening}")
     for i, passed in enumerate(passed_before_opening):
         print(f"  Player {i}: {'Passed' if passed else 'Did not pass'}")
-    
+
     # Bidding history against different contracts (obs[8:428])
     print(f"\nBidding history (obs[8:428]):")
     print(f"  Against 1C (obs[8:20]): {obs[8:20]}")
@@ -119,41 +121,43 @@ def decode_state_for_baseline(state):
 
 
 
-
-
-
 if __name__ == "__main__":
-  eval_env = BridgeBidding("dds_results/test_000.npy")
-  rng = jax.random.PRNGKey(0)
+    eval_env = BridgeBidding("dds_results/test_000.npy")
+    rng = jax.random.PRNGKey(0)
 
-  duplicate_evaluate = make_simple_duplicate_evaluate(
-    eval_env,
-    team1_activation="relu",
-    team1_model_type="baseline",
-    team2_activation="relu",
-    team2_model_type="baseline",
-    num_eval_envs=1,
-  )
+    # start the agent server
+    server_process = subprocess.Popen([
+        "python", "agent_server.py"
+    ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-  # print("running debug before JIT compiles...")
-  # rng_debug = jax.random.PRNGKey(0)
-  # subkeys = jax.random.split(rng_debug, 1)
-  # debug_state = jax.vmap(eval_env.init)(subkeys)
-  # decode_state_for_baseline(debug_state)
+    time.sleep(2)
 
-  duplicate_evaluate = jax.jit(duplicate_evaluate)
+    duplicate_evaluate = make_simple_duplicate_evaluate(
+        eval_env,
+        team1_activation="relu",
+        team1_model_type="baseline",
+        team2_activation="relu",
+        team2_model_type="baseline",
+        num_eval_envs=1,
+        team1_server_url="http://localhost:8000",
+        team2_server_url="http://localhost:8000"
+    )
 
-  print("Running baseline vs. baseline evaluation")
-  print("This will print detailed state information for debugging.")
-  print("="*50)
+    duplicate_evaluate = jax.jit(duplicate_evaluate)
 
-  log, tablea_info, tableb_info = duplicate_evaluate(
-    team1_params=None,
-    team2_params=None,
-    rng_key=rng
-  )
+    print("Running baseline vs. baseline evaluation")
+    print("This will print detailed state information for debugging.")
+    print("="*50)
 
-  print("="*50)
-  print("EVALUATION RESULTS:")
-  print(f"IMP: {float(log[0])} +/- {float(log[1])}")
-  print(f"Win rate: {float(log[2])}")
+    log, tablea_info, tableb_info = duplicate_evaluate(
+        team1_params=None,
+        team2_params=None,
+        rng_key=rng
+    )
+
+    print("="*50)
+    print("EVALUATION RESULTS:")
+    print(f"IMP: {float(log[0])} +/- {float(log[1])}")
+    print(f"Win rate: {float(log[2])}")
+
+    server_process.terminate()

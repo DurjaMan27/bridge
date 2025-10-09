@@ -138,7 +138,7 @@ if __name__ == "__main__":
         team1_model_type="baseline",
         team2_activation="relu",
         team2_model_type="baseline",
-        num_eval_envs=1,
+        num_eval_envs=1000,
         team1_server_url="http://localhost:8000",
         team2_server_url="http://localhost:8000"
     )

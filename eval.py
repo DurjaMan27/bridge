@@ -56,18 +56,11 @@ if __name__ == "__main__":
     # USING JAX AGAIN FOR DUPLICATE_EVALUATE
     duplicate_evaluate = jax.jit(duplicate_evaluate)
 
-    print("THIS IS DUPLICATE_EVALUATE")
-    print(type(duplicate_evaluate))
-    print(duplicate_evaluate)
-
     print(f"num envs: {config['num_eval_envs']}")
     team1_params = pickle.load(open(config["team1_model_path"], "rb"))
     team2_params = pickle.load(open(config["team2_model_path"], "rb"))
     print("---------------------------------------------------")
     print(f'{config["team1_model_path"]} vs. {config["team1_model_path"]}')
-
-
-    print(team1_params)
 
     # WHAT IS DUPLICATE_EVALUATE??
     log, tablea_info, tableb_info = duplicate_evaluate(

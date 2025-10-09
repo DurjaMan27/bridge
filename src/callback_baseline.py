@@ -73,6 +73,15 @@ def make_callback_baseline_agent(server_url: str = None):
                 pi_probs[action_idx] = 1.0
 
                 # return (jnp.array(action_idx, dtype=jnp.int32), jnp.array(pi_probs, dtype=jnp.float32))
+                print("THIS IS THE ACTION BEING MADE", action_idx)
+
+                if action_idx < 0 or action_idx >= 38:
+                    print(f"ERROR: Invalid action index {action_idx}")
+                    action_idx = 0
+                elif not legal_action_mask[action_idx]:
+                    print(f"ERROR: Action {action_idx} not legal")
+                    action_idx = 0
+
                 return np.int32(action_idx), pi_probs
         except Exception as e:
             import traceback

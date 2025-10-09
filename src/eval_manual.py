@@ -44,9 +44,6 @@ def make_simple_duplicate_evaluate(
     team1_server_url = None,
     team2_server_url = None,
 ):
-    first_time_1 = False
-    first_time_2 = False
-    first_time_3 = False
 
     if team1_model_type == "baseline":
         if team1_server_url:
@@ -73,8 +70,6 @@ def make_simple_duplicate_evaluate(
         team2_params,
         rng_key
     ):
-        
-        nonlocal first_time_1, first_time_2, first_time_3
 
         step_fn = duplicate_step(eval_env.step)
         rng_key, sub_key = jax.random.split(rng_key)
@@ -83,11 +78,6 @@ def make_simple_duplicate_evaluate(
         cum_return = jnp.zeros(num_eval_envs)
 
         # state_decode goes here
-        
-        if team1_model_type == "baseline" or team2_model_type == "baseline":
-            if not first_time_1:
-                # decode_state_for_baseline(state)
-                first_time_1 = True
 
         table_a_info = Table_info(
             terminated=state.terminated,
@@ -105,6 +95,13 @@ def make_simple_duplicate_evaluate(
             call_x=state._call_x,
             call_xx=state._call_xx,
         )
+
+        jax.debug.print("=== INITIAL STATE DEBUG ===")
+        jax.debug.print("Initial state terminated: {}", state.terminated)
+        jax.debug.print("Initial state rewards: {}", state.rewards)
+        jax.debug.print("Initial table A terminated: {}", table_a_info.terminated)
+        jax.debug.print("Initial table B terminated: {}", table_b_info.terminated)
+
         cum_return = jnp.zeros(num_eval_envs)
         count = 0
 
@@ -114,15 +111,24 @@ def make_simple_duplicate_evaluate(
         def cond_fn(tup):
             (state, _, _, _, _, _) = tup
             return ~state.terminated.all()
-        
-        
-        
+
         def actor_make_action(state):
 
-            nonlocal first_time_1, first_time_3
-
             if team1_model_type == "baseline" and team1_server_url:
-                return team1_agent_fn(state)
+                action, pi_probs = team1_agent_fn(state)
+
+                # jax.debug.print("=== BASELINE AGENT TURN ===")
+                # jax.debug.print("Current player: {}", state.current_player)
+                # jax.debug.print("Legal actions: {}", state.legal_action_mask)
+                # jax.debug.print("Last bid: {}", state._last_bid)
+                # jax.debug.print("Last bidder: {}", state._last_bidder)
+
+                # if action < 0 or action >= 38:
+                #     jax.debug.print("ERROR: Invalid action index: {}", action)
+                # elif not state.legal_action_mask[action]:
+                #     jax.debug.print("ERROR: Action {} not legal", action)
+
+                return action, pi_probs
             elif team1_model_type == "baseline":
 
                 jax.debug.print("=== BASELINE AGENT TURN ===")
@@ -155,13 +161,6 @@ def make_simple_duplicate_evaluate(
                 logits, value = team1_forward_pass.apply(
                     team1_params, state.observation
                 )
-
-                # if not first_time_3:
-                #     print("LOGITS SHAPE:", logits.shape)
-                #     print("LEGAL MASK:", state.legal_action_mask)
-                #     logging.debug(f"LOGITS SHAPE: \n{logits.shape}")
-                #     logging.debug(f"LEGAL MASK: \n{state.legal_action_mask}")
-                #     first_time_3 = True
 
                 masked_logits = logits + jnp.finfo(np.float64).min * (
                     ~state.legal_action_mask,
@@ -207,8 +206,6 @@ def make_simple_duplicate_evaluate(
         
         def loop_fn(tup):
 
-            nonlocal first_time_2
-
             (
                 state,
                 table_a_info,
@@ -218,20 +215,45 @@ def make_simple_duplicate_evaluate(
                 count,
             ) = tup
 
-            if not first_time_2:
-                print("STATE STRUCTURE:", state)
-                logging.debug(f"SECOND STATE STRUCTURE: \n{state}")
-                first_time_2 = True
+
+            jax.debug.print("=== STEP {} DEBUG ===", count)
+            jax.debug.print("State terminated: {}", state.terminated)
+            jax.debug.print("State rewards: {}", state.rewards)
+            jax.debug.print("Current player: {}", state.current_player)
+            jax.debug.print("Cumulative return: {}", cum_return)
+            jax.debug.print("Last bid: {}", state._last_bid)
+            jax.debug.print("Bidding history length: {}", jnp.sum(state._bidding_history != -1))
 
             (action, pi_probs) = jax.vmap(make_action)(state)
             rng_key, _rng = jax.random.split(rng_key)
             (state, table_a_info, table_b_info) = jax.vmap(step_fn)(
                 state, action, table_a_info, table_b_info
             )
+
+            jax.debug.print("BEFORE duplicate logic:")
+            jax.debug.print("  state.terminated: {}", state.terminated)
+            jax.debug.print("  table_a_info.terminated: {}", table_a_info.terminated)
+            jax.debug.print("  table_b_info.terminated: {}", table_b_info.terminated)
+            jax.debug.print("  state.rewards: {}", state.rewards)
+            jax.debug.print("  table_a_info.rewards: {}", table_a_info.rewards)
+
+            duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated
+            jax.debug.print("After step - State terminated: {}", state.terminated)
+            jax.debug.print("After step - State rewards: {}", state.rewards)
+            jax.debug.print("After step - Table A terminated: {}", table_a_info.terminated)
+            jax.debug.print("After step - Table B terminated: {}", table_b_info.terminated)
+            jax.debug.print("Duplicate comparison check: {}", duplicate_comparison)
+            jax.debug.print("Any duplication comparison: {}", jnp.any(duplicate_comparison))
+
+            jax.debug.print("After duplication logic - State rewards: {}", state.rewards)
+
             cum_return = cum_return + jax.vmap(get_fn)(
                 state.rewards,
                 jnp.zeros_like(state.current_player)
             )
+
+            jax.debug.print("Updated cumulative return: {}", cum_return)
+
             count += 1
             return (
                 state,

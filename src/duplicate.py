@@ -148,18 +148,31 @@ def duplicate_step(step_fn):
     def wrapped_step(state, action, table_a_info, table_b_info):
         state = step_fn(state, action)
 
-        next_state = jax.lax.cond(
-            ~table_a_info.terminated & state.terminated,
-            lambda: duplicate_init(state),
-            lambda: state,
-        )
+        # DEBUG: Check what we have before any logic
+        jax.debug.print("= DUPLICATE_STEP DEBUG: =")
+        jax.debug.print("  state.terminated: {}", state.terminated)
+        jax.debug.print("  state.rewards: {}", state.rewards)
+        jax.debug.print("  table_a_info.terminated: {}", table_a_info.terminated)
+        jax.debug.print("  table_a_info.rewards: {}", table_a_info.rewards)
+        jax.debug.print("  table_b_info.terminated: {}", table_b_info.terminated)
+        jax.debug.print("  table_b_info.rewards: {}", table_b_info.rewards)
+
+        # CHECKING FOR DUPLICATE COMPARISON BEFORE RESETTING STATE
+        duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated
 
         next_state = jax.lax.cond(
             table_a_info.terminated & state.terminated & ~table_b_info.terminated,
             lambda: state.replace(  # type: ignore
                 rewards=_imp_reward(table_a_info.rewards, state.rewards)
             ),
-            lambda: next_state.replace(rewards=jnp.zeros(4, dtype=jnp.float32)),
+            # lambda: next_state.replace(rewards=jnp.zeros(4, dtype=jnp.float32)),
+            lambda: state,
+        )
+
+        next_state = jax.lax.cond(
+            ~table_a_info.terminated & state.terminated,
+            lambda: duplicate_init(state),
+            lambda: state,
         )
 
         table_b_info = jax.lax.cond(

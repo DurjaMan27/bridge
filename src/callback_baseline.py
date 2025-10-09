@@ -3,6 +3,24 @@ import jax.numpy as jnp
 import numpy as np
 import requests
 from baseline import BaselineAgent
+from progress_tracker import increment_bid_count
+
+_session_pool = {}
+
+def get_session(server_url: str):
+    """Get or create a session for the given server URL with connection pooling"""
+    if server_url not in _session_pool:
+        session = requests.Session()
+        adapter = requests.adapters.HTTPAdapter(
+            pool_connections=10,  # Number of connection pools to cache
+            pool_maxsize=100,     # Max connections in each pool
+            max_retries=3,        # Retry on connection errors
+            pool_block=False      # Don't block when pool is full
+        )
+        session.mount('http://', adapter)
+        session.mount('https://', adapter)
+        _session_pool[server_url] = session
+    return _session_pool[server_url]
 
 class MockState:
     def __init__(self, obs, curr_player, legal_mask, term, rew,
@@ -65,7 +83,10 @@ def make_callback_baseline_agent(server_url: str = None):
                                 vul_EW, bidding_history):
         try:
             if server_url:
-                print("Connecting to a server for baseline agent...")
+                # print("Connecting to a server for baseline agent...")
+
+                session = get_session(server_url)
+
                 state_dict = {
                     "observation": observation.tolist(),
                     "current_player": int(current_player),
@@ -87,12 +108,13 @@ def make_callback_baseline_agent(server_url: str = None):
                 # response.raise_for_status()
                 # result = response.json()
 
-                session = requests.Session()
                 response = session.post(f"{server_url}/make_bid", json=state_dict)
                 result = response.json()
 
                 action = np.int32(result["action"])
                 pi_probs = np.array(result["pi_probs"], dtype=np.float32)
+
+                increment_bid_count()
                 return action, pi_probs
             else:
                 action_idx, pi_probs = baseline_bid_from_arrays(
@@ -101,6 +123,8 @@ def make_callback_baseline_agent(server_url: str = None):
                     call_x, call_xx, dealer, shuffled_players, vul_NS,
                     vul_EW, bidding_history
                 )
+
+                increment_bid_count()
                 return np.int32(action_idx), pi_probs
         except Exception as e:
             import traceback

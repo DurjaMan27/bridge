@@ -149,13 +149,13 @@ def duplicate_step(step_fn):
         state = step_fn(state, action)
 
         # DEBUG: Check what we have before any logic
-        jax.debug.print("= DUPLICATE_STEP DEBUG: =")
-        jax.debug.print("  state.terminated: {}", state.terminated)
-        jax.debug.print("  state.rewards: {}", state.rewards)
-        jax.debug.print("  table_a_info.terminated: {}", table_a_info.terminated)
-        jax.debug.print("  table_a_info.rewards: {}", table_a_info.rewards)
-        jax.debug.print("  table_b_info.terminated: {}", table_b_info.terminated)
-        jax.debug.print("  table_b_info.rewards: {}", table_b_info.rewards)
+        # jax.debug.print("= DUPLICATE_STEP DEBUG: =")
+        # jax.debug.print("  state.terminated: {}", state.terminated)
+        # jax.debug.print("  state.rewards: {}", state.rewards)
+        # jax.debug.print("  table_a_info.terminated: {}", table_a_info.terminated)
+        # jax.debug.print("  table_a_info.rewards: {}", table_a_info.rewards)
+        # jax.debug.print("  table_b_info.terminated: {}", table_b_info.terminated)
+        # jax.debug.print("  table_b_info.rewards: {}", table_b_info.rewards)
 
         # CHECKING FOR DUPLICATE COMPARISON BEFORE RESETTING STATE
         duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated

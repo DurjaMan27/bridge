@@ -113,6 +113,7 @@ class BaselineAgent():
       return BaselineAgent.opening_bid(hand_cards)
 
     bidding_history = state._bidding_history
+    bidding_history = [x for x in bidding_history if x != -1]
 
     # Check bidding situation based on history length and last bidder
     if len(bidding_history) == 0:
@@ -339,28 +340,34 @@ class BaselineAgent():
     partner_bid = BaselineAgent.get_partner_bid(bidding_history)
     
     if partner_bid:
-      level, suit = BaselineAgent._ACTION_IDENTIFIER[last_bid][0], BaselineAgent._ACTION_IDENTIFIER[last_bid][1:]
-      support = suit_dict.get(suit, 0)
+      bid_string = BaselineAgent._ACTION_IDENTIFIER[last_bid]
+      if not bid_string[0].isdigit():
+        pass
+      else:
+        level, suit = bid_string[0], bid_string[1:]
+        support = suit_dict.get(suit, 0)
 
-      if 6 <= hcp <= 10 and support >= 3:
-        proposed = f"{level+1}{suit}"
-        candidate_bids.append(proposed)
+        if 6 <= hcp <= 10 and support >= 3:
+          proposed = f"{int(level)+1}{suit}"
+          candidate_bids.append(proposed)
 
-      if hcp >= 13 and support >= 3:
-        proposed = f"{level+2}{suit}"
-        candidate_bids.append(proposed)
+        if hcp >= 13 and support >= 3:
+          proposed = f"{int(level)+2}{suit}"
+          candidate_bids.append(proposed)
 
-      if hcp <= 10 and support + level >= 8:
-        proposed = f"{level + 3}{suit}"
-        candidate_bids.append(proposed)
+        if hcp <= 10 and support + int(level) >= 8:
+          proposed = f"{int(level) + 3}{suit}"
+          candidate_bids.append(proposed)
 
     # 3. New suit bids (one-over-one or jump shift)
     for s, count in suit_dict.items():
-      if partner_bid and s == partner_bid[1]:
-        continue
+      if partner_bid:
+        bid_string = BaselineAgent._ACTION_IDENTIFIER[partner_bid]
+        if s == bid_string[1:]:
+          continue
 
       if count >= 4 and 6 <= hcp <= 18:
-        proposed = f"1{s}" if last_bid is None else f"{int(last_bid[0])+0}{s}"
+        proposed = f"1{s}" if last_bid is None else f"{int(last_bid)}{s}"
         candidate_bids.append(proposed)
 
       if count >= 4 and hcp >= 19:
@@ -496,13 +503,15 @@ class BaselineAgent():
     return new_bids
 
   def get_partner_bid(bidding_history):
+
     my_index = len(bidding_history) % 4
     partner_index = (my_index + 2) % 4
 
-    for i in range(len(bidding_history)-1, -1, -1):
+    for i in range(len(bidding_history) - 1, -1, -1):
       if i % 4 == partner_index:
-        if BaselineAgent._ACTION_IDENTIFIER[bidding_history[i]] not in ["Pass", "Double", "Redouble"]:
-          return bidding_history[i]
+        bid_value = bidding_history[i]
+        if BaselineAgent._ACTION_IDENTIFIER[bid_value] not in ["Pass", "Double", "Redouble"]:
+          return bid_value
 
     return None
 
@@ -515,7 +524,7 @@ class BaselineAgent():
         bid_index = key
         break
 
-    if bid <= 2 or bid > highest_bid:
+    if bid_index <= 2 or bid_index > highest_bid:
       return bid_index
     else:
       return 0    # index to Pass (default behavior when action isn't legal)

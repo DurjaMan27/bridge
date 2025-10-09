@@ -8,7 +8,7 @@ from src.duplicate import duplicate_step, Table_info
 from src.models import make_forward_pass
 from src.utils import single_play_step_two_policy_commpetitive_deterministic
 from src.agent_client import make_http_agent_client
-from src.callback_baseline import make_callback_baseline_agent
+from src.callback_baseline import make_callback_baseline_agent, make_io_callback_baseline_agent
 from baseline import BaselineAgent
 import logging
 
@@ -50,7 +50,7 @@ def make_simple_duplicate_evaluate(
 
     if team1_model_type == "baseline":
         if team1_server_url:
-            team1_agent_fn = make_callback_baseline_agent(team1_server_url)
+            team1_agent_fn = make_callback_baseline_agent()
         else:
             team1_forward_pass = None
     else:
@@ -61,7 +61,7 @@ def make_simple_duplicate_evaluate(
 
     if team2_model_type == "baseline":
         if team1_server_url:
-            team2_agent_fn = make_callback_baseline_agent(team2_server_url)
+            team2_agent_fn = make_callback_baseline_agent()
     else:
         team2_forward_pass = make_forward_pass(
             activation=team2_activation,

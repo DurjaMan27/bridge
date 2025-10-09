@@ -121,7 +121,7 @@ def decode_state_for_baseline(state):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_server", action="store_true", help="Start agent_server and route baseline bids via HTTP")
-    parser.add_argument("--server_url", default="http://localhost:8000", help="Agent server URL")
+    parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL")
     args = parser.parse_args()
 
     print("These are the args: ", args)
@@ -134,15 +134,10 @@ def main():
         if args.use_server:
             server_process = subprocess.Popen(
                 ["python", "agent_server.py"],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                # stdout=subprocess.PIPE,
+                # stderr=subprocess.PIPE,
             )
             time.sleep(2)  # give server time to boot
-
-        print("Use the server url:::")
-        print(args.server_url)
-        print(args.use_server)
-        print(args.server_url if args.use_server else None)
 
         duplicate_evaluate = make_simple_duplicate_evaluate(
             eval_env,
@@ -173,6 +168,7 @@ def main():
 
     finally:
         if server_process is not None:
+            print("SERVER TERMINATED!")
             server_process.terminate()
 
 if __name__ == "__main__":

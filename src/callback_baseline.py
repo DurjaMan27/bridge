@@ -65,26 +65,30 @@ def make_callback_baseline_agent(server_url: str = None):
                                 vul_EW, bidding_history):
         try:
             if server_url:
-                print("Creating a server for baseline agent...")
+                print("Connecting to a server for baseline agent...")
                 state_dict = {
                     "observation": observation.tolist(),
                     "current_player": int(current_player),
                     "legal_action_mask": legal_action_mask.tolist(),
                     "terminated": bool(terminated),
                     "rewards": rewards.tolist(),
-                    "_last_bid": int(last_bid),
-                    "_last_bidder": int(last_bidder),
-                    "_call_x": bool(call_x),
-                    "_call_xx": bool(call_xx),
-                    "_dealer": int(dealer),
-                    "_shuffled_players": shuffled_players.tolist(),
-                    "_vul_NS": bool(vul_NS),
-                    "_vul_EW": bool(vul_EW),
-                    "_bidding_history": bidding_history.tolist(),
+                    "last_bid": int(last_bid),
+                    "last_bidder": int(last_bidder),
+                    "call_x": bool(call_x),
+                    "call_xx": bool(call_xx),
+                    "dealer": int(dealer),
+                    "shuffled_players": shuffled_players.tolist(),
+                    "vul_NS": bool(vul_NS),
+                    "vul_EW": bool(vul_EW),
+                    "bidding_history": bidding_history.tolist(),
                 }
 
-                response = requests.post(f"{server_url}/make_bid", json=state_dict)
-                response.raise_for_status()
+                # response = requests.post(f"{server_url}/make_bid", json=state_dict)
+                # response.raise_for_status()
+                # result = response.json()
+
+                session = requests.Session()
+                response = session.post(f"{server_url}/make_bid", json=state_dict)
                 result = response.json()
 
                 action = np.int32(result["action"])

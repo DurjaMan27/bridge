@@ -72,9 +72,6 @@ def make_callback_baseline_agent(server_url: str = None):
                 pi_probs = np.zeros(38, dtype=np.float32)
                 pi_probs[action_idx] = 1.0
 
-                # return (jnp.array(action_idx, dtype=jnp.int32), jnp.array(pi_probs, dtype=jnp.float32))
-                # print("THIS IS THE ACTION BEING MADE", action_idx)
-
                 if action_idx < 0 or action_idx >= 38:
                     print(f"ERROR: Invalid action index {action_idx}")
                     action_idx = 0

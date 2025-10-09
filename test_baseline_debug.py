@@ -1,9 +1,10 @@
 import jax
+import argparse
+import subprocess
+import time
 import numpy as np
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
-import subprocess
-import time
 
 def decode_state_for_baseline(state):
 
@@ -117,47 +118,62 @@ def decode_state_for_baseline(state):
     
     return concrete_state
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use_server", action="store_true", help="Start agent_server and route baseline bids via HTTP")
+    parser.add_argument("--server_url", default="http://localhost:8000", help="Agent server URL")
+    args = parser.parse_args()
 
+    print("These are the args: ", args)
 
-
-
-if __name__ == "__main__":
     eval_env = BridgeBidding("dds_results/test_000.npy")
     rng = jax.random.PRNGKey(0)
 
-    # start the agent server
-    server_process = subprocess.Popen([
-        "python", "agent_server.py"
-    ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    server_process = None
+    try:
+        if args.use_server:
+            server_process = subprocess.Popen(
+                ["python", "agent_server.py"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+            )
+            time.sleep(2)  # give server time to boot
 
-    time.sleep(2)
+        print("Use the server url:::")
+        print(args.server_url)
+        print(args.use_server)
+        print(args.server_url if args.use_server else None)
 
-    duplicate_evaluate = make_simple_duplicate_evaluate(
-        eval_env,
-        team1_activation="relu",
-        team1_model_type="baseline",
-        team2_activation="relu",
-        team2_model_type="baseline",
-        num_eval_envs=1000,
-        team1_server_url="http://localhost:8000",
-        team2_server_url="http://localhost:8000"
-    )
+        duplicate_evaluate = make_simple_duplicate_evaluate(
+            eval_env,
+            team1_activation="relu",
+            team1_model_type="baseline",
+            team2_activation="relu",
+            team2_model_type="baseline",
+            num_eval_envs=1,
+            team1_server_url=(args.server_url if args.use_server else None),
+            team2_server_url=(args.server_url if args.use_server else None),
+        )
 
-    duplicate_evaluate = jax.jit(duplicate_evaluate)
+        duplicate_evaluate = jax.jit(duplicate_evaluate)
 
-    print("Running baseline vs. baseline evaluation")
-    print("This will print detailed state information for debugging.")
-    print("="*50)
+        print("Running baseline vs. baseline evaluation")
+        print("This will print detailed state information for debugging.")
+        print("="*50)
+        log, tablea_info, tableb_info = duplicate_evaluate(
+            team1_params=None,
+            team2_params=None,
+            rng_key=rng
+        )
 
-    log, tablea_info, tableb_info = duplicate_evaluate(
-        team1_params=None,
-        team2_params=None,
-        rng_key=rng
-    )
+        print("=" * 50)
+        print("EVALUATION RESULTS:")
+        print(f"IMP: {float(log[0])} +/- {float(log[1])}")
+        print(f"Win rate: {float(log[2])}")
 
-    print("="*50)
-    print("EVALUATION RESULTS:")
-    print(f"IMP: {float(log[0])} +/- {float(log[1])}")
-    print(f"Win rate: {float(log[2])}")
+    finally:
+        if server_process is not None:
+            server_process.terminate()
 
-    server_process.terminate()
+if __name__ == "__main__":
+    main()

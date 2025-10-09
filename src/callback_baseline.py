@@ -4,6 +4,59 @@ import numpy as np
 import requests
 from baseline import BaselineAgent
 
+class MockState:
+    def __init__(self, obs, curr_player, legal_mask, term, rew,
+                    last_b, last_bidder, call_x, call_xx,
+                    deal, shuffled, vul_ns, vul_ew, bidding_history):
+        self.observation = obs
+        self.current_player = curr_player
+        self.legal_action_mask = legal_mask
+        self.terminated = term
+        self.rewards = rew
+        self._last_bid = last_b
+        self._last_bidder = last_bidder
+        self._call_x = call_x
+        self._call_xx = call_xx
+        self._dealer = deal
+        self._shuffled_players = shuffled
+        self._vul_NS = vul_ns
+        self._vul_EW = vul_ew
+        self._bidding_history = bidding_history
+
+def baseline_bid_from_arrays(
+    observation,
+    current_player,
+    legal_action_mask,
+    terminated,
+    rewards,
+    last_bid,
+    last_bidder,
+    call_x,
+    call_xx,
+    dealer,
+    shuffled_players,
+    vul_NS,
+    vul_EW,
+    bidding_history,
+):
+    agent = BaselineAgent()
+
+    mock_state = MockState(
+        observation, current_player, legal_action_mask, terminated, rewards,
+        last_bid, last_bidder, call_x, call_xx, dealer, shuffled_players,
+        vul_NS, vul_EW, bidding_history
+    )
+    action = agent.make_bid(mock_state)
+
+    if isinstance(action, str):
+        action_idx = string_to_action_index(action)
+    else:
+        action_idx = int(action)
+
+    pi_probs = np.zeros(38, dtype=np.float32)
+    pi_probs[action_idx] = 1.0
+    return int(action_idx), pi_probs
+
 def make_callback_baseline_agent(server_url: str = None):
 
     def baseline_agent_callable(observation, current_player, legal_action_mask,
@@ -12,7 +65,7 @@ def make_callback_baseline_agent(server_url: str = None):
                                 vul_EW, bidding_history):
         try:
             if server_url:
-
+                print("Creating a server for baseline agent...")
                 state_dict = {
                     "observation": observation.tolist(),
                     "current_player": int(current_player),
@@ -38,52 +91,16 @@ def make_callback_baseline_agent(server_url: str = None):
                 pi_probs = np.array(result["pi_probs"], dtype=np.float32)
                 return action, pi_probs
             else:
-                agent = BaselineAgent()
-                class MockState:
-                    def __init__(self, obs, curr_player, legal_mask, term, rew,
-                                last_b, last_bidder, call_x, call_xx,
-                                deal, shuffled, vul_ns, vul_ew, bidding_history):
-                        self.observation = obs
-                        self.current_player = curr_player
-                        self.legal_action_mask = legal_mask
-                        self.terminated = term
-                        self.rewards = rew
-                        self._last_bid = last_b
-                        self._last_bidder = last_bidder
-                        self._call_x = call_x
-                        self._call_xx = call_xx
-                        self._dealer = deal
-                        self._shuffled_players = shuffled
-                        self._vul_NS = vul_ns
-                        self._vul_EW = vul_ew
-                        self._bidding_history = bidding_history
-                
-                mock_state = MockState(observation, current_player, legal_action_mask,
-                                       terminated, rewards, last_bid, last_bidder,
-                                       call_x, call_xx, dealer, shuffled_players,
-                                       vul_NS, vul_EW, bidding_history)
-                action = agent.make_bid(mock_state)
-
-                if isinstance(action, str):
-                    action_idx = string_to_action_index(action)
-                else:
-                    action_idx = int(action)
-
-                pi_probs = np.zeros(38, dtype=np.float32)
-                pi_probs[action_idx] = 1.0
-
-                if action_idx < 0 or action_idx >= 38:
-                    print(f"ERROR: Invalid action index {action_idx}")
-                    action_idx = 0
-                elif not legal_action_mask[action_idx]:
-                    print(f"ERROR: Action {action_idx} not legal")
-                    action_idx = 0
-
+                action_idx, pi_probs = baseline_bid_from_arrays(
+                    observation, current_player, legal_action_mask,
+                    terminated, rewards, last_bid, last_bidder,
+                    call_x, call_xx, dealer, shuffled_players, vul_NS,
+                    vul_EW, bidding_history
+                )
                 return np.int32(action_idx), pi_probs
         except Exception as e:
             import traceback
             print(f"Error in baseline agent: {e}")
-            print("Full traceback:")
             print(traceback.format_exc())
 
             # return numpy arrays for error case (automatic "Pass")
@@ -121,86 +138,6 @@ def make_callback_baseline_agent(server_url: str = None):
         # return action, jnp.array(pi_probs, dtype=jnp.float32)
         return action, pi_probs
 
-    return agent_fn
-
-
-def make_io_callback_baseline_agent(server_url: str = None):
-    """Create a JAX-compatible agent using io_callback"""
-    
-    def baseline_agent_callable(observation, current_player, legal_action_mask, 
-                               terminated, rewards, last_bid, last_bidder, 
-                               call_x, call_xx, dealer, shuffled_players, 
-                               vul_NS, vul_EW):
-        """This function runs outside JAX tracing"""
-        try:
-            # Use BaselineAgent directly
-            agent = BaselineAgent()
-            
-            # Create a mock state object
-            class MockState:
-                def __init__(self, obs, curr_player, legal_mask, term, rew, 
-                            last_b, last_bidder, call_x, call_xx, 
-                            deal, shuffled, vul_ns, vul_ew):
-                    self.observation = obs
-                    self.current_player = curr_player
-                    self.legal_action_mask = legal_mask
-                    self.terminated = term
-                    self.rewards = rew
-                    self._last_bid = last_b
-                    self._last_bidder = last_bidder
-                    self._call_x = call_x
-                    self._call_xx = call_xx
-                    self._dealer = deal
-                    self._shuffled_players = shuffled
-                    self._vul_NS = vul_ns
-                    self._vul_EW = vul_ew
-                    self._bidding_history = []
-            
-            mock_state = MockState(observation, current_player, legal_action_mask,
-                                terminated, rewards, last_bid, last_bidder,
-                                call_x, call_xx, dealer, shuffled_players,
-                                vul_NS, vul_EW)
-            action = agent.make_bid(mock_state)
-            
-            # Convert string action to index if needed
-            if isinstance(action, str):
-                action_idx = string_to_action_index(action)
-            else:
-                action_idx = int(action)
-            
-            # Create probability distribution
-            pi_probs = [0.0] * 38
-            pi_probs[action_idx] = 1.0
-            
-            return action_idx, pi_probs
-            
-        except Exception as e:
-            print(f"Error in baseline agent: {e}")
-            return 0, [1.0] + [0.0] * 37
-    
-    def agent_fn(state):
-        """JAX-compatible wrapper using io_callback"""
-        # Use io_callback instead of pure_callback
-        action, pi_probs = jax.experimental.io_callback(
-            baseline_agent_callable,
-            (jnp.array(0, dtype=jnp.int32), jnp.array([0.0] * 38, dtype=jnp.float32)),
-            state.observation,
-            state.current_player,
-            state.legal_action_mask,
-            state.terminated,
-            state.rewards,
-            state._last_bid,
-            state._last_bidder,
-            state._call_x,
-            state._call_xx,
-            state._dealer,
-            state._shuffled_players,
-            state._vul_NS,
-            state._vul_EW,
-        )
-        
-        return action, pi_probs
-    
     return agent_fn
 
 

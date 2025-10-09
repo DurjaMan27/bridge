@@ -4,10 +4,12 @@ import numpy as np
 from baseline import BaselineAgent
 import uvicorn
 
+from src.callback_baseline import baseline_bid_from_arrays
+
 app = FastAPI()
 
 class BridgeState(BaseModel):
-    observation: list[float]
+    observation: list[bool]
     current_player: int
     legal_action_mask: list[bool]
     terminated: bool
@@ -20,6 +22,7 @@ class BridgeState(BaseModel):
     _shuffled_players: list[int]
     _vul_NS: bool
     _vul_EW: bool
+    _bidding_history: list[int]
 
 class ActionResponse(BaseModel):
     action: int
@@ -28,48 +31,26 @@ class ActionResponse(BaseModel):
 @app.post("/make_bid", response_model=ActionResponse)
 async def make_bid(state: BridgeState):
     try:
-        # Convert to state-like object that Baseline Agent can use
-        mock_state = create_mock_state(state)
-
-        # Create agent and get action
-        agent = BaselineAgent()
-        action = agent.make_bid(mock_state)
-
-        # convert action to proper format
-        if isinstance(action, str):
-            action_idx = string_to_action_index(action)
-        else:
-            action_idx = int(action)
-
-        # create probability distribution (deterministic for baseline)
-        pi_probs = [0.0] * 38
-        pi_probs[action_idx] = 1.0
-
-        return ActionResponse(action = action_idx, pi_probs = pi_probs)
-
+        action_idx, pi_probs = baseline_bid_from_arrays(
+            np.asarray(state.observation, dtype=bool),
+            int(state.current_player),
+            np.asarray(state.legal_action_mask, dtype=bool),
+            bool(state.terminated),
+            np.asarray(state.rewards, dtype=np.float32),
+            int(state._last_bid),
+            int(state._last_bidder),
+            bool(state._call_x),
+            bool(state._call_xx),
+            int(state._dealer),
+            np.asarray(state._shuffled_players, dtype=np.int32),
+            bool(state._vul_NS),
+            bool(state._vul_EW),
+            np.asarray(state._bidding_history, dtype=np.int32),
+        )
+        return ActionResponse(action=int(action_idx), pi_probs=pi_probs.tolist())
     except Exception as e:
+        print("Server error in /make_bid: ", repr(e))
         raise HTTPException(status_code=500, detail=str(e))
-
-def create_mock_state(state: BridgeState):
-    """Create a mocks tate object that BaselineAgent.make_bid() can use"""
-    class MockState:
-        def __init__(self, state_data):
-            self.observation = np.array(state_data.observation)
-            self.current_player = state_data.current_player
-            self.legal_action_mask = np.array(state_data.legal_action_mask)
-            self.terminated = state_data.terminated
-            self.rewards = np.array(state_data.rewards)
-            self._last_bid = state_data._last_bid
-            self._last_bidder = state_data._last_bidder
-            self._call_x = state_data._call_x
-            self._call_xx = state_data._call_xx
-            self._dealer = state_data._dealer
-            self._shuffled_players = np.array(state_data._shuffled_players)
-            self._vul_NS = state_data._vul_NS
-            self._vul_EW = state_data._vul_EW
-            self._bidding_history = []
-
-    return MockState(state)
 
 def string_to_action_index(action_str: str) -> int:
     ACTION_IDENTIFIER = {

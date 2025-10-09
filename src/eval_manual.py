@@ -8,7 +8,7 @@ from src.duplicate import duplicate_step, Table_info
 from src.models import make_forward_pass
 from src.utils import single_play_step_two_policy_commpetitive_deterministic
 from src.agent_client import make_http_agent_client
-from src.callback_baseline import make_callback_baseline_agent, make_io_callback_baseline_agent
+from src.callback_baseline import make_callback_baseline_agent
 from baseline import BaselineAgent
 import logging
 
@@ -47,9 +47,9 @@ def make_simple_duplicate_evaluate(
 
     if team1_model_type == "baseline":
         if team1_server_url:
-            team1_agent_fn = make_callback_baseline_agent()
+            team1_agent_fn = make_callback_baseline_agent(team1_server_url)
         else:
-            team1_forward_pass = None
+            team1_agent_fn = make_callback_baseline_agent()
     else:
         team1_forward_pass = make_forward_pass(
             activation=team1_activation,
@@ -57,7 +57,9 @@ def make_simple_duplicate_evaluate(
         )
 
     if team2_model_type == "baseline":
-        if team1_server_url:
+        if team2_server_url:
+            team2_agent_fn = make_callback_baseline_agent(team2_server_url)
+        else:
             team2_agent_fn = make_callback_baseline_agent()
     else:
         team2_forward_pass = make_forward_pass(
@@ -108,7 +110,7 @@ def make_simple_duplicate_evaluate(
 
         def actor_make_action(state):
 
-            if team1_model_type == "baseline" and team1_server_url:
+            if team1_model_type == "baseline":
                 action, pi_probs = team1_agent_fn(state)
 
                 return action, pi_probs
@@ -138,7 +140,7 @@ def make_simple_duplicate_evaluate(
                 return (masked_pi.mode(), pi.probs)
             
         def opp_make_action(state):
-            if team2_model_type == "baseline" and team2_server_url:
+            if team2_model_type == "baseline":
                 return team2_agent_fn(state)
             elif team2_model_type == "baseline":
                 # legal_mask = state.legal_action_mask[0]

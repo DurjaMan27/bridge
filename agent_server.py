@@ -58,3 +58,13 @@ async def make_bid(state: BridgeState):
 
 if __name__ == "__main__":
     uvicorn.run(app, host = "0.0.0.0", port = 8001)
+    # import multiprocessing
+    # workers = multiprocessing.cpu_count()
+
+    # uvicorn.run(
+    #     app,
+    #     host="0.0.0.0",
+    #     port=8001,
+    #     workers=workers,
+    #     log_level="warning"
+    # )

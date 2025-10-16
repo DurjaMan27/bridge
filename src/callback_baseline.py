@@ -12,10 +12,10 @@ def get_session(server_url: str):
     if server_url not in _session_pool:
         session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
-            pool_connections=10,  # Number of connection pools to cache
-            pool_maxsize=100,     # Max connections in each pool
-            max_retries=3,        # Retry on connection errors
-            pool_block=False      # Don't block when pool is full
+            pool_connections=10,    # Number of connection pools to cache
+            pool_maxsize=1000,      # Max connections in each pool
+            max_retries=3,          # Retry on connection errors
+            pool_block=False        # Don't block when pool is full
         )
         session.mount('http://', adapter)
         session.mount('https://', adapter)
@@ -108,7 +108,7 @@ def make_callback_baseline_agent(server_url: str = None):
                 # response.raise_for_status()
                 # result = response.json()
 
-                response = session.post(f"{server_url}/make_bid", json=state_dict)
+                response = session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0)
                 result = response.json()
 
                 action = np.int32(result["action"])

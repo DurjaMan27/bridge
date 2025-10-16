@@ -13,7 +13,7 @@ def get_session(server_url: str):
         session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
             pool_connections=10,    # Number of connection pools to cache
-            pool_maxsize=1000,      # Max connections in each pool
+            pool_maxsize=500,      # Max connections in each pool
             max_retries=3,          # Retry on connection errors
             pool_block=False        # Don't block when pool is full
         )
@@ -83,7 +83,6 @@ def make_callback_baseline_agent(server_url: str = None):
                                 vul_EW, bidding_history):
         try:
             if server_url:
-                # print("Connecting to a server for baseline agent...")
 
                 session = get_session(server_url)
 
@@ -103,14 +102,6 @@ def make_callback_baseline_agent(server_url: str = None):
                     "vul_EW": bool(vul_EW),
                     "bidding_history": bidding_history.tolist(),
                 }
-
-                # response = requests.post(f"{server_url}/make_bid", json=state_dict)
-                # response.raise_for_status()
-                # result = response.json()
-
-                # response = session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0)
-                # result = response.json()
-                # response.close()
 
                 with session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0) as response:
                     response.raise_for_status()
@@ -146,7 +137,6 @@ def make_callback_baseline_agent(server_url: str = None):
 
         action_shape = jax.ShapeDtypeStruct((), jnp.int32)
         pi_probs_shape = jax.ShapeDtypeStruct((38,), jnp.float32)
-        # (jnp.array(0, dtype=jnp.int32), jnp.array([0.0] * 38, dtype=jnp.float32)),
 
         action, pi_probs = jax.pure_callback(
             baseline_agent_callable,
@@ -168,7 +158,6 @@ def make_callback_baseline_agent(server_url: str = None):
             vectorized=False
         )
 
-        # return action, jnp.array(pi_probs, dtype=jnp.float32)
         return action, pi_probs
 
     return agent_fn

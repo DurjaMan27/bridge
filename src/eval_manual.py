@@ -19,9 +19,9 @@ logging.basicConfig(
 )
 
 ACTION_TO_STRING = {
-  0: "Pass",
-  1: "Double",
-  2: "Redouble",
+    0: "Pass",
+    1: "Double",
+    2: "Redouble",
 }
 
 BID_LEVELS = ['1', '2', '3', '4', '5', '6', '7']
@@ -120,8 +120,6 @@ def make_simple_duplicate_evaluate(
                 action = baseline_agent.make_bid(state)
 
                 if not isinstance(int, action):
-                    print("\n\n\nALERT =======")
-                    print("Returned", action, "\n\n\n\n")
                     action = 0
 
                 pi_probs = jnp.zeros(state.legal_action_mask.shape)
@@ -149,8 +147,6 @@ def make_simple_duplicate_evaluate(
                 action = baseline_agent.make_bid(state)
 
                 if not isinstance(int, action):
-                    print("\n\n\nALERT =======")
-                    print("Returned", action, "\n\n\n\n")
                     action = 0
 
                 pi_probs = jnp.zeros(state.legal_action_mask.shape)

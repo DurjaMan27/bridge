@@ -13,8 +13,8 @@ python test_baseline_debug.py --use_server
 python test_baseline_debug.py
 
 ## Most recent update:
-- server bottleneck still exists -- stopping at 1074 bids for some reason
 - added more error logging and helper function
+- added server_output and server_error logging files in src/outputs
 - added batch function to split up calls to eval_env for large env numbers
 
 ## To-Do:

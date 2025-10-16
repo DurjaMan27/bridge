@@ -30,11 +30,15 @@ def main():
     server_process = None
     try:
         if args.use_server:
+            server_stdout = open("src/outputs/server_stdout.log", "w")
+            server_stderr = open("src/outputs/server_stderr.log", "w")
             server_process = subprocess.Popen(
                 ["python", "agent_server.py"],
                 # ["bash", "start_server.sh"],
-                stdout=subprocess.PIPE,
+                # stdout=subprocess.PIPE,
                 # stderr=subprocess.PIPE,
+                stdout=server_stdout,
+                stderr=server_stderr,
             )
             time.sleep(2)
 
@@ -53,28 +57,6 @@ def main():
         )
         log = batch_envs(eval_env, total_envs=1000, batch_size=20, args=args)
 
-        # duplicate_evaluate = make_simple_duplicate_evaluate(
-        #     eval_env,
-        #     team1_activation="relu",
-        #     team1_model_type="baseline",
-        #     team2_activation="relu",
-        #     team2_model_type="baseline",
-        #     num_eval_envs=50,
-        #     team1_server_url=(args.server_url if args.use_server else None),
-        #     team2_server_url=(args.server_url if args.use_server else None),
-        # )
-
-        # duplicate_evaluate = jax.jit(duplicate_evaluate)
-
-        # print("Running baseline vs. baseline evaluation")
-        # print("This will print detailed state information for debugging.")
-        # print("="*50)
-        # log, tablea_info, tableb_info = duplicate_evaluate(
-        #     team1_params=None,
-        #     team2_params=None,
-        #     rng_key=rng
-        # )
-
         print("=" * 50)
         print("EVALUATION RESULTS:")
         print(f"IMP: {float(log[0])} +/- {float(log[1])}")
@@ -84,6 +66,9 @@ def main():
         if server_process is not None:
             print("SERVER TERMINATED!")
             server_process.terminate()
+            server_process.wait()
+            server_stdout.close()
+            server_stderr.close()
 
 def batch_envs(eval_env: BridgeBidding, total_envs: int, batch_size: int, args: tuple):
 

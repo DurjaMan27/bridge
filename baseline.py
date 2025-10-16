@@ -59,9 +59,7 @@ class BaselineAgent():
 
     return hcp, suit_dict
 
-
-  @staticmethod
-  def make_bid(state):
+  def make_bid(self, state):
     """
     Make a bidding decision based on the PGX bridge state.
 

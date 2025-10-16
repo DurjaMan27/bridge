@@ -30,6 +30,7 @@ class ActionResponse(BaseModel):
 
 @app.post("/make_bid", response_model=ActionResponse)
 async def make_bid(state: BridgeState):
+
     try:
         action_idx, pi_probs = baseline_bid_from_arrays(
             np.asarray(state.observation, dtype=np.float32),
@@ -47,24 +48,12 @@ async def make_bid(state: BridgeState):
             bool(state.vul_EW),
             np.asarray(state.bidding_history, dtype=np.int32),
         )
+
         return ActionResponse(action=int(action_idx), pi_probs=pi_probs.tolist())
     except Exception as e:
         import traceback
-        print("="*60)
-        print("Server error in /make_bid:")
-        print(traceback.format_exc())
-        print("="*60)
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     uvicorn.run(app, host = "0.0.0.0", port = 8001)
-    # import multiprocessing
-    # workers = multiprocessing.cpu_count()
-
-    # uvicorn.run(
-    #     app,
-    #     host="0.0.0.0",
-    #     port=8001,
-    #     workers=workers,
-    #     log_level="warning"
-    # )

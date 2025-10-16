@@ -108,8 +108,13 @@ def make_callback_baseline_agent(server_url: str = None):
                 # response.raise_for_status()
                 # result = response.json()
 
-                response = session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0)
-                result = response.json()
+                # response = session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0)
+                # result = response.json()
+                # response.close()
+
+                with session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0) as response:
+                    response.raise_for_status()
+                    result = response.json()
 
                 action = np.int32(result["action"])
                 pi_probs = np.array(result["pi_probs"], dtype=np.float32)

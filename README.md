@@ -13,13 +13,12 @@ python test_baseline_debug.py --use_server
 python test_baseline_debug.py
 
 ## Most recent update:
-- client-server architecture is working on small eval_envs with reproducible results each time
-- added a progress_tracker.py file to keep track of server calls for large eval_envs (>1000)
-- for some reason, number of server calls gets stopped at 1074 calls (bottleneck?)
-- need to debug where this bottleneck is occurring and fix
+- fixed server bottleneck by added more process pool connections
+- added more error logging and helper function
+- added batch function to split up calls to eval_env for large env numbers
 
 ## To-Do:
-- explore whether the eval_envs test the same card hands every time
+- explore whether the eval_envs test the same card hands every time - THEY DO (RNG KEY)
 - explore which card hands are "equal" to create a more reproducible testing set
 - add LLM agent
 - improve baseline agent

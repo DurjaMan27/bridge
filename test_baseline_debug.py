@@ -7,8 +7,12 @@ import numpy as np
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
 from progress_tracker import _bid_counter, reset_counter
+# Import both callback types
+from callback_baseline import make_callback_baseline_agent
+from callback_llm import make_callback_llm_agent # New import
 
 def heartbeat():
+    # ... (Heartbeat function remains the same)
     while True:
         time.sleep(10)
         elapsed = time.time() - _bid_counter["start_time"]
@@ -16,109 +20,141 @@ def heartbeat():
         rate = count / elapsed if elapsed > 0 else 0
         print(f"[{elapsed:.0f}s] {count} bids ({rate:.1f} bids/sec)")
 
+def get_agent_callback(agent_type, server_url):
+    """Helper function to return the correct agent callback based on type."""
+    if agent_type == 'baseline':
+        return make_callback_baseline_agent(server_url=server_url)
+    elif agent_type == 'llm':
+        # The LLM callback function needs the server URL if running in server mode
+        return make_callback_llm_agent(server_url=server_url)
+    else:
+        raise ValueError(f"Unknown agent type: {agent_type}")
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--use_server", action="store_true", help="Start agent_server and route baseline bids via HTTP")
-    parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL")
+    parser.add_argument("--use_server", action="store_true", help="Start agent_server and route bids via HTTP")
+    parser.add_argument("--server_url", default="http://localhost:8000", help="Agent server URL (must match uvicorn host/port)")
+    
+    # NEW ARGUMENTS for agent selection
+    parser.add_argument("--team1_agent", default="baseline", choices=["baseline", "llm"], 
+                        help="Agent type for Team 1 (NS)")
+    parser.add_argument("--team2_agent", default="baseline", choices=["baseline", "llm"], 
+                        help="Agent type for Team 2 (EW)")
+    
     args = parser.parse_args()
 
     print("These are the args: ", args)
 
     eval_env = BridgeBidding("dds_results/test_000.npy")
-    rng = jax.random.PRNGKey(0)
+    # rng = jax.random.PRNGKey(0) # Not used in main, but good practice
 
     server_process = None
     try:
         if args.use_server:
-            server_stdout = open("src/outputs/server_stdout.log", "w")
-            server_stderr = open("src/outputs/server_stderr.log", "w")
-            server_process = subprocess.Popen(
-                ["python", "agent_server.py"],
-                # ["bash", "start_server.sh"],
-                # stdout=subprocess.PIPE,
-                # stderr=subprocess.PIPE,
-                stdout=server_stdout,
-                stderr=server_stderr,
-            )
-            time.sleep(2)
+            # Check if server_url is not None before using it
+            if args.server_url is not None:
+                server_stdout = open("src/outputs/server_stdout.log", "w")
+                server_stderr = open("src/outputs/server_stderr.log", "w")
+                # Ensure agent_server.py is running on the correct port (defaulted to 8000 in this change)
+                print(f"Starting server at {args.server_url}...")
+                server_process = subprocess.Popen(
+                    # Using uvicorn directly if needed, assuming agent_server.py contains `app`
+                    ["uvicorn", "agent_server:app", "--host", "127.0.0.1", "--port", args.server_url.split(':')[-1]],
+                    stdout=server_stdout,
+                    stderr=server_stderr
+                )
+                time.sleep(5)  # Give the server time to start up
+                print("Server started.")
+            else:
+                 print("Server URL is None. Cannot start server.")
 
-        threading.Thread(target=heartbeat, daemon=True).start()
+
+        # --- Determine the agents and their configuration ---
+
+        # 1. Get the agent callbacks (which contain the logic/server routing)
+        team1_action = get_agent_callback(args.team1_agent, args.server_url if args.use_server else None)
+        team2_action = get_agent_callback(args.team2_agent, args.server_url if args.use_server else None)
+        
+        # 2. Extract model type string for logging/eval (always None for these baseline/llm agents)
+        team1_model_type = args.team1_agent
+        team2_model_type = args.team2_agent
+
+        # 3. Server URL is only passed if --use_server is true
+        team1_server_url = args.server_url if args.use_server else None
+        team2_server_url = args.server_url if args.use_server else None
+
+
+        # --- Start Evaluation ---
+
         reset_counter()
+        # Start heartbeat thread for rate monitoring
+        threading.Thread(target=heartbeat, daemon=True).start()
 
-        args = (
-            "relu",
-            "baseline",
-            "relu",
-            "baseline",
-            (args.server_url if args.use_server else None),
-            (args.server_url if args.use_server else None),
-            None,
-            None
-        )
-        log = batch_envs(eval_env, total_envs=1000, batch_size=20, args=args)
+        total_envs = 1024 # Example value
+        batch_size = 64 # Example value
 
-        print("=" * 50)
-        print("EVALUATION RESULTS:")
-        print(f"IMP: {float(log[0])} +/- {float(log[1])}")
-        print(f"Win rate: {float(log[2])}")
-
-    finally:
-        if server_process is not None:
-            print("SERVER TERMINATED!")
-            server_process.terminate()
-            server_process.wait()
-            server_stdout.close()
-            server_stderr.close()
-
-def batch_envs(eval_env: BridgeBidding, total_envs: int, batch_size: int, args: tuple):
-
-    """
-        args = (
+        args_for_eval = (
             team1_action,
             team1_model_type,
-            team2_activation,
+            team2_action,
             team2_model_type,
             team1_server_url,
             team2_server_url,
         )
-    """
 
-    all_imps = []
-    all_stderrs = []
-    all_winrate = []
-    for batch_start in range(0, total_envs, batch_size):
-        batch_end = min(batch_start + batch_size, total_envs)
+        all_imps = []
+        all_stderrs = []
+        all_winrate = []
+        
+        # ... (Batch processing loop remains the same)
+        for batch_start in range(0, total_envs, batch_size):
+            batch_end = min(batch_start + batch_size, total_envs)
 
-        batch_rng = jax.random.PRNGKey(batch_start + 12345)
-        print(f"Processing envs {batch_start}-{batch_end}")
+            batch_rng = jax.random.PRNGKey(batch_start + 12345)
+            print(f"Processing envs {batch_start}-{batch_end}")
 
-        duplicate_evaluate = make_simple_duplicate_evaluate(
-            eval_env,
-            team1_activation=args[0],
-            team1_model_type=args[1],
-            team2_activation=args[2],
-            team2_model_type=args[3],
-            num_eval_envs = batch_end - batch_start,
-            team1_server_url=args[4],
-            team2_server_url=args[5],
-        )
+            duplicate_evaluate = make_simple_duplicate_evaluate(
+                eval_env,
+                team1_activation=args_for_eval[0],
+                team1_model_type=args_for_eval[1],
+                team2_activation=args_for_eval[2],
+                team2_model_type=args_for_eval[3],
+                num_eval_envs = batch_end - batch_start,
+                team1_server_url=args_for_eval[4],
+                team2_server_url=args_for_eval[5],
+            )
 
-        duplicate_evaluate = jax.jit(duplicate_evaluate)
+            duplicate_evaluate = jax.jit(duplicate_evaluate)
 
-        log, tablea_info, tableb_info = duplicate_evaluate(
-            team1_params=None,
-            team2_params=None,
-            rng_key=batch_rng,
-        )
+            log, tablea_info, tableb_info = duplicate_evaluate(
+                team1_params=None,
+                team2_params=None,
+                rng_key=batch_rng,
+            )
 
-        all_imps.append(float(log[0]))
-        all_stderrs.append(float(log[1]))
-        all_winrate.append(float(log[2]))
+            all_imps.append(float(log[0]))
+            all_stderrs.append(float(log[1]))
+            all_winrate.append(float(log[2]))
 
-    overall_imp = np.mean(all_imps)
-    combined_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2) / len(all_stderrs))
-    overall_winrate = np.mean(all_winrate)
-    return [overall_imp, combined_stderr, overall_winrate]
+        final_imp = np.average(all_imps)
+        final_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2)) / len(all_stderrs)
+        final_winrate = np.average(all_winrate)
+
+        print("-" * 50)
+        print(f"Total bids processed: {_bid_counter['count']}")
+        print(f"Final IMP: {final_imp:.2f} (StdErr: {final_stderr:.2f})")
+        print(f"Final Win Rate (T1 vs T2): {final_winrate*100:.2f}%")
+        print("-" * 50)
+
+    finally:
+        if server_process:
+            print("Stopping server...")
+            server_process.terminate()
+            server_process.wait()
+            # Clean up file handles
+            if 'server_stdout' in locals() and not server_stdout.closed: server_stdout.close()
+            if 'server_stderr' in locals() and not server_stderr.closed: server_stderr.close()
+
 
 if __name__ == "__main__":
     main()

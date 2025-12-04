@@ -44,7 +44,7 @@ class MockState:
         self._shuffled_players = shuffled
         self._vul_NS = vul_ns
         self._vul_EW = vul_ew
-        self.bidding_history = bidding_history
+        self._bidding_history = bidding_history
 
 def llm_agent_callable(
     observation, current_player, legal_action_mask, terminated, rewards,
@@ -82,7 +82,7 @@ def llm_agent_callable(
         response.raise_for_status()
         
         response_data = response.json()
-        action_idx = response_data['action']
+        action_idx = np.int32(response_data['action'])
         pi_probs = np.asarray(response_data['pi_probs'], dtype=np.float32)
         
     else:
@@ -95,7 +95,7 @@ def llm_agent_callable(
         agent = LLMAgent()
         action_idx, pi_probs = agent.make_bid(state)
 
-    return action_idx, pi_probs
+    return np.int32(action_idx), pi_probs
 
 def make_callback_llm_agent(server_url=None):
     """

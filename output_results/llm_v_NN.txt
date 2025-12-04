@@ -1,0 +1,38 @@
+TEAM 1 = LLM
+TEAM 2 = NN
+
+12/4/2025 - 12:01 AM
+
+--------------------------------------------------
+Total bids processed: 2640
+Final IMP: 41.38 (StdErr: 19.47)
+Final Win Rate (T1 vs T2): 33.75%
+--------------------------------------------------
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[ 200.,  200., -200., -200.],
+       [   0.,    0.,    0.,    0.],
+       [-110., -110.,  110.,  110.],
+       [   0.,    0.,    0.,    0.],
+       [   0.,    0.,    0.,    0.],
+       [ -70.,  -70.,   70.,   70.],
+       [ 300.,  300., -300., -300.],
+       [ -70.,  -70.,   70.,   70.],
+       [-400., -400.,  400.,  400.],
+       [ -80.,  -80.,   80.,   80.]], dtype=float32), last_bid=Array([ 9, -1,  3, -1, -1,  1, 14,  1, 14,  3], dtype=int32), last_bidder=Array([ 3, -1,  3, -1, -1,  3,  2,  2,  3,  3], dtype=int32), call_x=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[   0.,    0.,    0.,    0.],
+       [ 400.,  400., -400., -400.],
+       [   0.,    0.,    0.,    0.],
+       [-140., -140.,  140.,  140.],
+       [   0.,    0.,    0.,    0.],
+       [  50.,   50.,  -50.,  -50.],
+       [ -70.,  -70.,   70.,   70.],
+       [   0.,    0.,    0.,    0.],
+       [   0.,    0.,    0.,    0.],
+       [   0.,    0.,    0.,    0.]], dtype=float32), last_bid=Array([-1,  9, -1,  2, -1,  0,  0, -1, -1, -1], dtype=int32), last_bidder=Array([-1,  3, -1,  3, -1,  2,  3, -1, -1, -1], dtype=int32), call_x=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+--------------------------------------------------
+Stopping server...

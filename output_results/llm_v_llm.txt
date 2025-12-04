@@ -1,0 +1,38 @@
+TEAM 1 = LLM
+TEAM 2 = LLM
+
+12/3/2025 - 11:58 PM
+
+--------------------------------------------------
+Total bids processed: 1280
+Final IMP: 0.00 (StdErr: 0.00)
+Final Win Rate (T1 vs T2): 0.00%
+--------------------------------------------------
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.]], dtype=float32), last_bid=Array([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], dtype=int32), last_bidder=Array([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], dtype=int32), call_x=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.]], dtype=float32), last_bid=Array([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], dtype=int32), last_bidder=Array([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], dtype=int32), call_x=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+--------------------------------------------------
+Stopping server...

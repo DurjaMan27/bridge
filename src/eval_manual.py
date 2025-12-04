@@ -9,6 +9,7 @@ from src.models import make_forward_pass
 from src.utils import single_play_step_two_policy_commpetitive_deterministic
 from src.agent_client import make_http_agent_client
 from src.callback_baseline import make_callback_baseline_agent
+from src.callback_llm import make_callback_llm_agent
 from baseline import BaselineAgent
 import logging
 
@@ -50,21 +51,32 @@ def make_simple_duplicate_evaluate(
             team1_agent_fn = make_callback_baseline_agent(team1_server_url)
         else:
             team1_agent_fn = make_callback_baseline_agent()
+    elif team1_model_type == "llm":
+        if team1_server_url:
+            team1_agent_fn = make_callback_llm_agent(team1_server_url)
+        else:
+            team1_agent_fn = make_callback_llm_agent()
     else:
         team1_forward_pass = make_forward_pass(
             activation=team1_activation,
-            model_type=team1_model_type,
+            model_type="relu",
         )
+
 
     if team2_model_type == "baseline":
         if team2_server_url:
             team2_agent_fn = make_callback_baseline_agent(team2_server_url)
         else:
             team2_agent_fn = make_callback_baseline_agent()
+    elif team2_model_type == "llm":
+        if team2_server_url:
+            team2_agent_fn = make_callback_llm_agent(team2_server_url)
+        else:
+            team2_agent_fn = make_callback_llm_agent()
     else:
         team2_forward_pass = make_forward_pass(
             activation=team2_activation,
-            model_type=team2_model_type,
+            model_type="relu",
         )
 
     def duplicate_evaluate(
@@ -110,21 +122,8 @@ def make_simple_duplicate_evaluate(
 
         def actor_make_action(state):
 
-            if team1_model_type == "baseline":
-                action, pi_probs = team1_agent_fn(state)
-
-                return action, pi_probs
-            elif team1_model_type == "baseline":
-
-                baseline_agent = BaselineAgent()
-                action = baseline_agent.make_bid(state)
-
-                if not isinstance(int, action):
-                    action = 0
-
-                pi_probs = jnp.zeros(state.legal_action_mask.shape)
-                pi_probs = pi_probs.at[action].set(1.0)
-                return action, pi_probs
+            if team1_model_type == "baseline" or team1_model_type == "llm":
+                return team1_agent_fn(state)
             else:
                 logits, value = team1_forward_pass.apply(
                     team1_params, state.observation
@@ -138,20 +137,8 @@ def make_simple_duplicate_evaluate(
                 return (masked_pi.mode(), pi.probs)
             
         def opp_make_action(state):
-            if team2_model_type == "baseline":
+            if team2_model_type == "baseline" or team2_model_type == "llm":
                 return team2_agent_fn(state)
-            elif team2_model_type == "baseline":
-                # legal_mask = state.legal_action_mask[0]
-
-                baseline_agent = BaselineAgent()
-                action = baseline_agent.make_bid(state)
-
-                if not isinstance(int, action):
-                    action = 0
-
-                pi_probs = jnp.zeros(state.legal_action_mask.shape)
-                pi_probs = pi_probs.at[action].set(1.0)
-                return action, pi_probs
             else:
                 logits, value = team2_forward_pass.apply(
                     team2_params, state.observation

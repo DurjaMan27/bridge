@@ -1,0 +1,38 @@
+TEAM 1 = Baseline
+TEAM 2 = Baseline
+
+12/3/2025 - 11:57 PM
+
+--------------------------------------------------
+Total bids processed: 3160
+Final IMP: -140.00 (StdErr: 102.01)
+Final Win Rate (T1 vs T2): 41.25%
+--------------------------------------------------
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[  150.,   150.,  -150.,  -150.],
+       [  500.,   500.,  -500.,  -500.],
+       [ -110.,  -110.,   110.,   110.],
+       [ 1700.,  1700., -1700., -1700.],
+       [    0.,     0.,     0.,     0.],
+       [ -100.,  -100.,   100.,   100.],
+       [  600.,   600.,  -600.,  -600.],
+       [ -250.,  -250.,   250.,   250.],
+       [ -450.,  -450.,   450.,   450.],
+       [  -80.,   -80.,    80.,    80.]], dtype=float32), last_bid=Array([15, 31,  3, 21, -1,  5, 25, 18, 25,  3], dtype=int32), last_bidder=Array([ 0,  2,  3,  2, -1,  0,  3,  0,  0,  3], dtype=int32), call_x=Array([False,  True, False,  True, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True], dtype=bool), rewards=Array([[ -150.,  -150.,   150.,   150.],
+       [ -500.,  -500.,   500.,   500.],
+       [  110.,   110.,  -110.,  -110.],
+       [-1700., -1700.,  1700.,  1700.],
+       [    0.,     0.,     0.,     0.],
+       [  100.,   100.,  -100.,  -100.],
+       [ -600.,  -600.,   600.,   600.],
+       [  250.,   250.,  -250.,  -250.],
+       [  450.,   450.,  -450.,  -450.],
+       [   80.,    80.,   -80.,   -80.]], dtype=float32), last_bid=Array([15, 31,  3, 21, -1,  5, 25, 18, 25,  3], dtype=int32), last_bidder=Array([ 3,  1,  0,  0, -1,  2,  0,  2,  3,  1], dtype=int32), call_x=Array([False,  True, False,  True, False, False, False, False, False,
+       False], dtype=bool), call_xx=Array([False, False, False, False, False, False, False, False, False,
+       False], dtype=bool))
+--------------------------------------------------
+Stopping server...

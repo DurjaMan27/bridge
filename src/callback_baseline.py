@@ -101,6 +101,7 @@ def make_callback_baseline_agent(server_url: str = None):
                     "vul_NS": bool(vul_NS),
                     "vul_EW": bool(vul_EW),
                     "bidding_history": bidding_history.tolist(),
+                    "agent_type": "baseline",
                 }
 
                 with session.post(f"{server_url}/make_bid", json=state_dict, timeout=60.0) as response:

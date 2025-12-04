@@ -80,12 +80,12 @@ class LLMAgent():
     hand_str = self._format_hand(state.observation)
     
     # 2. Bidding History
-    history_str = self._format_bidding_history(state.bidding_history)
+    history_str = self._format_bidding_history(state._bidding_history)
     
     # 3. Current Vul (for scoring context)
-    vul_str = "Both" if state.vul_NS and state.vul_EW else \
-              "NS Only" if state.vul_NS else \
-              "EW Only" if state.vul_EW else \
+    vul_str = "Both" if state._vul_NS and state._vul_EW else \
+              "NS Only" if state._vul_NS else \
+              "EW Only" if state._vul_EW else \
               "None"
     
     # 4. Legal Actions
@@ -199,6 +199,6 @@ LLMAgent.MockState = type("MockState", (object,), {
         setattr(self, "_shuffled_players", shuff),
         setattr(self, "_vul_NS", vns),
         setattr(self, "_vul_EW", vew),
-        setattr(self, "bidding_history", bh)
+        setattr(self, "_bidding_history", bh)
     )
 })

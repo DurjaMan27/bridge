@@ -4,15 +4,16 @@ import subprocess
 import time
 import threading
 import numpy as np
+import os # Import os for environment check
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
 from progress_tracker import _bid_counter, reset_counter
 # Import both callback types
-from callback_baseline import make_callback_baseline_agent
-from callback_llm import make_callback_llm_agent # New import
+from src.callback_baseline import make_callback_baseline_agent
+from src.callback_llm import make_callback_llm_agent 
 
+# ... (heartbeat function remains the same)
 def heartbeat():
-    # ... (Heartbeat function remains the same)
     while True:
         time.sleep(10)
         elapsed = time.time() - _bid_counter["start_time"]
@@ -27,18 +28,21 @@ def get_agent_callback(agent_type, server_url):
     elif agent_type == 'llm':
         # The LLM callback function needs the server URL if running in server mode
         return make_callback_llm_agent(server_url=server_url)
+    elif agent_type in ['DeepMind', 'FAIR']:
+        return agent_type
     else:
         raise ValueError(f"Unknown agent type: {agent_type}")
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_server", action="store_true", help="Start agent_server and route bids via HTTP")
-    parser.add_argument("--server_url", default="http://localhost:8000", help="Agent server URL (must match uvicorn host/port)")
+    # --- FIX: Changed default port to 8001 to avoid potential conflicts ---
+    parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL (must match uvicorn host/port)")
     
-    # NEW ARGUMENTS for agent selection
-    parser.add_argument("--team1_agent", default="baseline", choices=["baseline", "llm"], 
+    # Arguments for agent selection
+    parser.add_argument("--team1_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
                         help="Agent type for Team 1 (NS)")
-    parser.add_argument("--team2_agent", default="baseline", choices=["baseline", "llm"], 
+    parser.add_argument("--team2_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
                         help="Agent type for Team 2 (EW)")
     
     args = parser.parse_args()
@@ -46,25 +50,41 @@ def main():
     print("These are the args: ", args)
 
     eval_env = BridgeBidding("dds_results/test_000.npy")
-    # rng = jax.random.PRNGKey(0) # Not used in main, but good practice
+    # rng = jax.random.PRNGKey(0) 
 
     server_process = None
     try:
         if args.use_server:
-            # Check if server_url is not None before using it
             if args.server_url is not None:
                 server_stdout = open("src/outputs/server_stdout.log", "w")
                 server_stderr = open("src/outputs/server_stderr.log", "w")
-                # Ensure agent_server.py is running on the correct port (defaulted to 8000 in this change)
-                print(f"Starting server at {args.server_url}...")
+                
+                # Get port from server_url, defaulting to 80 if not found
+                try:
+                    server_port = args.server_url.split(':')[-1]
+                    if not server_port.isdigit():
+                         server_port = "8001"
+                except:
+                    server_port = "8001"
+
+
+                print(f"Starting server at {args.server_url} using `python -m uvicorn`...")
+                
+                # Use 'python -m uvicorn' for better virtual environment compatibility
                 server_process = subprocess.Popen(
-                    # Using uvicorn directly if needed, assuming agent_server.py contains `app`
-                    ["uvicorn", "agent_server:app", "--host", "127.0.0.1", "--port", args.server_url.split(':')[-1]],
+                    [
+                        "python", "-m", "uvicorn", "agent_server:app", 
+                        "--host", "127.0.0.1", 
+                        "--port", server_port
+                    ],
                     stdout=server_stdout,
-                    stderr=server_stderr
+                    stderr=server_stderr,
+                    # Ensure the current environment PATH is used
+                    env=os.environ.copy() 
                 )
-                time.sleep(5)  # Give the server time to start up
-                print("Server started.")
+                
+                time.sleep(7)  # Increased sleep to 7s to give the server more time to start
+                print("Server startup initiated. Proceeding with evaluation.")
             else:
                  print("Server URL is None. Cannot start server.")
 
@@ -75,7 +95,7 @@ def main():
         team1_action = get_agent_callback(args.team1_agent, args.server_url if args.use_server else None)
         team2_action = get_agent_callback(args.team2_agent, args.server_url if args.use_server else None)
         
-        # 2. Extract model type string for logging/eval (always None for these baseline/llm agents)
+        # 2. Extract model type string for logging/eval (always the agent type string for these)
         team1_model_type = args.team1_agent
         team2_model_type = args.team2_agent
 
@@ -90,8 +110,7 @@ def main():
         # Start heartbeat thread for rate monitoring
         threading.Thread(target=heartbeat, daemon=True).start()
 
-        total_envs = 1024 # Example value
-        batch_size = 64 # Example value
+        total_envs, batch_size = 80, 10
 
         args_for_eval = (
             team1_action,
@@ -124,6 +143,7 @@ def main():
                 team2_server_url=args_for_eval[5],
             )
 
+            # JIT compilation occurs here
             duplicate_evaluate = jax.jit(duplicate_evaluate)
 
             log, tablea_info, tableb_info = duplicate_evaluate(
@@ -144,6 +164,9 @@ def main():
         print(f"Total bids processed: {_bid_counter['count']}")
         print(f"Final IMP: {final_imp:.2f} (StdErr: {final_stderr:.2f})")
         print(f"Final Win Rate (T1 vs T2): {final_winrate*100:.2f}%")
+        print("-" * 50)
+        print(tablea_info)
+        print(tableb_info)
         print("-" * 50)
 
     finally:

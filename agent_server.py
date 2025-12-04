@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 import numpy as np
 import uvicorn
 import logging
-from callback_baseline import baseline_bid_from_arrays
-from callback_llm import llm_bid_from_arrays
+from src.callback_baseline import baseline_bid_from_arrays
+from src.callback_llm import llm_bid_from_arrays
 
 # Set up logging
 logger = logging.getLogger("uvicorn")

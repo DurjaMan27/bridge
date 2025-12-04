@@ -25,12 +25,12 @@
 - added LLM Agent infrastructure (files llm.py and callback_llm.py).
 - updated agent_server.py to route requests based on agent type (baseline or llm).
 - updated test_baseline_debug.py to allow agent selection via --team1_agent and --team2_agent.
-- added more error logging and helper function
-- added server_output and server_error logging files in src/outputs
 - added batch function to split up calls to eval_env for large env numbers
+- tested llm against baseline and stored results in **/output_results**
 
 ## To-Do:
-- explore which card hands are "equal" to create a more reproducible testing set
-- improve baseline agent
 - test baseline against NN
-- test LLM against baseline, NN
+- test LLM against NN
+
+## Backlog:
+- improve baseline agent

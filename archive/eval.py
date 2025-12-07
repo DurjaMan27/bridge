@@ -2,7 +2,7 @@ import jax
 from omegaconf import OmegaConf
 from pgx.bridge_bidding import BridgeBidding
 import pickle
-from src.evaluation import make_simple_duplicate_evaluate
+from bidding_helpers.evaluation import make_simple_duplicate_evaluate
 from pydantic import BaseModel
 
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
         "team2_model_type": args.team2_model_type,
         "num_eval_envs": args.num_eval_envs,
     }
-    eval_env = BridgeBidding("dds_results/test_000.npy")
+    eval_env = BridgeBidding("data/dds_results/test_000.npy")
     rng = jax.random.PRNGKey(0)
 
     # FIRST INSTANCE OF DUPLICATE_EVALUATE

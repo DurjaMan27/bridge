@@ -4,17 +4,16 @@ import jax.numpy as jnp
 import numpy as np
 import distrax
 import pickle
-from src.duplicate import duplicate_step, Table_info
-from src.models import make_forward_pass
-from src.utils import single_play_step_two_policy_commpetitive_deterministic
-from src.agent_client import make_http_agent_client
+from bidding_helpers.duplicate import duplicate_step, Table_info
+from bidding_helpers.models import make_forward_pass
+from bidding_helpers.utils import single_play_step_two_policy_commpetitive_deterministic
 from src.callback_baseline import make_callback_baseline_agent
 from src.callback_llm import make_callback_llm_agent
 from baseline import BaselineAgent
 import logging
 
 logging.basicConfig(
-  filename="src/outputs/debug_log.txt",
+  filename="src/logs/debug_log.txt",
   level=logging.DEBUG,
   format="%(asctime)s [%(levelname)s] %(message)s"
 )

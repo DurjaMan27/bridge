@@ -49,15 +49,15 @@ def main():
 
     print("These are the args: ", args)
 
-    eval_env = BridgeBidding("dds_results/test_000.npy")
+    eval_env = BridgeBidding("data/dds_results/test_000.npy")
     # rng = jax.random.PRNGKey(0) 
 
     server_process = None
     try:
         if args.use_server:
             if args.server_url is not None:
-                server_stdout = open("src/outputs/server_stdout.log", "w")
-                server_stderr = open("src/outputs/server_stderr.log", "w")
+                server_stdout = open("src/logs/server_stdout.log", "w")
+                server_stderr = open("src/logs/server_stderr.log", "w")
                 
                 # Get port from server_url, defaulting to 80 if not found
                 try:

@@ -41,9 +41,7 @@ async def make_bid(state: BridgeState):
     """
     Endpoint that routes the bidding request to the appropriate agent logic.
     """
-    
-    # Convert list/bool inputs from JSON back into numpy arrays/native types
-    # This prepares the data for the pure Python agent logic
+
     state_args = (
         np.asarray(state.observation, dtype=np.float32),
         int(state.current_player),

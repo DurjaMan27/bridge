@@ -17,7 +17,7 @@ def act_randomly(rng_key, obs, mask):
 
 
 # Load the environment
-env = BridgeBidding("dds_results/test_000.npy")
+env = BridgeBidding("data/dds_results/test_000.npy")
 init_fn = jax.jit(jax.vmap(env.init))
 step_fn = jax.jit(jax.vmap(env.step))
 

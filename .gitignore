@@ -1,3 +1,2 @@
-bridge_models/*
-dds_results/*
+data/*
 .env

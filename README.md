@@ -1,5 +1,5 @@
 ## Important files in directory:
-- **test_baseline_debug.py** --> entry point to framework, used to test NNs, baseline agent, and LLM
+- **run_bidding.py** --> entry point to framework, used to test NNs, baseline agent, and LLM
 - **baseline.py** --> logic for baseline if-else bidding agent
 - **llm.py** --> logic for the LLM bidding agent, including prompt generation and OpenAI API call
 - **agent_server.py** --> hosts the local server responsible for directing "make_bid" calls for both baseline and LLM agents
@@ -13,18 +13,18 @@
 - The execution now requires specifying the agents for Team 1 (NS) and Team 2 (EW). The --team1_agent and --team2_agent arguments accept either baseline or llm.
 - Local Mode (Agent logic runs directly in Python via JAX callback):
 - To run a Baseline Agent (T1) vs. LLM Agent (T2) without the FastAPI server:
-`python test_baseline_debug.py --team1_agent baseline --team2_agent llm`
+`python run_bidding.py --team1_agent baseline --team2_agent llm`
 
 ### Server Mode (Agent logic runs via HTTP requests to agent_server.py):
 
 - This is typically used for external agents (like the LLM) to ensure clean separation, but can be used for any agent type.
 - To run an LLM Agent (T1) vs. Baseline Agent (T2) using the server:
-`python test_baseline_debug.py --use_server --team1_agent llm --team2_agent baseline`
+`python run_bidding.py --use_server --team1_agent llm --team2_agent baseline`
 
 ## Most recent update:
 - added LLM Agent infrastructure (files llm.py and callback_llm.py).
 - updated agent_server.py to route requests based on agent type (baseline or llm).
-- updated test_baseline_debug.py to allow agent selection via --team1_agent and --team2_agent.
+- updated run_bidding.py to allow agent selection via --team1_agent and --team2_agent.
 - added batch function to split up calls to eval_env for large env numbers
 - tested llm against baseline and stored results in **/output_results**
 

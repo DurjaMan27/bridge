@@ -111,6 +111,7 @@ def main():
         threading.Thread(target=heartbeat, daemon=True).start()
 
         total_envs, batch_size = 80, 10
+        # 1024, 64
 
         args_for_eval = (
             team1_action,

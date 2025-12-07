@@ -32,5 +32,9 @@
 - test baseline against NN
 - test LLM against NN
 
+- enforce 2 games (switching sides and compare scores)
+- mutate the prompt to see if it improves score and win rate %
+- clean up directory
+
 ## Backlog:
 - improve baseline agent

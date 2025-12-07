@@ -2,8 +2,8 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import requests
-from baseline import BaselineAgent
-from progress_tracker import increment_bid_count
+from agents.baseline import BaselineAgent
+from utils.progress_tracker import increment_bid_count
 
 _session_pool = {}
 

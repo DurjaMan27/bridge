@@ -7,7 +7,7 @@ import numpy as np
 import os # Import os for environment check
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
-from progress_tracker import _bid_counter, reset_counter
+from utils.progress_tracker import _bid_counter, reset_counter
 # Import both callback types
 from src.callback_baseline import make_callback_baseline_agent
 from src.callback_llm import make_callback_llm_agent 

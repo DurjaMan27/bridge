@@ -2,8 +2,8 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import requests
-from llm import LLMAgent, llm_bid_from_arrays
-from progress_tracker import increment_bid_count # Assuming progress_tracker is available
+from agents.llm import LLMAgent, llm_bid_from_arrays
+from utils.progress_tracker import increment_bid_count # Assuming progress_tracker is available
 
 _session_pool = {}
 

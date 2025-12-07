@@ -7,7 +7,7 @@ import numpy as np
 import os # Import os for environment check
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
-from utils.progress_tracker import _bid_counter, reset_counter
+from src.utils.progress_tracker import _bid_counter, reset_counter
 # Import both callback types
 from src.callback_baseline import make_callback_baseline_agent
 from src.callback_llm import make_callback_llm_agent 
@@ -73,7 +73,7 @@ def main():
                 # Use 'python -m uvicorn' for better virtual environment compatibility
                 server_process = subprocess.Popen(
                     [
-                        "python", "-m", "uvicorn", "agent_server:app", 
+                        "python", "-m", "uvicorn", "src.server.agent_server:app", 
                         "--host", "127.0.0.1", 
                         "--port", server_port
                     ],

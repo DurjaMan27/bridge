@@ -2,8 +2,9 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import requests
-from agents.llm import LLMAgent, llm_bid_from_arrays
-from utils.progress_tracker import increment_bid_count # Assuming progress_tracker is available
+from src.agents.llm import LLMAgent, llm_bid_from_arrays
+from src.utils.state import AgentMockState
+from src.utils.progress_tracker import increment_bid_count # Assuming progress_tracker is available
 
 _session_pool = {}
 
@@ -22,29 +23,6 @@ def get_session(server_url: str):
         session.mount('https://', adapter)
         _session_pool[server_url] = session
     return _session_pool[server_url]
-
-class MockState:
-    """
-    A lightweight, Python-native object to hold the necessary state for the 
-    Python agent to make a bid, mirroring the JAX state structure.
-    """
-    def __init__(self, obs, curr_player, legal_mask, term, rew,
-                    last_b, last_bidder, call_x, call_xx,
-                    deal, shuffled, vul_ns, vul_ew, bidding_history):
-        self.observation = obs
-        self.current_player = curr_player
-        self.legal_action_mask = legal_mask
-        self.terminated = term
-        self.rewards = rew
-        self._last_bid = last_b
-        self._last_bidder = last_bidder
-        self._call_x = call_x
-        self._call_xx = call_xx
-        self._dealer = deal
-        self._shuffled_players = shuffled
-        self._vul_NS = vul_ns
-        self._vul_EW = vul_ew
-        self._bidding_history = bidding_history
 
 def llm_agent_callable(
     observation, current_player, legal_action_mask, terminated, rewards,
@@ -87,7 +65,7 @@ def llm_agent_callable(
         
     else:
         # LOCAL PATH: Call the LLM Agent directly
-        state = MockState(
+        state = AgentMockState(
             observation, current_player, legal_action_mask, terminated, rewards,
             last_bid, last_bidder, call_x, call_xx, dealer, shuffled_players,
             vul_NS, vul_EW, bidding_history

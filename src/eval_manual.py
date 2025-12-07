@@ -4,9 +4,9 @@ import jax.numpy as jnp
 import numpy as np
 import distrax
 import pickle
-from bidding_helpers.duplicate import duplicate_step, Table_info
-from bidding_helpers.models import make_forward_pass
-from bidding_helpers.utils import single_play_step_two_policy_commpetitive_deterministic
+from src.bidding_helpers.duplicate import duplicate_step, Table_info
+from src.bidding_helpers.models import make_forward_pass
+from src.bidding_helpers.utils import single_play_step_two_policy_commpetitive_deterministic
 from src.callback_baseline import make_callback_baseline_agent
 from src.callback_llm import make_callback_llm_agent
 import logging

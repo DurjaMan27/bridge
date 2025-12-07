@@ -28,7 +28,6 @@ class BridgeState(BaseModel):
     vul_NS: bool
     vul_EW: bool
     bidding_history: list[int]
-    # CRITICAL NEW FIELD: Determines which agent's logic to use
     agent_type: str = Field(..., description="Type of agent: 'baseline' or 'llm'")
 
 class ActionResponse(BaseModel):

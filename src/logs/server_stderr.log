@@ -1,8 +1,2648 @@
-INFO:     Started server process [5052]
+INFO:     Started server process [47161]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 15
+INFO:     Baseline Agent bid calculated: Action 20
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 20
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 35
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 18
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 29
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 20
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 19
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 18
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 29
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 12
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 20
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 36
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 1
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 9
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 35
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 13
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 29
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 20
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 23
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 23
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 18
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 10
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 12
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 28
+INFO:     Baseline Agent bid calculated: Action 36
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 9
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 7
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 29
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 18
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 11
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 11
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 35
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 10
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 19
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 24
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 18
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 14
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 13
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 28
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 35
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 35
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 15
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 36
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 24
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 7
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 33
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 35
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 3
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 28
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 20
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 28
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 18
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 28
+INFO:     Baseline Agent bid calculated: Action 6
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 9
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 9
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 23
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 21
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 7
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 24
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 1
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 34
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 5
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 14
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 17
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
+ERROR:    Error in make_bid for agent type llm: __init__() should return None, not 'tuple'
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [5052]
+INFO:     Finished server process [47161]

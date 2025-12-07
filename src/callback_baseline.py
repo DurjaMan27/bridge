@@ -2,8 +2,9 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import requests
-from agents.baseline import BaselineAgent
-from utils.progress_tracker import increment_bid_count
+from src.agents.baseline import BaselineAgent
+from src.utils.state import AgentMockState
+from src.utils.progress_tracker import increment_bid_count
 
 _session_pool = {}
 
@@ -59,7 +60,7 @@ def baseline_bid_from_arrays(
 ):
     agent = BaselineAgent()
 
-    mock_state = MockState(
+    mock_state = AgentMockState(
         observation, current_player, legal_action_mask, terminated, rewards,
         last_bid, last_bidder, call_x, call_xx, dealer, shuffled_players,
         vul_NS, vul_EW, bidding_history

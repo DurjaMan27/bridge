@@ -1,4 +1,4 @@
-INFO:     Started server process [16583]
+INFO:     Started server process [22585]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
@@ -6325,4 +6325,4 @@ INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [16583]
+INFO:     Finished server process [22585]

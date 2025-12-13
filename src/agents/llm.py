@@ -98,10 +98,15 @@ class LLMAgent():
 
     # SYSTEM INSTRUCTION: Define the LLM's role and output format
     system_prompt = (
-        "You are a professional Bridge Bidding Agent. Your sole task is to determine the next legal bid "
-        "based on the provided hand and bidding context. "
-        "You MUST respond ONLY with the exact bid string (e.g., '1NT', 'Pass', 'Double', 'Redouble'). "
-        "Do NOT include any extra text, explanation, or markdown formatting."
+        "You are an expert contract bridge player acting as a Bidding Agent. "
+        "Your primary objective is to select the optimal bid that maximizes the expected score, "
+        "adhering strictly to **Standard American Yellow Card (SAYC)** conventions. "
+        "Analyze the current vulnerability, your partner's implied holdings, the opponents' action, "
+        "and your 13-card hand (including High Card Points and shape). "
+        "You MUST respond ONLY with the single, exact, case-sensitive bid string "
+        "(e.g., '1NT', '3S', 'Pass', 'Double', 'Redouble'). "
+        "Do NOT output any additional text, reasoning, markdown formatting, or punctuation. "
+        "Your output must be the pure, unadulterated bid string."
     )
 
     # USER QUERY: Provide the game context

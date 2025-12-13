@@ -36,7 +36,6 @@ def get_agent_callback(agent_type, server_url):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_server", action="store_true", help="Start agent_server and route bids via HTTP")
-    # --- FIX: Changed default port to 8001 to avoid potential conflicts ---
     parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL (must match uvicorn host/port)")
     
     # Arguments for agent selection
@@ -161,13 +160,58 @@ def main():
         final_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2)) / len(all_stderrs)
         final_winrate = np.average(all_winrate)
 
+        reverse_imps = []
+        reverse_stderrs = []
+        reverse_winrate = []
+
+        # ... (Batch processing loop remains the same)
+        for batch_start in range(0, total_envs, batch_size):
+            batch_end = min(batch_start + batch_size, total_envs)
+
+            batch_rng = jax.random.PRNGKey(batch_start + 12345)
+            print(f"Processing envs {batch_start}-{batch_end}")
+
+            duplicate_evaluate = make_simple_duplicate_evaluate(
+                eval_env,
+                team1_activation=args_for_eval[2],
+                team1_model_type=args_for_eval[3],
+                team2_activation=args_for_eval[0],
+                team2_model_type=args_for_eval[1],
+                num_eval_envs = batch_end - batch_start,
+                team1_server_url=args_for_eval[5],
+                team2_server_url=args_for_eval[4]
+            )
+
+            # JIT compilation occurs here
+            duplicate_evaluate = jax.jit(duplicate_evaluate)
+
+            reverse_log, reverse_tablea_info, reverse_tableb_info = duplicate_evaluate(
+                team1_params=None,
+                team2_params=None,
+                rng_key=batch_rng,
+            )
+
+            reverse_imps.append(float(reverse_log[0]))
+            reverse_stderrs.append(float(reverse_log[1]))
+            reverse_winrate.append(float(reverse_log[2]))
+
+        reverse_final_imp = np.average(reverse_imps)
+        reverse_final_stderr = np.sqrt(np.sum(np.array(reverse_stderrs)**2)) / len(reverse_stderrs)
+        reverse_final_winrate = np.average(reverse_winrate)
+
         print("-" * 50)
         print(f"Total bids processed: {_bid_counter['count']}")
         print(f"Final IMP: {final_imp:.2f} (StdErr: {final_stderr:.2f})")
         print(f"Final Win Rate (T1 vs T2): {final_winrate*100:.2f}%")
+        print("-" * 25)
+        print(f"Final IMP REVERSED: {reverse_final_imp:.2f} (StdErr: {reverse_final_stderr:.2f})")
+        print(f"Final Win Rate (T2 vs T1 - REVERSED): {reverse_final_winrate*100:.2f}%")
         print("-" * 50)
         print(tablea_info)
         print(tableb_info)
+        print("-" * 50)
+        print(reverse_tablea_info)
+        print(reverse_tableb_info)
         print("-" * 50)
 
     finally:

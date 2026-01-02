@@ -22,19 +22,11 @@
 `python run_bidding.py --use_server --team1_agent llm --team2_agent baseline`
 
 ## Most recent update:
-- added LLM Agent infrastructure (files llm.py and callback_llm.py).
-- updated agent_server.py to route requests based on agent type (baseline or llm).
-- updated run_bidding.py to allow agent selection via --team1_agent and --team2_agent.
-- added batch function to split up calls to eval_env for large env numbers
 - tested llm against baseline and stored results in **/output_results**
+- tested baseline against itself and stored results in **/output_results**
+- updated and improved logic of baseline agent, much more predictable decisions
+- created a more detailed prompt for LLM to perform better
 
 ## To-Do:
 - test baseline against NN
 - test LLM against NN
-
-- enforce 2 games (switching sides and compare scores) - JUST FINISHED?
-- mutate the prompt to see if it improves score and win rate %
-- clean up directory - JUST FINISHED
-
-## Backlog:
-- improve baseline agent

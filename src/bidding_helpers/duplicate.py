@@ -203,19 +203,35 @@ def duplicate_step(step_fn):
         # CHECKING FOR DUPLICATE COMPARISON BEFORE RESETTING STATE
         duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated
 
+        # next_state = jax.lax.cond(
+        #     table_a_info.terminated & state.terminated & ~table_b_info.terminated,
+        #     lambda: state.replace(  # type: ignore
+        #         rewards=_imp_reward(table_a_info.rewards, state.rewards)
+        #     ),
+        #     # lambda: next_state.replace(rewards=jnp.zeros(4, dtype=jnp.float32)),
+        #     lambda: state,
+        # )
+
+        # next_state = jax.lax.cond(
+        #     ~table_a_info.terminated & state.terminated,
+        #     lambda: duplicate_init(state),
+        #     lambda: state,
+        # )
+
         next_state = jax.lax.cond(
             table_a_info.terminated & state.terminated & ~table_b_info.terminated,
-            lambda: state.replace(  # type: ignore
+            lambda: state.replace(
                 rewards=_imp_reward(table_a_info.rewards, state.rewards)
             ),
-            # lambda: next_state.replace(rewards=jnp.zeros(4, dtype=jnp.float32)),
             lambda: state,
         )
 
+        # 2. Switch to Table B if Table A just finished
+        # IMPORTANT: Use 'next_state' in the else branch to preserve IMPs if calculated above
         next_state = jax.lax.cond(
             ~table_a_info.terminated & state.terminated,
             lambda: duplicate_init(state),
-            lambda: state,
+            lambda: next_state, # <--- FIX: Use next_state here
         )
 
         table_b_info = jax.lax.cond(

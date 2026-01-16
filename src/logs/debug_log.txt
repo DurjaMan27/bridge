@@ -9989,3 +9989,524 @@
 2026-01-15 23:20:44,931 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
 2026-01-15 23:20:44,937 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
 2026-01-15 23:20:45,433 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:20:23,553 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.00025272369384765625 sec
+2026-01-16 12:20:23,554 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:20:23,556 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.0019769668579101562 sec
+2026-01-16 12:20:23,556 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:20:23,556 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:20:23,574 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.017667770385742188 sec
+2026-01-16 12:20:30,598 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0008480548858642578 sec
+2026-01-16 12:20:30,600 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.004941225051879883 sec
+2026-01-16 12:20:30,601 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:20:30,610 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.008244991302490234 sec
+2026-01-16 12:20:30,611 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:20:30,611 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:20:30,629 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.01791691780090332 sec
+2026-01-16 12:20:30,634 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0009920597076416016 sec
+2026-01-16 12:20:30,636 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0008399486541748047 sec
+2026-01-16 12:20:30,636 [DEBUG] Finished tracing + transforming clip for pjit in 0.002839803695678711 sec
+2026-01-16 12:20:30,639 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.002190113067626953 sec
+2026-01-16 12:20:30,640 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005681514739990234 sec
+2026-01-16 12:20:30,640 [DEBUG] Finished tracing + transforming clip for pjit in 0.003571033477783203 sec
+2026-01-16 12:20:30,641 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002129077911376953 sec
+2026-01-16 12:20:30,642 [DEBUG] Finished tracing + transforming fn for pjit in 0.0005156993865966797 sec
+2026-01-16 12:20:30,643 [DEBUG] Finished tracing + transforming fn for pjit in 0.00021886825561523438 sec
+2026-01-16 12:20:30,643 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000202178955078125 sec
+2026-01-16 12:20:30,644 [DEBUG] Finished tracing + transforming _randint for pjit in 0.011277914047241211 sec
+2026-01-16 12:20:30,647 [DEBUG] Finished tracing + transforming fn for pjit in 0.00023818016052246094 sec
+2026-01-16 12:20:30,648 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002181529998779297 sec
+2026-01-16 12:20:30,648 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00014495849609375 sec
+2026-01-16 12:20:30,649 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005269050598144531 sec
+2026-01-16 12:20:30,649 [DEBUG] Finished tracing + transforming _take for pjit in 0.0023610591888427734 sec
+2026-01-16 12:20:30,652 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00021195411682128906 sec
+2026-01-16 12:20:30,653 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002989768981933594 sec
+2026-01-16 12:20:30,655 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00012612342834472656 sec
+2026-01-16 12:20:30,655 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017690658569335938 sec
+2026-01-16 12:20:30,656 [DEBUG] Finished tracing + transforming fn for pjit in 0.0004410743713378906 sec
+2026-01-16 12:20:30,657 [DEBUG] Finished tracing + transforming fn for pjit in 0.00040078163146972656 sec
+2026-01-16 12:20:30,658 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002529621124267578 sec
+2026-01-16 12:20:30,660 [DEBUG] Finished tracing + transforming _squeeze for pjit in 8.082389831542969e-05 sec
+2026-01-16 12:20:30,676 [DEBUG] Finished tracing + transforming _take for pjit in 0.0007560253143310547 sec
+2026-01-16 12:20:30,678 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015687942504882812 sec
+2026-01-16 12:20:30,679 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015211105346679688 sec
+2026-01-16 12:20:30,679 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001480579376220703 sec
+2026-01-16 12:20:30,679 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001399517059326172 sec
+2026-01-16 12:20:30,680 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0029418468475341797 sec
+2026-01-16 12:20:30,683 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.0002880096435546875 sec
+2026-01-16 12:20:30,690 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013780593872070312 sec
+2026-01-16 12:20:30,691 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.91278076171875e-05 sec
+2026-01-16 12:20:30,691 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002028942108154297 sec
+2026-01-16 12:20:30,692 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014019012451171875 sec
+2026-01-16 12:20:30,692 [DEBUG] Finished tracing + transforming ravel for pjit in 7.390975952148438e-05 sec
+2026-01-16 12:20:30,693 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002810955047607422 sec
+2026-01-16 12:20:30,697 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017213821411132812 sec
+2026-01-16 12:20:30,698 [DEBUG] Finished tracing + transforming <lambda> for pjit in 9.608268737792969e-05 sec
+2026-01-16 12:20:30,702 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015211105346679688 sec
+2026-01-16 12:20:30,704 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003361701965332031 sec
+2026-01-16 12:20:30,705 [DEBUG] Finished tracing + transforming op for pjit in 0.0003199577331542969 sec
+2026-01-16 12:20:30,705 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00033092498779296875 sec
+2026-01-16 12:20:30,705 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0020241737365722656 sec
+2026-01-16 12:20:30,707 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006532669067382812 sec
+2026-01-16 12:20:30,716 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021314620971679688 sec
+2026-01-16 12:20:30,716 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015091896057128906 sec
+2026-01-16 12:20:30,717 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014781951904296875 sec
+2026-01-16 12:20:30,718 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019097328186035156 sec
+2026-01-16 12:20:30,719 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013709068298339844 sec
+2026-01-16 12:20:30,750 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0003190040588378906 sec
+2026-01-16 12:20:30,767 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001628398895263672 sec
+2026-01-16 12:20:30,768 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015783309936523438 sec
+2026-01-16 12:20:30,768 [DEBUG] Finished tracing + transforming op for pjit in 0.00013589859008789062 sec
+2026-01-16 12:20:30,768 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015306472778320312 sec
+2026-01-16 12:20:30,769 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001049041748046875 sec
+2026-01-16 12:20:30,769 [DEBUG] Finished tracing + transforming _where for pjit in 0.00036215782165527344 sec
+2026-01-16 12:20:30,769 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0020940303802490234 sec
+2026-01-16 12:20:30,770 [DEBUG] Finished tracing + transforming fn for pjit in 0.00020503997802734375 sec
+2026-01-16 12:20:30,770 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.698204040527344e-05 sec
+2026-01-16 12:20:30,770 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.507469177246094e-05 sec
+2026-01-16 12:20:30,771 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0003552436828613281 sec
+2026-01-16 12:20:30,771 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006909370422363281 sec
+2026-01-16 12:20:30,772 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00022792816162109375 sec
+2026-01-16 12:20:30,772 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006437301635742188 sec
+2026-01-16 12:20:30,773 [DEBUG] Finished tracing + transforming _power for pjit in 0.002866983413696289 sec
+2026-01-16 12:20:30,775 [DEBUG] Finished tracing + transforming fn for pjit in 0.00025391578674316406 sec
+2026-01-16 12:20:30,775 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00017595291137695312 sec
+2026-01-16 12:20:30,775 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001919269561767578 sec
+2026-01-16 12:20:30,776 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0001590251922607422 sec
+2026-01-16 12:20:30,776 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002570152282714844 sec
+2026-01-16 12:20:30,777 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006086826324462891 sec
+2026-01-16 12:20:30,777 [DEBUG] Finished tracing + transforming ravel for pjit in 6.794929504394531e-05 sec
+2026-01-16 12:20:30,777 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002582073211669922 sec
+2026-01-16 12:20:30,778 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00013017654418945312 sec
+2026-01-16 12:20:30,779 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020933151245117188 sec
+2026-01-16 12:20:30,779 [DEBUG] Finished tracing + transforming ravel for pjit in 9.393692016601562e-05 sec
+2026-01-16 12:20:30,787 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021076202392578125 sec
+2026-01-16 12:20:30,788 [DEBUG] Finished tracing + transforming fn for pjit in 0.00019598007202148438 sec
+2026-01-16 12:20:30,788 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001442432403564453 sec
+2026-01-16 12:20:30,791 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014591217041015625 sec
+2026-01-16 12:20:30,793 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017309188842773438 sec
+2026-01-16 12:20:30,794 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001590251922607422 sec
+2026-01-16 12:20:30,801 [DEBUG] Finished tracing + transforming absolute for pjit in 9.083747863769531e-05 sec
+2026-01-16 12:20:30,803 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.392333984375e-05 sec
+2026-01-16 12:20:30,803 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00016069412231445312 sec
+2026-01-16 12:20:30,803 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005710124969482422 sec
+2026-01-16 12:20:30,807 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016999244689941406 sec
+2026-01-16 12:20:30,807 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00022101402282714844 sec
+2026-01-16 12:20:30,810 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001437664031982422 sec
+2026-01-16 12:20:30,813 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019478797912597656 sec
+2026-01-16 12:20:30,841 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017714500427246094 sec
+2026-01-16 12:20:30,848 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015878677368164062 sec
+2026-01-16 12:20:30,848 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00013303756713867188 sec
+2026-01-16 12:20:30,849 [DEBUG] Finished tracing + transforming _where for pjit in 0.0004379749298095703 sec
+2026-01-16 12:20:31,408 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017189979553222656 sec
+2026-01-16 12:20:31,409 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001678466796875 sec
+2026-01-16 12:20:31,409 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.817413330078125e-05 sec
+2026-01-16 12:21:44,112 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.00025177001953125 sec
+2026-01-16 12:21:44,113 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:21:44,115 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.001981019973754883 sec
+2026-01-16 12:21:44,115 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:21:44,115 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:21:44,131 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.016179800033569336 sec
+2026-01-16 12:21:51,150 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0008220672607421875 sec
+2026-01-16 12:21:51,151 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.004297018051147461 sec
+2026-01-16 12:21:51,152 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:21:51,156 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.003439188003540039 sec
+2026-01-16 12:21:51,156 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:21:51,156 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:21:51,169 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.012941837310791016 sec
+2026-01-16 12:21:51,173 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005168914794921875 sec
+2026-01-16 12:21:51,174 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00043392181396484375 sec
+2026-01-16 12:21:51,174 [DEBUG] Finished tracing + transforming clip for pjit in 0.0016131401062011719 sec
+2026-01-16 12:21:51,176 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0007219314575195312 sec
+2026-01-16 12:21:51,177 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0006830692291259766 sec
+2026-01-16 12:21:51,177 [DEBUG] Finished tracing + transforming clip for pjit in 0.002311229705810547 sec
+2026-01-16 12:21:51,178 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002880096435546875 sec
+2026-01-16 12:21:51,179 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003159046173095703 sec
+2026-01-16 12:21:51,180 [DEBUG] Finished tracing + transforming fn for pjit in 0.00029587745666503906 sec
+2026-01-16 12:21:51,181 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00026607513427734375 sec
+2026-01-16 12:21:51,182 [DEBUG] Finished tracing + transforming _randint for pjit in 0.00930476188659668 sec
+2026-01-16 12:21:51,186 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002942085266113281 sec
+2026-01-16 12:21:51,187 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002760887145996094 sec
+2026-01-16 12:21:51,187 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001811981201171875 sec
+2026-01-16 12:21:51,188 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006668567657470703 sec
+2026-01-16 12:21:51,188 [DEBUG] Finished tracing + transforming _take for pjit in 0.0029582977294921875 sec
+2026-01-16 12:21:51,191 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00025963783264160156 sec
+2026-01-16 12:21:51,193 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003788471221923828 sec
+2026-01-16 12:21:51,195 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00016999244689941406 sec
+2026-01-16 12:21:51,196 [DEBUG] Finished tracing + transforming fn for pjit in 0.00026106834411621094 sec
+2026-01-16 12:21:51,198 [DEBUG] Finished tracing + transforming fn for pjit in 0.0005369186401367188 sec
+2026-01-16 12:21:51,199 [DEBUG] Finished tracing + transforming fn for pjit in 0.00044608116149902344 sec
+2026-01-16 12:21:51,200 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000308990478515625 sec
+2026-01-16 12:21:51,202 [DEBUG] Finished tracing + transforming _squeeze for pjit in 8.702278137207031e-05 sec
+2026-01-16 12:21:51,219 [DEBUG] Finished tracing + transforming _take for pjit in 0.0008769035339355469 sec
+2026-01-16 12:21:51,222 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016689300537109375 sec
+2026-01-16 12:21:51,223 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017309188842773438 sec
+2026-01-16 12:21:51,223 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001621246337890625 sec
+2026-01-16 12:21:51,223 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014901161193847656 sec
+2026-01-16 12:21:51,224 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0031528472900390625 sec
+2026-01-16 12:21:51,228 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.00033092498779296875 sec
+2026-01-16 12:21:51,235 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001480579376220703 sec
+2026-01-16 12:21:51,236 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.4849853515625e-05 sec
+2026-01-16 12:21:51,237 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00022459030151367188 sec
+2026-01-16 12:21:51,237 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001499652862548828 sec
+2026-01-16 12:21:51,238 [DEBUG] Finished tracing + transforming ravel for pjit in 8.0108642578125e-05 sec
+2026-01-16 12:21:51,238 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.000308990478515625 sec
+2026-01-16 12:21:51,242 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001327991485595703 sec
+2026-01-16 12:21:51,243 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.702278137207031e-05 sec
+2026-01-16 12:21:51,247 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003058910369873047 sec
+2026-01-16 12:21:51,249 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00036215782165527344 sec
+2026-01-16 12:21:51,250 [DEBUG] Finished tracing + transforming op for pjit in 0.0003478527069091797 sec
+2026-01-16 12:21:51,251 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003409385681152344 sec
+2026-01-16 12:21:51,251 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0021545886993408203 sec
+2026-01-16 12:21:51,252 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006682872772216797 sec
+2026-01-16 12:21:51,261 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021386146545410156 sec
+2026-01-16 12:21:51,262 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015306472778320312 sec
+2026-01-16 12:21:51,263 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001571178436279297 sec
+2026-01-16 12:21:51,264 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019097328186035156 sec
+2026-01-16 12:21:51,265 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014209747314453125 sec
+2026-01-16 12:21:51,299 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0007011890411376953 sec
+2026-01-16 12:21:51,323 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0021958351135253906 sec
+2026-01-16 12:21:51,323 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001819133758544922 sec
+2026-01-16 12:21:51,326 [DEBUG] Finished tracing + transforming op for pjit in 0.0005681514739990234 sec
+2026-01-16 12:21:51,331 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000881195068359375 sec
+2026-01-16 12:21:51,333 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0008149147033691406 sec
+2026-01-16 12:21:51,333 [DEBUG] Finished tracing + transforming _where for pjit in 0.0012402534484863281 sec
+2026-01-16 12:21:51,334 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.014775991439819336 sec
+2026-01-16 12:21:51,338 [DEBUG] Finished tracing + transforming fn for pjit in 0.00031113624572753906 sec
+2026-01-16 12:21:51,339 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 7.510185241699219e-05 sec
+2026-01-16 12:21:51,339 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.866455078125e-05 sec
+2026-01-16 12:21:51,340 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00042700767517089844 sec
+2026-01-16 12:21:51,341 [DEBUG] Finished tracing + transforming _where for pjit in 0.0008461475372314453 sec
+2026-01-16 12:21:51,342 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002529621124267578 sec
+2026-01-16 12:21:51,342 [DEBUG] Finished tracing + transforming _where for pjit in 0.0012972354888916016 sec
+2026-01-16 12:21:51,349 [DEBUG] Finished tracing + transforming _power for pjit in 0.009398937225341797 sec
+2026-01-16 12:21:51,356 [DEBUG] Finished tracing + transforming fn for pjit in 0.0021359920501708984 sec
+2026-01-16 12:21:51,359 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0003261566162109375 sec
+2026-01-16 12:21:51,359 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00026702880859375 sec
+2026-01-16 12:21:51,360 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0002040863037109375 sec
+2026-01-16 12:21:51,360 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00030803680419921875 sec
+2026-01-16 12:21:51,361 [DEBUG] Finished tracing + transforming _where for pjit in 0.0007321834564208984 sec
+2026-01-16 12:21:51,361 [DEBUG] Finished tracing + transforming ravel for pjit in 7.987022399902344e-05 sec
+2026-01-16 12:21:51,361 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0003082752227783203 sec
+2026-01-16 12:21:51,363 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.0001857280731201172 sec
+2026-01-16 12:21:51,364 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002548694610595703 sec
+2026-01-16 12:21:51,365 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00011110305786132812 sec
+2026-01-16 12:21:51,381 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002551078796386719 sec
+2026-01-16 12:21:51,382 [DEBUG] Finished tracing + transforming fn for pjit in 0.00023794174194335938 sec
+2026-01-16 12:21:51,382 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001659393310546875 sec
+2026-01-16 12:21:51,385 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001678466796875 sec
+2026-01-16 12:21:51,388 [DEBUG] Finished tracing + transforming fn for pjit in 0.00018787384033203125 sec
+2026-01-16 12:21:51,388 [DEBUG] Finished tracing + transforming fn for pjit in 0.000164031982421875 sec
+2026-01-16 12:21:51,395 [DEBUG] Finished tracing + transforming absolute for pjit in 8.96453857421875e-05 sec
+2026-01-16 12:21:51,397 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.511543273925781e-05 sec
+2026-01-16 12:21:51,398 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00016379356384277344 sec
+2026-01-16 12:21:51,398 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005838871002197266 sec
+2026-01-16 12:21:51,401 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017595291137695312 sec
+2026-01-16 12:21:51,402 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00022721290588378906 sec
+2026-01-16 12:21:51,405 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001571178436279297 sec
+2026-01-16 12:21:51,407 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019478797912597656 sec
+2026-01-16 12:21:51,437 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017905235290527344 sec
+2026-01-16 12:21:51,444 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015807151794433594 sec
+2026-01-16 12:21:51,445 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00013589859008789062 sec
+2026-01-16 12:21:51,445 [DEBUG] Finished tracing + transforming _where for pjit in 0.0004420280456542969 sec
+2026-01-16 12:21:51,997 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017118453979492188 sec
+2026-01-16 12:21:51,998 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016260147094726562 sec
+2026-01-16 12:21:51,998 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.91278076171875e-05 sec
+2026-01-16 12:21:52,072 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013709068298339844 sec
+2026-01-16 12:21:52,072 [DEBUG] Finished tracing + transforming absolute for pjit in 8.702278137207031e-05 sec
+2026-01-16 12:21:52,072 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002079010009765625 sec
+2026-01-16 12:21:52,077 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002110004425048828 sec
+2026-01-16 12:21:52,077 [DEBUG] Finished tracing + transforming _where for pjit in 0.0007166862487792969 sec
+2026-01-16 12:21:52,078 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00013518333435058594 sec
+2026-01-16 12:21:52,078 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005311965942382812 sec
+2026-01-16 12:21:52,080 [DEBUG] Finished tracing + transforming sign for pjit in 7.915496826171875e-05 sec
+2026-01-16 12:21:52,080 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
+2026-01-16 12:21:52,095 [DEBUG] Finished tracing + transforming fn for pjit in 0.001332998275756836 sec
+2026-01-16 12:21:52,095 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 6.103515625e-05 sec
+2026-01-16 12:21:52,190 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001049041748046875 sec
+2026-01-16 12:21:52,191 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013494491577148438 sec
+2026-01-16 12:21:52,192 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001289844512939453 sec
+2026-01-16 12:21:52,192 [DEBUG] Finished tracing + transforming _where for pjit in 0.00044798851013183594 sec
+2026-01-16 12:21:52,193 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001289844512939453 sec
+2026-01-16 12:21:52,221 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0002319812774658203 sec
+2026-01-16 12:21:52,225 [DEBUG] Finished tracing + transforming _mean for pjit in 0.004614830017089844 sec
+2026-01-16 12:21:52,229 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.003864765167236328 sec
+2026-01-16 12:21:52,230 [DEBUG] Finished tracing + transforming _var for pjit in 0.00922703742980957 sec
+2026-01-16 12:21:52,230 [DEBUG] Finished tracing + transforming _std for pjit in 0.009521961212158203 sec
+2026-01-16 12:21:52,230 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013375282287597656 sec
+2026-01-16 12:21:52,230 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.00016498565673828125 sec
+2026-01-16 12:21:52,231 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002009868621826172 sec
+2026-01-16 12:21:52,231 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00021696090698242188 sec
+2026-01-16 12:21:52,232 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.00018906593322753906 sec
+2026-01-16 12:21:52,232 [DEBUG] Finished tracing + transforming _mean for pjit in 0.0003790855407714844 sec
+2026-01-16 12:21:52,234 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 1.0636160373687744 sec
+2026-01-16 12:21:52,245 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:21:52,250 [DEBUG] Finished tracing + transforming ravel for pjit in 7.605552673339844e-05 sec
+2026-01-16 12:21:52,250 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0006082057952880859 sec
+2026-01-16 12:21:52,251 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.0011708736419677734 sec
+2026-01-16 12:21:52,251 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.0016570091247558594 sec
+2026-01-16 12:21:52,252 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017118453979492188 sec
+2026-01-16 12:21:52,253 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
+2026-01-16 12:21:52,253 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013494491577148438 sec
+2026-01-16 12:21:52,254 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019598007202148438 sec
+2026-01-16 12:21:52,254 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001239776611328125 sec
+2026-01-16 12:21:52,255 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001251697540283203 sec
+2026-01-16 12:21:52,269 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017690658569335938 sec
+2026-01-16 12:21:52,269 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016689300537109375 sec
+2026-01-16 12:21:52,269 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002288818359375 sec
+2026-01-16 12:21:52,270 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012683868408203125 sec
+2026-01-16 12:21:52,271 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012493133544921875 sec
+2026-01-16 12:21:52,271 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012087821960449219 sec
+2026-01-16 12:21:52,274 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001246929168701172 sec
+2026-01-16 12:21:52,274 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001220703125 sec
+2026-01-16 12:21:52,283 [DEBUG] Finished tracing + transforming ravel for pjit in 6.67572021484375e-05 sec
+2026-01-16 12:21:52,284 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0011241436004638672 sec
+2026-01-16 12:21:52,285 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.002032041549682617 sec
+2026-01-16 12:21:52,287 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015687942504882812 sec
+2026-01-16 12:21:52,288 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013208389282226562 sec
+2026-01-16 12:21:52,289 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012302398681640625 sec
+2026-01-16 12:21:52,292 [DEBUG] Finished tracing + transforming fn for pjit in 0.000164031982421875 sec
+2026-01-16 12:21:52,308 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002760887145996094 sec
+2026-01-16 12:21:52,309 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.793571472167969e-05 sec
+2026-01-16 12:21:52,313 [DEBUG] Finished tracing + transforming ravel for pjit in 6.580352783203125e-05 sec
+2026-01-16 12:21:52,313 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0005328655242919922 sec
+2026-01-16 12:21:52,314 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.001119852066040039 sec
+2026-01-16 12:21:52,314 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.0015528202056884766 sec
+2026-01-16 12:21:52,316 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016880035400390625 sec
+2026-01-16 12:21:52,317 [DEBUG] Finished tracing + transforming fn for pjit in 0.000125885009765625 sec
+2026-01-16 12:21:52,318 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012421607971191406 sec
+2026-01-16 12:21:52,318 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00011992454528808594 sec
+2026-01-16 12:21:52,320 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001239776611328125 sec
+2026-01-16 12:21:52,321 [DEBUG] Finished tracing + transforming fn for pjit in 0.00011897087097167969 sec
+2026-01-16 12:21:52,340 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0007920265197753906 sec
+2026-01-16 12:21:52,412 [DEBUG] Finished tracing + transforming ravel for pjit in 6.890296936035156e-05 sec
+2026-01-16 12:21:52,412 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0006132125854492188 sec
+2026-01-16 12:21:52,413 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0014891624450683594 sec
+2026-01-16 12:21:52,654 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.4088470935821533 sec
+2026-01-16 12:21:52,654 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:21:52,655 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:21:54,550 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 1.8952031135559082 sec
+2026-01-16 12:21:54,551 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2026-01-16 12:21:54,559 [DEBUG] Starting new HTTP connection (1): localhost:8001
+2026-01-16 12:21:54,757 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:54,760 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:54,760 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2026-01-16 12:21:54,761 [DEBUG] Starting new HTTP connection (1): localhost:8001
+2026-01-16 12:21:56,326 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:57,546 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:57,556 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:57,562 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:21:58,261 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:59,591 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:59,599 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:21:59,605 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:01,295 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:01,942 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:01,953 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:01,959 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:02,642 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:03,374 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:03,384 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:03,391 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:04,908 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:05,624 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:05,634 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:05,640 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:06,749 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:07,362 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:07,371 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:07,377 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:07,976 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:08,690 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:08,699 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:08,705 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:09,306 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:09,827 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:09,834 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:09,838 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:10,534 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:11,135 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:11,143 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:11,149 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:13,110 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:13,858 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:13,864 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.0008978843688964844 sec
+2026-01-16 12:22:13,866 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(bool[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
+2026-01-16 12:22:13,879 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.011807918548583984 sec
+2026-01-16 12:22:13,884 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:13,885 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:13,905 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.0196230411529541 sec
+2026-01-16 12:22:13,907 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.0006060600280761719 sec
+2026-01-16 12:22:13,907 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(bool[1])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:22:13,909 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.0014910697937011719 sec
+2026-01-16 12:22:13,909 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:13,910 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:13,918 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.008062124252319336 sec
+2026-01-16 12:22:13,922 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.0005271434783935547 sec
+2026-01-16 12:22:13,923 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(int32[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
+2026-01-16 12:22:13,926 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.0023097991943359375 sec
+2026-01-16 12:22:13,927 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:13,927 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:13,935 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.00770878791809082 sec
+2026-01-16 12:22:13,936 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.0001518726348876953 sec
+2026-01-16 12:22:13,936 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(int32[1])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:22:13,938 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.0011141300201416016 sec
+2026-01-16 12:22:13,938 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:13,938 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:13,949 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.010920047760009766 sec
+2026-01-16 12:22:14,789 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.8335397243499756 sec
+2026-01-16 12:22:14,798 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:22:15,110 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.311877965927124 sec
+2026-01-16 12:22:15,111 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:15,111 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:17,029 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 1.9177789688110352 sec
+2026-01-16 12:22:17,031 [DEBUG] Resetting dropped connection: localhost
+2026-01-16 12:22:17,035 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:17,037 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:19,755 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:21,243 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:21,252 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:21,258 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:21,899 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:22,505 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:22,512 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:22,519 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:23,839 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:24,467 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:24,474 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:24,479 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:25,271 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:25,886 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:25,895 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:25,901 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:26,499 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:27,116 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:27,125 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:27,131 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:27,641 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:28,138 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:28,147 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:28,153 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:30,702 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:31,407 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:31,411 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:31,414 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:32,228 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:32,828 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:32,835 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:32,840 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:33,359 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:33,973 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:33,982 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:33,987 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-01-16 12:22:35,074 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-01-16 12:22:43,923 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.00024390220642089844 sec
+2026-01-16 12:22:43,924 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:22:43,925 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.0011568069458007812 sec
+2026-01-16 12:22:43,925 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:43,925 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:43,936 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.01053309440612793 sec
+2026-01-16 12:22:50,957 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0007839202880859375 sec
+2026-01-16 12:22:50,958 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.004685163497924805 sec
+2026-01-16 12:22:50,960 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-01-16 12:22:50,964 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.00468897819519043 sec
+2026-01-16 12:22:50,966 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-01-16 12:22:50,967 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-01-16 12:22:50,979 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.012539148330688477 sec
+2026-01-16 12:22:50,985 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0010721683502197266 sec
+2026-01-16 12:22:50,987 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0017480850219726562 sec
+2026-01-16 12:22:50,987 [DEBUG] Finished tracing + transforming clip for pjit in 0.0037398338317871094 sec
+2026-01-16 12:22:50,988 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0007138252258300781 sec
+2026-01-16 12:22:50,989 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00045180320739746094 sec
+2026-01-16 12:22:50,989 [DEBUG] Finished tracing + transforming clip for pjit in 0.0018661022186279297 sec
+2026-01-16 12:22:50,990 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001609325408935547 sec
+2026-01-16 12:22:50,991 [DEBUG] Finished tracing + transforming fn for pjit in 0.00020813941955566406 sec
+2026-01-16 12:22:50,991 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013709068298339844 sec
+2026-01-16 12:22:50,991 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014090538024902344 sec
+2026-01-16 12:22:50,992 [DEBUG] Finished tracing + transforming _randint for pjit in 0.009156942367553711 sec
+2026-01-16 12:22:50,996 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003509521484375 sec
+2026-01-16 12:22:50,996 [DEBUG] Finished tracing + transforming fn for pjit in 0.00027680397033691406 sec
+2026-01-16 12:22:50,997 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00017595291137695312 sec
+2026-01-16 12:22:50,997 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006377696990966797 sec
+2026-01-16 12:22:50,998 [DEBUG] Finished tracing + transforming _take for pjit in 0.0030357837677001953 sec
+2026-01-16 12:22:51,001 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00023603439331054688 sec
+2026-01-16 12:22:51,003 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00033926963806152344 sec
+2026-01-16 12:22:51,004 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00013518333435058594 sec
+2026-01-16 12:22:51,005 [DEBUG] Finished tracing + transforming fn for pjit in 0.00019311904907226562 sec
+2026-01-16 12:22:51,006 [DEBUG] Finished tracing + transforming fn for pjit in 0.00046825408935546875 sec
+2026-01-16 12:22:51,007 [DEBUG] Finished tracing + transforming fn for pjit in 0.0004181861877441406 sec
+2026-01-16 12:22:51,007 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002779960632324219 sec
+2026-01-16 12:22:51,009 [DEBUG] Finished tracing + transforming _squeeze for pjit in 9.703636169433594e-05 sec
+2026-01-16 12:22:51,030 [DEBUG] Finished tracing + transforming _take for pjit in 0.0008151531219482422 sec
+2026-01-16 12:22:51,032 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016689300537109375 sec
+2026-01-16 12:22:51,033 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001609325408935547 sec
+2026-01-16 12:22:51,033 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014901161193847656 sec
+2026-01-16 12:22:51,033 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001442432403564453 sec
+2026-01-16 12:22:51,034 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0029649734497070312 sec
+2026-01-16 12:22:51,037 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.00031113624572753906 sec
+2026-01-16 12:22:51,044 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014090538024902344 sec
+2026-01-16 12:22:51,045 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.008148193359375e-05 sec
+2026-01-16 12:22:51,046 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020194053649902344 sec
+2026-01-16 12:22:51,047 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000141143798828125 sec
+2026-01-16 12:22:51,047 [DEBUG] Finished tracing + transforming ravel for pjit in 7.605552673339844e-05 sec
+2026-01-16 12:22:51,047 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.00028705596923828125 sec
+2026-01-16 12:22:51,051 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013184547424316406 sec
+2026-01-16 12:22:51,053 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.702278137207031e-05 sec
+2026-01-16 12:22:51,056 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014901161193847656 sec
+2026-01-16 12:22:51,058 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003311634063720703 sec
+2026-01-16 12:22:51,059 [DEBUG] Finished tracing + transforming op for pjit in 0.0003190040588378906 sec
+2026-01-16 12:22:51,059 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.000331878662109375 sec
+2026-01-16 12:22:51,059 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0020148754119873047 sec
+2026-01-16 12:22:51,061 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006570816040039062 sec
+2026-01-16 12:22:51,069 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020575523376464844 sec
+2026-01-16 12:22:51,070 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001499652862548828 sec
+2026-01-16 12:22:51,071 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017499923706054688 sec
+2026-01-16 12:22:51,074 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019931793212890625 sec
+2026-01-16 12:22:51,075 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001430511474609375 sec
+2026-01-16 12:22:51,106 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0002989768981933594 sec
+2026-01-16 12:22:51,123 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001678466796875 sec
+2026-01-16 12:22:51,123 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001590251922607422 sec
+2026-01-16 12:22:51,124 [DEBUG] Finished tracing + transforming op for pjit in 0.0001373291015625 sec
+2026-01-16 12:22:51,124 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001533031463623047 sec
+2026-01-16 12:22:51,124 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00011229515075683594 sec
+2026-01-16 12:22:51,124 [DEBUG] Finished tracing + transforming _where for pjit in 0.0003631114959716797 sec
+2026-01-16 12:22:51,125 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0021240711212158203 sec
+2026-01-16 12:22:51,125 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002071857452392578 sec
+2026-01-16 12:22:51,126 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.698204040527344e-05 sec
+2026-01-16 12:22:51,126 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.3882598876953125e-05 sec
+2026-01-16 12:22:51,127 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0004150867462158203 sec
+2026-01-16 12:22:51,127 [DEBUG] Finished tracing + transforming _where for pjit in 0.0007531642913818359 sec
+2026-01-16 12:22:51,128 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002410411834716797 sec
+2026-01-16 12:22:51,128 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006570816040039062 sec
+2026-01-16 12:22:51,129 [DEBUG] Finished tracing + transforming _power for pjit in 0.002927064895629883 sec
+2026-01-16 12:22:51,130 [DEBUG] Finished tracing + transforming fn for pjit in 0.00024890899658203125 sec
+2026-01-16 12:22:51,131 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00018262863159179688 sec
+2026-01-16 12:22:51,131 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019478797912597656 sec
+2026-01-16 12:22:51,132 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.00015878677368164062 sec
+2026-01-16 12:22:51,132 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002727508544921875 sec
+2026-01-16 12:22:51,132 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006380081176757812 sec
+2026-01-16 12:22:51,133 [DEBUG] Finished tracing + transforming ravel for pjit in 7.009506225585938e-05 sec
+2026-01-16 12:22:51,133 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.00026297569274902344 sec
+2026-01-16 12:22:51,134 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00013399124145507812 sec
+2026-01-16 12:22:51,135 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002040863037109375 sec
+2026-01-16 12:22:51,139 [DEBUG] Finished tracing + transforming ravel for pjit in 9.799003601074219e-05 sec
+2026-01-16 12:22:51,147 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00022983551025390625 sec
+2026-01-16 12:22:51,148 [DEBUG] Finished tracing + transforming fn for pjit in 0.00020933151245117188 sec
+2026-01-16 12:22:51,149 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001499652862548828 sec
+2026-01-16 12:22:51,152 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016021728515625 sec
+2026-01-16 12:22:51,155 [DEBUG] Finished tracing + transforming fn for pjit in 0.00018596649169921875 sec
+2026-01-16 12:22:51,156 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016880035400390625 sec
+2026-01-16 12:22:51,163 [DEBUG] Finished tracing + transforming absolute for pjit in 9.298324584960938e-05 sec
+2026-01-16 12:22:51,165 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.702278137207031e-05 sec
+2026-01-16 12:22:51,165 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001659393310546875 sec
+2026-01-16 12:22:51,165 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005919933319091797 sec
+2026-01-16 12:22:51,169 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017404556274414062 sec
+2026-01-16 12:22:51,170 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00023031234741210938 sec
+2026-01-16 12:22:51,173 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015211105346679688 sec
+2026-01-16 12:22:51,175 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019979476928710938 sec
+2026-01-16 12:22:51,203 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017499923706054688 sec
+2026-01-16 12:22:51,210 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015592575073242188 sec
+2026-01-16 12:22:51,210 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001347064971923828 sec
+2026-01-16 12:22:51,210 [DEBUG] Finished tracing + transforming _where for pjit in 0.00044417381286621094 sec
+2026-01-16 12:22:51,750 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001671314239501953 sec
+2026-01-16 12:22:51,750 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001678466796875 sec
+2026-01-16 12:22:51,751 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.984306335449219e-05 sec

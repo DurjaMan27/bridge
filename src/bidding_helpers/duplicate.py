@@ -15,59 +15,110 @@ BID_OFFSET_NUM = 3
 def _imp_reward(
     table_a_reward: jnp.ndarray, table_b_reward: jnp.ndarray
 ) -> jnp.ndarray:
-    """Convert score reward to IMP reward
-
-    >>> table_a_reward = jnp.array([0, 0, 0, 0])
-    >>> table_b_reward = jnp.array([0, 0, 0, 0])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([0., 0., 0., 0.], dtype=float32)
-    >>> table_a_reward = jnp.array([0, 0, 0, 0])
-    >>> table_b_reward = jnp.array([100, 100, -100, -100])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([ 3.,  3., -3., -3.], dtype=float32)
-    >>> table_a_reward = jnp.array([-100, -100, 100, 100])
-    >>> table_b_reward = jnp.array([0, 0, 0, 0])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([-3., -3.,  3.,  3.], dtype=float32)
-    >>> table_a_reward = jnp.array([-100, -100, 100, 100])
-    >>> table_b_reward = jnp.array([100, 100, -100, -100])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([0., 0., 0., 0.], dtype=float32)
-    >>> table_a_reward = jnp.array([-3500, -3500, 3500, 3500])
-    >>> table_b_reward = jnp.array([0, 0, 0, 0])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([-23., -23.,  23.,  23.], dtype=float32)
-    >>> table_a_reward = jnp.array([2000, 2000, -2000, -2000])
-    >>> table_b_reward = jnp.array([2000, 2000, -2000, -2000])
-    >>> _imp_reward(table_a_reward, table_b_reward)
-    Array([ 24.,  24., -24., -24.], dtype=float32)
     """
-    # fmt: off
-    IMP_LIST = jnp.array([20, 50, 90, 130, 170,
-                          220, 270, 320, 370, 430,
-                          500, 600, 750, 900, 1100,
-                          1300, 1500, 1750, 2000, 2250,
-                          2500, 3000, 3500, 4000], dtype=jnp.float32)
-    # fmt: on
-    win = jax.lax.cond(
-        table_a_reward[0] + table_b_reward[0] >= 0, lambda: 1, lambda: -1
+    Calculates IMPs (International Match Points) based on the score difference.
+    IMPs are non-linear: a huge score difference (like 2000) is compressed to ~20 IMPs.
+    """
+    # 1. Calculate the net score difference for Team 1 (North-South)
+    # Table A is Team 1 vs Team 2. Table B is Team 2 vs Team 1.
+    # We want (Table A N-S Score) - (Table B N-S Score)
+    score_diff = table_a_reward - table_b_reward
+    
+    # 2. Get the absolute difference to look up in the IMP table
+    diff = jnp.abs(score_diff)
+    
+    # 3. Apply the standard WBF IMP Scale
+    # 0-10: 0, 20-40: 1, 50-80: 2, etc.
+    imp = jnp.select(
+        [
+            diff < 20,
+            diff < 50,
+            diff < 90,
+            diff < 130,
+            diff < 170,
+            diff < 220,
+            diff < 270,
+            diff < 320,
+            diff < 370,
+            diff < 430,
+            diff < 500,
+            diff < 600,
+            diff < 750,
+            diff < 900,
+            diff < 1100,
+            diff < 1300,
+            diff < 1500,
+            diff < 1750,
+            diff < 2000,
+            diff < 2250,
+            diff < 2500,
+            diff < 3000,
+            diff < 3500,
+            diff < 4000,
+        ],
+        [
+            0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0,
+            11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0,
+            21.0, 22.0, 23.0
+        ],
+        default=24.0 # Max IMPs is 24
     )
+    
+    # 4. Restore the sign (if Team 1 lost points, they get negative IMPs)
+    return imp * jnp.sign(score_diff)
+    # """Convert score reward to IMP reward
 
-    def condition_fun(imp_diff):
-        imp, difference_point = imp_diff
-        return (difference_point >= IMP_LIST[imp]) & (imp < 24)
+    # >>> table_a_reward = jnp.array([0, 0, 0, 0])
+    # >>> table_b_reward = jnp.array([0, 0, 0, 0])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([0., 0., 0., 0.], dtype=float32)
+    # >>> table_a_reward = jnp.array([0, 0, 0, 0])
+    # >>> table_b_reward = jnp.array([100, 100, -100, -100])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([ 3.,  3., -3., -3.], dtype=float32)
+    # >>> table_a_reward = jnp.array([-100, -100, 100, 100])
+    # >>> table_b_reward = jnp.array([0, 0, 0, 0])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([-3., -3.,  3.,  3.], dtype=float32)
+    # >>> table_a_reward = jnp.array([-100, -100, 100, 100])
+    # >>> table_b_reward = jnp.array([100, 100, -100, -100])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([0., 0., 0., 0.], dtype=float32)
+    # >>> table_a_reward = jnp.array([-3500, -3500, 3500, 3500])
+    # >>> table_b_reward = jnp.array([0, 0, 0, 0])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([-23., -23.,  23.,  23.], dtype=float32)
+    # >>> table_a_reward = jnp.array([2000, 2000, -2000, -2000])
+    # >>> table_b_reward = jnp.array([2000, 2000, -2000, -2000])
+    # >>> _imp_reward(table_a_reward, table_b_reward)
+    # Array([ 24.,  24., -24., -24.], dtype=float32)
+    # """
+    # # fmt: off
+    # IMP_LIST = jnp.array([20, 50, 90, 130, 170,
+    #                       220, 270, 320, 370, 430,
+    #                       500, 600, 750, 900, 1100,
+    #                       1300, 1500, 1750, 2000, 2250,
+    #                       2500, 3000, 3500, 4000], dtype=jnp.float32)
+    # # fmt: on
+    # win = jax.lax.cond(
+    #     table_a_reward[0] + table_b_reward[0] >= 0, lambda: 1, lambda: -1
+    # )
 
-    def body_fun(imp_diff):
-        imp, difference_point = imp_diff
-        imp += 1
-        return (imp, difference_point)
+    # def condition_fun(imp_diff):
+    #     imp, difference_point = imp_diff
+    #     return (difference_point >= IMP_LIST[imp]) & (imp < 24)
 
-    imp, difference_point = jax.lax.while_loop(
-        condition_fun,
-        body_fun,
-        (0, abs(table_a_reward[0] + table_b_reward[0])),
-    )
-    return jnp.array([imp * win, imp * win, -imp * win, -imp * win], dtype=jnp.float32)
+    # def body_fun(imp_diff):
+    #     imp, difference_point = imp_diff
+    #     imp += 1
+    #     return (imp, difference_point)
+
+    # imp, difference_point = jax.lax.while_loop(
+    #     condition_fun,
+    #     body_fun,
+    #     (0, abs(table_a_reward[0] + table_b_reward[0])),
+    # )
+    # return jnp.array([imp * win, imp * win, -imp * win, -imp * win], dtype=jnp.float32)
 
 
 def _duplicate_init(

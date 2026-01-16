@@ -67,66 +67,74 @@ def single_play_step_two_policy_commpetitive(
     # teamB_model_params = teamB_param
 
     def wrapped_step_fn(state, action, rng):
+        # state = jax.vmap(step_fn)(state, action)
+        # terminated1 = state.terminated
+
+        # # sl model turn
+        # rng, _rng = jax.random.split(rng)
+        # logits, _ = opp_forward_pass.apply(
+        #     opp_params,
+        #     state.observation.astype(jnp.float32),
+        # )
+        # logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
+        # pi = distrax.Categorical(logits=logits)
+        # action = pi.sample(seed=_rng)
+        # state = jax.vmap(step_fn)(state, action)  # step by left
+        # rewards2 = state.rewards
+        # terminated2 = state.terminated
+
+        # # actor teammate turn
+        # rng, _rng = jax.random.split(rng)
+        # logits, _ = actor_forward_pass.apply(
+        #     actor_params,
+        #     state.observation.astype(jnp.float32),
+        # )
+        # logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
+        # pi = distrax.Categorical(logits=logits)
+        # action = pi.sample(seed=_rng)
+        # state = jax.vmap(step_fn)(state, action)  # step by pd
+        # rewards3 = state.rewards
+        # terminated3 = state.terminated
+
+        # # sl model turn
+        # rng, _rng = jax.random.split(rng)
+        # logits, _ = opp_forward_pass.apply(
+        #     opp_params,
+        #     state.observation.astype(jnp.float32),
+        # )
+        # logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
+        # pi = distrax.Categorical(logits=logits)
+        # action = pi.sample(seed=_rng)
+        # state = jax.vmap(step_fn)(state, action)  # step by left
+        # rewards4 = state.rewards
+        # terminated4 = state.terminated
+
+        # # rewards = rewards1 + rewards2 + rewards3 + rewards4
+        # rewards = state.rewards
+        # terminated = terminated1 | terminated2 | terminated3 | terminated4
+        # return state.replace(rewards=rewards, terminated=terminated)
+
         state = jax.vmap(step_fn)(state, action)
-        rewards1 = state.rewards
-        terminated1 = state.terminated
-        # print(f"rewards: {state.rewards}")
-
-        # sl model turn
-        # print("===01==")
-        # print(f"current player: {state.current_player}")
-        rng, _rng = jax.random.split(rng)
-        logits, _ = opp_forward_pass.apply(
-            opp_params,
-            state.observation.astype(jnp.float32),
-        )
-        logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
-        pi = distrax.Categorical(logits=logits)
-        action = pi.sample(seed=_rng)
-        state = jax.vmap(step_fn)(state, action)  # step by left
-        rewards2 = state.rewards
-        terminated2 = state.terminated
-        # print(f"sl model, action: {action}")
-        # print(f"rewards: {state.rewards}")
-
+        
+        # opposite turn
+        action = jnp.zeros_like(action)
+        state = jax.vmap(step_fn)(state, action)
+        
         # actor teammate turn
-        # print("===02==")
-        # print(f"current player: {state.current_player}")
         rng, _rng = jax.random.split(rng)
-        logits, _ = actor_forward_pass.apply(
-            actor_params,
-            state.observation.astype(jnp.float32),
-        )
+        logits, _ = actor_forward_pass.apply(actor_params, state.observation.astype(jnp.float32))
         logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
         pi = distrax.Categorical(logits=logits)
-        action = pi.sample(seed=_rng)
-        state = jax.vmap(step_fn)(state, action)  # step by pd
-        rewards3 = state.rewards
-        terminated3 = state.terminated
-        # print(f"actor team, action: {action}")
-        # print(f"rewards: {state.rewards}")
+        action = pi.mode()
+        state = jax.vmap(step_fn)(state, action)
+        
+        # opposite turn
+        action = jnp.zeros_like(action)
+        state = jax.vmap(step_fn)(state, action)
 
-        # sl model turn
-        # print("===03==")
-        # print(f"current player: {state.current_player}")
-        rng, _rng = jax.random.split(rng)
-        logits, _ = opp_forward_pass.apply(
-            opp_params,
-            state.observation.astype(jnp.float32),
-        )
-        logits = logits + jnp.finfo(jnp.float64).min * (~state.legal_action_mask)
-        pi = distrax.Categorical(logits=logits)
-        action = pi.sample(seed=_rng)
-        state = jax.vmap(step_fn)(state, action)  # step by left
-        rewards4 = state.rewards
-        terminated4 = state.terminated
-        # print(f"sl model, action: {action}")
-        # print(f"rewards: {state.rewards}")
-
-        # rewards = rewards1 + rewards2 + rewards3 + rewards4
-        rewards = state.rewards
-        terminated = terminated1 | terminated2 | terminated3 | terminated4
-        return state.replace(rewards=rewards, terminated=terminated)
+        # CHANGE THIS: Remove the summation logic. 
+        # Just return the state; PGX handles the termination and rewards internally.
+        return state
 
     return wrapped_step_fn
 
@@ -141,8 +149,8 @@ def single_play_step_two_policy_commpetitive_deterministic(
 
     def wrapped_step_fn(state, action, rng):
         state = jax.vmap(step_fn)(state, action)
-        rewards1 = state.rewards
-        terminated1 = state.terminated
+        # rewards1 = state.rewards
+        # terminated1 = state.terminated
         # print(f"rewards: {state.rewards}")
 
         # sl model turn
@@ -157,8 +165,8 @@ def single_play_step_two_policy_commpetitive_deterministic(
         pi = distrax.Categorical(logits=logits)
         action = pi.mode()
         state = jax.vmap(step_fn)(state, action)  # step by left
-        rewards2 = state.rewards
-        terminated2 = state.terminated
+        # rewards2 = state.rewards
+        # terminated2 = state.terminated
         # print(f"sl model, action: {action}")
         # print(f"rewards: {state.rewards}")
 
@@ -174,8 +182,8 @@ def single_play_step_two_policy_commpetitive_deterministic(
         pi = distrax.Categorical(logits=logits)
         action = pi.mode()
         state = jax.vmap(step_fn)(state, action)  # step by pd
-        rewards3 = state.rewards
-        terminated3 = state.terminated
+        # rewards3 = state.rewards
+        # terminated3 = state.terminated
         # print(f"actor team, action: {action}")
         # print(f"rewards: {state.rewards}")
 
@@ -191,14 +199,15 @@ def single_play_step_two_policy_commpetitive_deterministic(
         pi = distrax.Categorical(logits=logits)
         action = pi.mode()
         state = jax.vmap(step_fn)(state, action)  # step by left
-        rewards4 = state.rewards
-        terminated4 = state.terminated
+        # rewards4 = state.rewards
+        # terminated4 = state.terminated
         # print(f"sl model, action: {action}")
         # print(f"rewards: {state.rewards}")
 
-        rewards = rewards1 + rewards2 + rewards3 + rewards4
-        terminated = terminated1 | terminated2 | terminated3 | terminated4
-        return state.replace(rewards=rewards, terminated=terminated)
+        # rewards = rewards1 + rewards2 + rewards3 + rewards4
+        # terminated = terminated1 | terminated2 | terminated3 | terminated4
+        # return state.replace(rewards=rewards, terminated=terminated)
+        return state
 
     return wrapped_step_fn
 
@@ -240,9 +249,10 @@ def single_play_step_free_run(
         rewards4 = state.rewards
         terminated4 = state.terminated
 
-        rewards = rewards1 + rewards2 + rewards3 + rewards4
-        terminated = terminated1 | terminated2 | terminated3 | terminated4
-        return state.replace(rewards=rewards, terminated=terminated)
+        # rewards = rewards1 + rewards2 + rewards3 + rewards4
+        # terminated = terminated1 | terminated2 | terminated3 | terminated4
+        # return state.replace(rewards=rewards, terminated=terminated)
+        return state
 
     return wrapped_step_fn
 

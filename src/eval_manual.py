@@ -168,16 +168,32 @@ def make_simple_duplicate_evaluate(
                 count,
             ) = tup
 
+            prev_terminated = state.terminated
+
             (action, pi_probs) = jax.vmap(make_action)(state)
             rng_key, _rng = jax.random.split(rng_key)
             (state, table_a_info, table_b_info) = jax.vmap(step_fn)(
                 state, action, table_a_info, table_b_info
             )
 
-            cum_return = cum_return + jax.vmap(get_fn)(
-                state.rewards,
-                jnp.zeros_like(state.current_player)
-            )
+            is_newly_terminated = state.terminated & ~prev_terminated
+
+            # cum_return = cum_return + jax.vmap(get_fn)(
+            #     state.rewards,
+            #     jnp.zeros_like(state.current_player)
+            # )
+
+            # step_rewards = jax.vmap(get_fn)(
+            #     state.rewards, 
+            #     jnp.zeros_like(state.current_player)
+            # )
+
+            # Only add reward for games that transitioned to terminated on THIS step
+            is_newly_terminated = state.terminated & ~prev_terminated
+            step_rewards = jax.vmap(get_fn)(state.rewards, jnp.zeros_like(state.current_player))
+
+            # Use jnp.where to only add rewards where is_newly_terminated is True
+            cum_return = cum_return + jnp.where(is_newly_terminated, step_rewards, 0.0)
 
             count += 1
             return (

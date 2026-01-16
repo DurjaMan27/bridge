@@ -71,10 +71,10 @@ def inspect_outliers(table_info, batch_start):
             print(f"Auction: {' -> '.join(history)}")
             
             # Identify the final contract
-            contract = decode_action(table_info.last_bid[i])
+            # contract = decode_action(table_info.last_bid[i] + 3)
             was_doubled = " (X)" if table_info.call_x[i] else ""
             was_redoubled = " (XX)" if table_info.call_xx[i] else ""
-            print(f"Final Contract: {contract}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
+            print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
             print("-" * 30)
 
 def main():
@@ -153,7 +153,7 @@ def main():
         # Start heartbeat thread for rate monitoring
         threading.Thread(target=heartbeat, daemon=True).start()
 
-        total_envs, batch_size = 20, 5
+        total_envs, batch_size = 5, 2
         # 1024, 64
 
         args_for_eval = (

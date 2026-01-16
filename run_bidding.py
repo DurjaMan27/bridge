@@ -32,6 +32,50 @@ def get_agent_callback(agent_type, server_url):
         return agent_type
     else:
         raise ValueError(f"Unknown agent type: {agent_type}")
+    
+# --- ADD THIS HELPER TO THE TOP OF YOUR FILE ---
+def decode_action(action_idx):
+    """Maps integer indices back to bridge bid strings."""
+    mapping = {
+        0: "Pass", 1: "Double", 2: "Redouble",
+        3: "1C", 4: "1D", 5: "1H", 6: "1S", 7: "1NT",
+        8: "2C", 9: "2D", 10: "2H", 11: "2S", 12: "2NT",
+        13: "3C", 14: "3D", 15: "3H", 16: "3S", 17: "3NT",
+        18: "4C", 19: "4D", 20: "4H", 21: "4S", 22: "4NT",
+        23: "5C", 24: "5D", 25: "5H", 26: "5S", 27: "5NT",
+        28: "6C", 29: "6D", 30: "6H", 31: "6S", 32: "6NT",
+        33: "7C", 34: "7D", 35: "7H", 36: "7S", 37: "7NT"
+    }
+    return mapping.get(int(action_idx), "??")
+
+def inspect_outliers(table_info, batch_start):
+    """Prints details of any environment with suspicious scores."""
+    # Convert JAX arrays to numpy for easier iteration
+    rewards = np.array(table_info.rewards)
+    bidding_histories = np.array(table_info.bidding_history)
+    last_bids = np.array(table_info.last_bid)
+    
+    for i in range(rewards.shape[0]):
+        # Check if North's score is an outlier (adjust 1500 threshold as needed)
+        if abs(rewards[i, 0]) > 1500:
+
+            contract_idx = last_bids[i] + 3 if last_bids[i] != -1 else -1
+            contract_name = decode_action(contract_idx)
+
+            print(f"\n[ALERT] Outlier detected at Env {batch_start + i}")
+            print(f"Final Contract: {contract_name} (X:{table_info.call_x[i]})")
+            print(f"Rewards [N, S, E, W]: {rewards[i]}")
+            
+            # Decode the auction
+            history = [decode_action(bid) for bid in bidding_histories[i] if bid != -1]
+            print(f"Auction: {' -> '.join(history)}")
+            
+            # Identify the final contract
+            contract = decode_action(table_info.last_bid[i])
+            was_doubled = " (X)" if table_info.call_x[i] else ""
+            was_redoubled = " (XX)" if table_info.call_xx[i] else ""
+            print(f"Final Contract: {contract}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
+            print("-" * 30)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -109,8 +153,7 @@ def main():
         # Start heartbeat thread for rate monitoring
         threading.Thread(target=heartbeat, daemon=True).start()
 
-        # total_envs, batch_size = 80, 10
-        total_envs, batch_size = 256, 16
+        total_envs, batch_size = 20, 5
         # 1024, 64
 
         args_for_eval = (
@@ -152,6 +195,11 @@ def main():
                 team2_params=None,
                 rng_key=batch_rng,
             )
+
+            # --- ADD THIS CALL HERE ---
+            print(f"Checking for outliers in batch {batch_start}...")
+            inspect_outliers(tablea_info, batch_start)
+            # --------------------------
 
             all_imps.append(float(log[0]))
             all_stderrs.append(float(log[1]))

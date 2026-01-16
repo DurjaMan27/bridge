@@ -142,6 +142,7 @@ class Table_info(NamedTuple):
     last_bidder: jnp.ndarray
     call_x: jnp.ndarray
     call_xx: jnp.ndarray
+    bidding_history: jnp.ndarray  # <-- Add this field
 
 
 def duplicate_step(step_fn):
@@ -175,6 +176,7 @@ def duplicate_step(step_fn):
                 last_bidder=state._last_bidder,
                 call_x=state._call_x,
                 call_xx=state._call_xx,
+                bidding_history=state._bidding_history # <-- Add this
             ),
             lambda: table_b_info,
         )
@@ -187,6 +189,7 @@ def duplicate_step(step_fn):
                 last_bidder=state._last_bidder,
                 call_x=state._call_x,
                 call_xx=state._call_xx,
+                bidding_history=state._bidding_history # <-- Add this
             ),
             lambda: table_a_info,
         )

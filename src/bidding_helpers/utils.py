@@ -123,7 +123,8 @@ def single_play_step_two_policy_commpetitive(
         # print(f"sl model, action: {action}")
         # print(f"rewards: {state.rewards}")
 
-        rewards = rewards1 + rewards2 + rewards3 + rewards4
+        # rewards = rewards1 + rewards2 + rewards3 + rewards4
+        rewards = state.rewards
         terminated = terminated1 | terminated2 | terminated3 | terminated4
         return state.replace(rewards=rewards, terminated=terminated)
 

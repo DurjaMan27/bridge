@@ -98,6 +98,7 @@ def make_simple_duplicate_evaluate(
             last_bidder=state._last_bidder,
             call_x=state._call_x,
             call_xx=state._call_xx,
+            bidding_history=state._bidding_history # <-- Initialize history here
         )
         table_b_info = Table_info(
             terminated=state.terminated,
@@ -106,6 +107,7 @@ def make_simple_duplicate_evaluate(
             last_bidder=state._last_bidder,
             call_x=state._call_x,
             call_xx=state._call_xx,
+            bidding_history=state._bidding_history # <-- Initialize history here
         )
 
         cum_return = jnp.zeros(num_eval_envs)

@@ -43,6 +43,7 @@ def make_simple_duplicate_evaluate(
             last_bidder=state._last_bidder,
             call_x=state._call_x,
             call_xx=state._call_xx,
+            bidding_history=state._bidding_history # <-- Initialize history here
         )
         table_b_info = Table_info(
             terminated=state.terminated,
@@ -51,6 +52,7 @@ def make_simple_duplicate_evaluate(
             last_bidder=state._last_bidder,
             call_x=state._call_x,
             call_xx=state._call_xx,
+            bidding_history=state._bidding_history # <-- Initialize history here
         )
 
         cum_return = jnp.zeros(num_eval_envs)
@@ -106,9 +108,11 @@ def make_simple_duplicate_evaluate(
             (state, table_a_info, table_b_info) = jax.vmap(step_fn)(
                 state, action, table_a_info, table_b_info
             )
-            cum_return = cum_return + jax.vmap(get_fn)(
-                state.rewards, jnp.zeros_like(state.current_player)
-            )
+            # cum_return = cum_return + jax.vmap(get_fn)(
+            #     state.rewards, jnp.zeros_like(state.current_player)
+            # )
+            new_rewards = jax.vmap(get_fn)(state.rewards, jnp.zeros_like(state.current_player))
+            cum_return = jnp.where(state.terminated, new_rewards, cum_return)
             count += 1
             return (
                 state,

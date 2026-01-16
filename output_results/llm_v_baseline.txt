@@ -65,3 +65,12 @@ Table_info(terminated=Array([ True,  True,  True,  True,  True,  True,  True,  T
        False], dtype=bool))
 --------------------------------------------------
 Stopping server...
+
+01/15/2026 - 7:57 PM
+-------------------------
+Total bids processed: 30784
+Final IMP: 1797.85 (StdErr: 342.21)
+Final Win Rate (T1 vs T2): 49.22%
+-------------------------
+Final IMP REVERSED: 317.73 (StdErr: 314.91)
+Final Win Rate (T2 vs T1 - REVERSED): 19.53%

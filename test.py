@@ -1,18 +1,10 @@
-from openai import OpenAI
-import os
-from dotenv import load_dotenv
+import numpy as np
 
-load_dotenv()
+# Load your DDS file
+dds = np.load("data/dds_results/test_000.npy")
 
-key = os.getenv("OPENAI_API_KEY")
-
-print("KEY PRESENT:", key is not None)
-
-client = OpenAI(api_key=key)
-
-resp = client.chat.completions.create(
-    model="gpt-4o",
-    messages=[{"role": "user", "content": "ping"}]
-)
-
-print(resp.choices[0].message.content)
+print(f"DDS shape: {dds.shape}")
+print(f"DDS dtype: {dds.dtype}")
+print(f"Sample values:\n{dds[0:5]}")
+print(f"Number of zeros: {np.sum(dds == 0)}")
+print(f"Total elements: {dds.size}")

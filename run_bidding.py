@@ -76,6 +76,24 @@ def inspect_outliers(table_info, batch_start):
             was_redoubled = " (XX)" if table_info.call_xx[i] else ""
             print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
             print("-" * 30)
+        elif rewards[i,0] < -5:
+            contract_idx = last_bids[i] + 3 if last_bids[i] != -1 else -1
+            contract_name = decode_action(contract_idx)
+
+            print(f"\n[ALERT] WE FAILED HEREEEEE detected at Env {batch_start + i}")
+            print(f"Final Contract: {contract_name} (X:{table_info.call_x[i]})")
+            print(f"Rewards [N, S, E, W]: {rewards[i]}")
+            
+            # Decode the auction
+            history = [decode_action(bid) for bid in bidding_histories[i] if bid != -1]
+            print(f"Auction: {' -> '.join(history)}")
+            
+            # Identify the final contract
+            # contract = decode_action(table_info.last_bid[i] + 3)
+            was_doubled = " (X)" if table_info.call_x[i] else ""
+            was_redoubled = " (XX)" if table_info.call_xx[i] else ""
+            print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
+            print("-" * 30)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -153,7 +171,8 @@ def main():
         # Start heartbeat thread for rate monitoring
         threading.Thread(target=heartbeat, daemon=True).start()
 
-        total_envs, batch_size = 5, 2
+        # total_envs, batch_size = 80, 10
+        total_envs, batch_size = 6, 3
         # 1024, 64
 
         args_for_eval = (

@@ -44,7 +44,8 @@ class BaselineAgent():
         return points, hcp, suit_counts
 
     def _get_bid_info(self, bid_idx):
-        if bid_idx < 3: return None, None
+        if bid_idx < 3: 
+            return None, None
         level = (bid_idx - 3) // 5 + 1
         suit_idx = (bid_idx - 3) % 5
         return level, self._SUITS[suit_idx]
@@ -70,13 +71,19 @@ class BaselineAgent():
                 break
 
         if last_real_bid == -1:
-            return self.opening_bid(total_pts, hcp, suits)
+            bid = self.opening_bid(total_pts, hcp, suits)
+        else:
+            rel_pos = (my_pos - last_bidder) % 4
+            if rel_pos == 2: # Partner bid last
+                bid = self.respond_to_partner(last_real_bid, total_pts, hcp, suits)
+            else: # Opponent bid last
+                bid = self.overcall(last_real_bid, total_pts, hcp, suits)
+
+        if not state.legal_action_mask[bid]:
+            # Fallback to Pass if illegal
+            return 0 if state.legal_action_mask[0] else jnp.argmax(state.legal_action_mask)
         
-        rel_pos = (my_pos - last_bidder) % 4
-        if rel_pos == 2: # Partner bid last
-            return self.respond_to_partner(last_real_bid, total_pts, hcp, suits)
-        else: # Opponent bid last
-            return self.overcall(last_real_bid, total_pts, hcp, suits)
+        return bid
 
     def opening_bid(self, pts, hcp, suits):
         is_balanced = sorted(suits.values()) in [[3,3,3,4], [2,3,3,5], [2,3,4,4]]
@@ -100,19 +107,52 @@ class BaselineAgent():
                     return self._to_idx(3, s)
         return 0
 
+    # def overcall(self, last_bid, pts, hcp, suits):
+    #     lvl, suit = self._get_bid_info(last_bid)
+    #     if 16 <= hcp <= 18 and all(c <= 5 for c in suits.values()):
+    #         return 7 # 1NT
+    #     if pts >= 13: # Takeout Double logic simplified
+    #         unbid = [s for s in ["S", "H", "D", "C"] if s != suit and suits[s] >= 3]
+    #         if len(unbid) >= 3:
+    #             return 1
+    #     for s in ["S", "H", "D", "C"]:
+    #         if suits[s] >= 5 and 10 <= pts <= 17:
+    #             idx = self._to_idx(lvl if s > suit or lvl > 1 else lvl + 1, s)
+    #             if idx > last_bid:
+    #                 return idx
+    #     return 0
+
     def overcall(self, last_bid, pts, hcp, suits):
         lvl, suit = self._get_bid_info(last_bid)
+        
+        # Don't overcall above 4-level without strong hand
+        if lvl >= 4 and pts < 18:
+            return 0
+        
+        # Don't overcall at 7-level unless you have slam values
+        if lvl >= 6 and pts < 25:
+            return 0
+        
         if 16 <= hcp <= 18 and all(c <= 5 for c in suits.values()):
-            return 7 # 1NT
-        if pts >= 13: # Takeout Double logic simplified
-            unbid = [s for s in ["S", "H", "D", "C"] if s != suit and suits[s] >= 3]
-            if len(unbid) >= 3:
-                return 1
+            if lvl <= 3:  # Only 1NT overcall at low levels
+                return 7
+        
         for s in ["S", "H", "D", "C"]:
             if suits[s] >= 5 and 10 <= pts <= 17:
-                idx = self._to_idx(lvl if s > suit or lvl > 1 else lvl + 1, s)
+                # Calculate minimum level needed
+                if suit and s == suit:
+                    continue  # Don't overcall in opponent's suit
+                
+                min_lvl = lvl + 1 if suit and self._SUITS.index(s) <= self._SUITS.index(suit) else lvl
+                
+                # Cap overcalls at 3-level unless very strong
+                if min_lvl > 3 and pts < 17:
+                    continue
+                    
+                idx = self._to_idx(min_lvl, s)
                 if idx > last_bid:
                     return idx
+        
         return 0
 
     def respond_to_partner(self, p_bid, pts, hcp, suits):
@@ -140,9 +180,17 @@ class BaselineAgent():
 
         if suits[s] >= 3:
             if 6 <= support_pts <= 10:
-                return self._to_idx(lvl + 1, s)
-            if support_pts >= 13:
-                return self._to_idx(lvl + 2, s)
+                target_level = min(lvl + 1, 4)  # Cap at game
+                return self._to_idx(target_level, s)
+            if 11 <= support_pts <= 12:
+                target_level = min(lvl + 2, 4)  # Invite game
+                return self._to_idx(target_level, s)
+            if 13 <= support_pts <= 15:
+                # Game values - bid game
+                if s in ["H", "S"]:
+                    return self._to_idx(4, s)  # 4H/4S
+                else:
+                    return self._to_idx(5, s)  # 5C/5D
         
         if 6 <= pts <= 18:
             for sn in ["S", "H", "D", "C"]:

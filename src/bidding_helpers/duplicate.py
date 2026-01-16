@@ -196,49 +196,133 @@ class Table_info(NamedTuple):
     bidding_history: jnp.ndarray  # <-- Add this field
 
 
+# def duplicate_step(step_fn):
+#     def wrapped_step(state, action, table_a_info, table_b_info):
+#         state = step_fn(state, action)
+
+#         # CHECKING FOR DUPLICATE COMPARISON BEFORE RESETTING STATE
+#         duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated
+
+#         next_state = jax.lax.cond(
+#             table_a_info.terminated & state.terminated & ~table_b_info.terminated,
+#             lambda: state.replace(
+#                 rewards=_imp_reward(table_a_info.rewards, state.rewards)
+#             ),
+#             lambda: state,
+#         )
+
+#         # 2. Switch to Table B if Table A just finished
+#         # IMPORTANT: Use 'next_state' in the else branch to preserve IMPs if calculated above
+#         next_state = jax.lax.cond(
+#             ~table_a_info.terminated & state.terminated,
+#             lambda: duplicate_init(state),
+#             lambda: next_state, # <--- FIX: Use next_state here
+#         )
+
+#         table_b_info = jax.lax.cond(
+#             state.terminated & table_a_info.terminated & ~table_b_info.terminated,
+#             lambda: Table_info(
+#                 terminated=state.terminated,
+#                 rewards=state.rewards,
+#                 last_bid=state._last_bid,
+#                 last_bidder=state._last_bidder,
+#                 call_x=state._call_x,
+#                 call_xx=state._call_xx,
+#                 bidding_history=state._bidding_history # <-- Add this
+#             ),
+#             lambda: table_b_info,
+#         )
+#         table_a_info = jax.lax.cond(
+#             ~table_a_info.terminated & state.terminated,
+#             lambda: Table_info(
+#                 terminated=state.terminated,
+#                 rewards=state.rewards,
+#                 last_bid=state._last_bid,
+#                 last_bidder=state._last_bidder,
+#                 call_x=state._call_x,
+#                 call_xx=state._call_xx,
+#                 bidding_history=state._bidding_history # <-- Add this
+#             ),
+#             lambda: table_a_info,
+#         )
+
+#         return next_state, table_a_info, table_b_info
+
+#     return wrapped_step
+    
 def duplicate_step(step_fn):
-        def wrapped_step(state, action, table_a_info, table_b_info):
-            state = step_fn(state, action)
-            
-            # 1. Capture the OLD termination status of Table B
-            # We need this to know if it JUST finished this turn.
-            prev_table_b_terminated = table_b_info.terminated
+    def wrapped_step(state, action, table_a_info, table_b_info):
+        state = step_fn(state, action)
 
-            # 2. Update Table A Info (Logic remains the same)
-            table_a_info = jax.lax.cond(
-                ~table_a_info.terminated & state.terminated,
-                lambda: table_a_info._replace(terminated=TRUE, rewards=state.rewards),
-                lambda: table_a_info,
-            )
+        # def log_contract(s):
+        #     jax.debug.print(
+        #         "Contract finished: {bid} by player {bidder}, Score: {score}",
+        #         bid=s._last_bid,
+        #         bidder=s._last_bidder,
+        #         score=s.rewards
+        #     )
+        #     return None
+        
+        # jax.lax.cond(
+        #     state.terminated & ~table_a_info.terminated,
+        #     lambda: log_contract(state),
+        #     lambda: None
+        # )
 
-            # 3. Update Table B Info (Logic remains the same)
-            table_b_info = jax.lax.cond(
-                table_a_info.terminated & state.terminated & ~table_b_info.terminated,
-                lambda: table_b_info._replace(terminated=TRUE, rewards=state.rewards),
-                lambda: table_b_info,
-            )
+        # Check if duplicate comparison should happen
+        # duplicate_comparison = table_a_info.terminated & state.terminated & table_b_info.terminated
+        both_done = table_a_info.terminated & state.terminated
 
-            # 4. Calculate IMPs
-            # CRITICAL FIX: Use 'prev_table_b_terminated' instead of 'table_b_info.terminated'
-            # We want to run this ONLY if it wasn't terminated before, but IS terminated now (which we know from state.terminated).
-            next_state = jax.lax.cond(
-                table_a_info.terminated & state.terminated & ~prev_table_b_terminated,
-                lambda: state.replace(
-                    rewards=_imp_reward(table_a_info.rewards, state.rewards)
-                ),
-                lambda: state,
-            )
+        # 1. Calculate IMPs when both tables are done
+        next_state = jax.lax.cond(
+            both_done & ~table_b_info.terminated,
+            lambda: state.replace(
+                rewards=_imp_reward(table_a_info.rewards, state.rewards),
+                terminated=jnp.ones_like(state.terminated, dtype=jnp.bool_)  # ← FORCE TERMINATION
+            ),
+            lambda: state,
+        )
 
-            # 5. Handle Table A -> Table B switch
-            next_state = jax.lax.cond(
-                ~table_a_info.terminated & state.terminated,
-                lambda: duplicate_init(state),
-                lambda: next_state, # Ensure this is next_state (your previous fix)
-            )
+        # 2. Switch to Table B if Table A just finished (and Table B hasn't started)
+        next_state = jax.lax.cond(
+            ~table_a_info.terminated & state.terminated,
+            lambda: duplicate_init(next_state),  # Use next_state to preserve any IMPs
+            lambda: next_state,
+        )
 
-            return next_state, table_a_info, table_b_info
+        # 3. Update table_b_info when it finishes
+        table_b_info = jax.lax.cond(
+            both_done & ~table_b_info.terminated,
+            lambda: Table_info(
+                terminated=jnp.ones_like(state.terminated, dtype=jnp.bool_),  # Also force here,
+                rewards=state.rewards,
+                last_bid=state._last_bid,
+                last_bidder=state._last_bidder,
+                call_x=state._call_x,
+                call_xx=state._call_xx,
+                bidding_history=state._bidding_history
+            ),
+            lambda: table_b_info,
+        )
 
-        return wrapped_step
+        # 4. Update table_a_info when it finishes
+        table_a_info = jax.lax.cond(
+            ~table_a_info.terminated & state.terminated,
+            lambda: Table_info(
+                terminated=state.terminated,
+                rewards=state.rewards,
+                last_bid=state._last_bid,
+                last_bidder=state._last_bidder,
+                call_x=state._call_x,
+                call_xx=state._call_xx,
+                bidding_history=state._bidding_history
+            ),
+            lambda: table_a_info,
+        )
+
+        return next_state, table_a_info, table_b_info
+
+    return wrapped_step
 
 
 if __name__ == "__main__":

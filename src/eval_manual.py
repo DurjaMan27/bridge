@@ -176,8 +176,6 @@ def make_simple_duplicate_evaluate(
                 state, action, table_a_info, table_b_info
             )
 
-            is_newly_terminated = state.terminated & ~prev_terminated
-
             # cum_return = cum_return + jax.vmap(get_fn)(
             #     state.rewards,
             #     jnp.zeros_like(state.current_player)
@@ -190,6 +188,9 @@ def make_simple_duplicate_evaluate(
 
             # Only add reward for games that transitioned to terminated on THIS step
             is_newly_terminated = state.terminated & ~prev_terminated
+            # if jnp.any(is_newly_terminated):
+            #     # Log when games terminate
+            #     jax.debug.print("Game terminated. Rewards: {}", state.rewards)
             step_rewards = jax.vmap(get_fn)(state.rewards, jnp.zeros_like(state.current_player))
 
             # Use jnp.where to only add rewards where is_newly_terminated is True

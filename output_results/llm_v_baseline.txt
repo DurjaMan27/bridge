@@ -1,26 +1,6 @@
 TEAM 1 = Baseline
 TEAM 2 = LLM
 
-12/19/2025
---------------------------------------------------
-Total bids processed: 5759
-Final IMP: -71.25 (StdErr: 38.42)
-Final Win Rate (T1 vs T2): 26.25%
--------------------------
-Final IMP REVERSED: 62.62 (StdErr: 32.93)
-Final Win Rate (T2 vs T1 - REVERSED): 33.75%
---------------------------------------------------
-
-12/31/2025 - 8:29 PM
---------------------------------------------------
-Total bids processed: 8720
-Final IMP: -503.88 (StdErr: 332.87)
-Final Win Rate (T1 vs T2): 17.50%
--------------------------
-Final IMP REVERSED: 2356.62 (StdErr: 733.70)
-Final Win Rate (T2 vs T1 - REVERSED): 52.50%
---------------------------------------------------
-
 01/01/2025 - 6:27 PM
 --------------------------------------------------
 Total bids processed: 8720

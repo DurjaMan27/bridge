@@ -2,22 +2,28 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import requests
+import threading  # Added for Semaphore
 from src.agents.llm import LLMAgent, llm_bid_from_arrays
 from src.utils.state import AgentMockState
-from src.utils.progress_tracker import increment_bid_count # Assuming progress_tracker is available
+from src.utils.progress_tracker import increment_bid_count 
+
+# 1. Global Semaphore to prevent overwhelming the server/API
+# Start with a conservative number like 10-20. 
+# This ensures only 20 LLM calls are "in-flight" at once.
+MAX_CONCURRENT_BIDS = 20
+_api_semaphore = threading.BoundedSemaphore(MAX_CONCURRENT_BIDS)
 
 _session_pool = {}
 
 def get_session(server_url: str):
-    """Get or create a session for the given server URL with connection pooling"""
     if server_url not in _session_pool:
-        # Configuration for connection pooling
         session = requests.Session()
+        # Reduce pool_maxsize to something more reasonable now that we use a semaphore
         adapter = requests.adapters.HTTPAdapter(
             pool_connections=10,
-            pool_maxsize=500,
+            pool_maxsize=MAX_CONCURRENT_BIDS, 
             max_retries=3,
-            pool_block=False
+            pool_block=True # Block if the pool is full
         )
         session.mount('http://', adapter)
         session.mount('https://', adapter)
@@ -56,9 +62,26 @@ def llm_agent_callable(
         }
         
         session = get_session(server_url)
-        response = session.post(f"{server_url}/make_bid", json=data, timeout=30.0) # Increased timeout for LLM
-        response.raise_for_status()
+        # response = session.post(f"{server_url}/make_bid", json=data, timeout=300.0) # Increased timeout for LLM
+        # response.raise_for_status()
         
+        # response_data = response.json()
+        # action_idx = np.int32(response_data['action'])
+        # pi_probs = np.asarray(response_data['pi_probs'], dtype=np.float32)
+        with _api_semaphore:
+            try:
+                # Explicitly setting (connect_timeout, read_timeout)
+                # If you still see 30.0 in the error, the SERVER is timing out.
+                response = session.post(
+                    f"{server_url}/make_bid", 
+                    json=data, 
+                    timeout=(10.0, 300.0) 
+                )
+                response.raise_for_status()
+            except requests.exceptions.ReadTimeout:
+                print(f"CRITICAL: Server at {server_url} failed to respond within 300s")
+                raise
+
         response_data = response.json()
         action_idx = np.int32(response_data['action'])
         pi_probs = np.asarray(response_data['pi_probs'], dtype=np.float32)

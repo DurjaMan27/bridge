@@ -144,7 +144,8 @@ class LLMAgent():
             "2. VULNERABILITY: At IMPs, a vulnerable game is worth the risk. If you have a 40% chance of making, BID IT."
             "3. COMPETITIVE EDGE: Do not let the opponents steal the auction for a part-score. If you have a fit and distribution, compete to the 3-level. "
             "4. OVERCALLS: Be aggressive. A 1-level overcall shows 7-15 points and a 5-card suit. It is a lead-director and a defensive tool. "
-            "5. PARTNERSHIP TRUST: Assume your partner (the other LLM) is following these exact aggressive mandates. If they bid, they have 'working' cards. "
+            "8. PARTNERSHIP TRUST: Assume your partner (the other LLM) is following these exact aggressive mandates. If they bid, they have 'working' cards. "
+            
 
             "THOUGHT PROCESS (Chain-of-Thought):"
             "- Evaluate 'Working' Points: Are your honors in your long suits? "

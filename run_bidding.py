@@ -172,7 +172,7 @@ def main():
         threading.Thread(target=heartbeat, daemon=True).start()
 
         # total_envs, batch_size = 80, 10
-        total_envs, batch_size = 6, 3
+        total_envs, batch_size = 40, 5
         # 1024, 64
 
         args_for_eval = (

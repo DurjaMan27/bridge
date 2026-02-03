@@ -2,8 +2,10 @@ import jax
 import argparse
 import subprocess
 import time
+import collections
 import threading
 import numpy as np
+from pathlib import Path
 import os # Import os for environment check
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
@@ -111,6 +113,19 @@ def main():
     print("These are the args: ", args)
 
     eval_env = BridgeBidding("data/dds_results/test_000.npy")
+
+    # reset debug_log.txt
+    with open('src/logs/debug_log.txt', 'w') as f:
+        pass
+    
+    current = Path('src/logs/llm_diagnostic_logs.jsonl')
+    archive = Path('src/logs/archive_diagnostic.jsonl')
+
+    if current.exists() and current.stat().st_size > 0:
+        archive.write_text(current.read_text())
+
+    current.write_text("")
+
     # rng = jax.random.PRNGKey(0) 
 
     server_process = None
@@ -172,7 +187,7 @@ def main():
         threading.Thread(target=heartbeat, daemon=True).start()
 
         # total_envs, batch_size = 80, 10
-        total_envs, batch_size = 40, 5
+        total_envs, batch_size = 4, 2
         # 1024, 64
 
         args_for_eval = (

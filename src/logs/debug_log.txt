@@ -1,578 +1,598 @@
-2026-02-02 17:01:18,162 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0009210109710693359 sec
-2026-02-02 17:01:18,164 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.006178140640258789 sec
-2026-02-02 17:01:18,166 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:01:18,176 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.00970602035522461 sec
-2026-02-02 17:01:18,177 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:01:18,177 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:01:18,202 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.024448633193969727 sec
-2026-02-02 17:01:18,207 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005340576171875 sec
-2026-02-02 17:01:18,207 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003998279571533203 sec
-2026-02-02 17:01:18,208 [DEBUG] Finished tracing + transforming clip for pjit in 0.0017468929290771484 sec
-2026-02-02 17:01:18,209 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00042891502380371094 sec
-2026-02-02 17:01:18,209 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0004248619079589844 sec
-2026-02-02 17:01:18,210 [DEBUG] Finished tracing + transforming clip for pjit in 0.001641988754272461 sec
-2026-02-02 17:01:18,211 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021576881408691406 sec
-2026-02-02 17:01:18,211 [DEBUG] Finished tracing + transforming fn for pjit in 0.00029397010803222656 sec
-2026-02-02 17:01:18,212 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002219676971435547 sec
-2026-02-02 17:01:18,213 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020503997802734375 sec
-2026-02-02 17:01:18,214 [DEBUG] Finished tracing + transforming _randint for pjit in 0.008182048797607422 sec
-2026-02-02 17:01:18,217 [DEBUG] Finished tracing + transforming fn for pjit in 0.00023603439331054688 sec
-2026-02-02 17:01:18,217 [DEBUG] Finished tracing + transforming fn for pjit in 0.00018596649169921875 sec
-2026-02-02 17:01:18,218 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0003299713134765625 sec
-2026-02-02 17:01:18,218 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006747245788574219 sec
-2026-02-02 17:01:18,219 [DEBUG] Finished tracing + transforming _take for pjit in 0.002317190170288086 sec
-2026-02-02 17:01:18,220 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00015497207641601562 sec
-2026-02-02 17:01:18,222 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002372264862060547 sec
-2026-02-02 17:01:18,223 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00010776519775390625 sec
-2026-02-02 17:01:18,223 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001399517059326172 sec
-2026-02-02 17:01:18,225 [DEBUG] Finished tracing + transforming fn for pjit in 0.0006887912750244141 sec
-2026-02-02 17:01:18,227 [DEBUG] Finished tracing + transforming fn for pjit in 0.0014119148254394531 sec
-2026-02-02 17:01:18,229 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005278587341308594 sec
-2026-02-02 17:01:18,232 [DEBUG] Finished tracing + transforming _squeeze for pjit in 7.009506225585938e-05 sec
-2026-02-02 17:01:18,253 [DEBUG] Finished tracing + transforming _take for pjit in 0.0007507801055908203 sec
-2026-02-02 17:01:18,255 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015211105346679688 sec
-2026-02-02 17:01:18,255 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001442432403564453 sec
-2026-02-02 17:01:18,256 [DEBUG] Finished tracing + transforming fn for pjit in 0.000141143798828125 sec
-2026-02-02 17:01:18,256 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001342296600341797 sec
-2026-02-02 17:01:18,257 [DEBUG] Finished tracing + transforming _randint for pjit in 0.002753734588623047 sec
-2026-02-02 17:01:18,260 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.00030422210693359375 sec
-2026-02-02 17:01:18,266 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013208389282226562 sec
-2026-02-02 17:01:18,267 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.008148193359375e-05 sec
-2026-02-02 17:01:18,268 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020003318786621094 sec
-2026-02-02 17:01:18,269 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001399517059326172 sec
-2026-02-02 17:01:18,269 [DEBUG] Finished tracing + transforming ravel for pjit in 7.009506225585938e-05 sec
-2026-02-02 17:01:18,269 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.00028967857360839844 sec
-2026-02-02 17:01:18,273 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012803077697753906 sec
-2026-02-02 17:01:18,275 [DEBUG] Finished tracing + transforming <lambda> for pjit in 9.298324584960938e-05 sec
-2026-02-02 17:01:18,278 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015401840209960938 sec
-2026-02-02 17:01:18,280 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003483295440673828 sec
-2026-02-02 17:01:18,280 [DEBUG] Finished tracing + transforming op for pjit in 0.00032401084899902344 sec
-2026-02-02 17:01:18,281 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003478527069091797 sec
-2026-02-02 17:01:18,281 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.002032041549682617 sec
-2026-02-02 17:01:18,282 [DEBUG] Finished tracing + transforming remainder for pjit in 0.00063323974609375 sec
-2026-02-02 17:01:18,292 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021386146545410156 sec
-2026-02-02 17:01:18,292 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014901161193847656 sec
-2026-02-02 17:01:18,293 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015783309936523438 sec
-2026-02-02 17:01:18,295 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001900196075439453 sec
-2026-02-02 17:01:18,295 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014090538024902344 sec
-2026-02-02 17:01:18,327 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.0003268718719482422 sec
-2026-02-02 17:01:18,344 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016880035400390625 sec
-2026-02-02 17:01:18,345 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00015783309936523438 sec
-2026-02-02 17:01:18,345 [DEBUG] Finished tracing + transforming op for pjit in 0.00013685226440429688 sec
-2026-02-02 17:01:18,345 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001518726348876953 sec
-2026-02-02 17:01:18,346 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00011301040649414062 sec
-2026-02-02 17:01:18,346 [DEBUG] Finished tracing + transforming _where for pjit in 0.0003597736358642578 sec
-2026-02-02 17:01:18,346 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0021469593048095703 sec
-2026-02-02 17:01:18,346 [DEBUG] Finished tracing + transforming fn for pjit in 0.00020503997802734375 sec
-2026-02-02 17:01:18,347 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.793571472167969e-05 sec
-2026-02-02 17:01:18,347 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.507469177246094e-05 sec
-2026-02-02 17:01:18,348 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0003619194030761719 sec
-2026-02-02 17:01:18,348 [DEBUG] Finished tracing + transforming _where for pjit in 0.0007021427154541016 sec
-2026-02-02 17:01:18,349 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00021696090698242188 sec
-2026-02-02 17:01:18,349 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006289482116699219 sec
-2026-02-02 17:01:18,350 [DEBUG] Finished tracing + transforming _power for pjit in 0.0028810501098632812 sec
-2026-02-02 17:01:18,352 [DEBUG] Finished tracing + transforming fn for pjit in 0.00025177001953125 sec
-2026-02-02 17:01:18,352 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0001900196075439453 sec
-2026-02-02 17:01:18,352 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019621849060058594 sec
-2026-02-02 17:01:18,353 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.00016498565673828125 sec
-2026-02-02 17:01:18,353 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002617835998535156 sec
-2026-02-02 17:01:18,354 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006198883056640625 sec
-2026-02-02 17:01:18,354 [DEBUG] Finished tracing + transforming ravel for pjit in 6.866455078125e-05 sec
-2026-02-02 17:01:18,354 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002658367156982422 sec
-2026-02-02 17:01:18,355 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00014019012451171875 sec
-2026-02-02 17:01:18,356 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020003318786621094 sec
-2026-02-02 17:01:18,357 [DEBUG] Finished tracing + transforming ravel for pjit in 9.179115295410156e-05 sec
-2026-02-02 17:01:18,364 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002281665802001953 sec
-2026-02-02 17:01:18,365 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002028942108154297 sec
-2026-02-02 17:01:18,365 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001430511474609375 sec
-2026-02-02 17:01:18,369 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014710426330566406 sec
-2026-02-02 17:01:18,371 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001780986785888672 sec
-2026-02-02 17:01:18,371 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015997886657714844 sec
-2026-02-02 17:01:18,378 [DEBUG] Finished tracing + transforming absolute for pjit in 9.274482727050781e-05 sec
-2026-02-02 17:01:18,380 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.392333984375e-05 sec
-2026-02-02 17:01:18,380 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001690387725830078 sec
-2026-02-02 17:01:18,381 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005919933319091797 sec
-2026-02-02 17:01:18,384 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001690387725830078 sec
-2026-02-02 17:01:18,385 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021982192993164062 sec
-2026-02-02 17:01:18,388 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014829635620117188 sec
-2026-02-02 17:01:18,390 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001919269561767578 sec
-2026-02-02 17:01:18,419 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017786026000976562 sec
-2026-02-02 17:01:18,427 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015783309936523438 sec
-2026-02-02 17:01:18,427 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00013589859008789062 sec
-2026-02-02 17:01:18,427 [DEBUG] Finished tracing + transforming _where for pjit in 0.00045013427734375 sec
-2026-02-02 17:01:19,011 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017189979553222656 sec
-2026-02-02 17:01:19,012 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001671314239501953 sec
-2026-02-02 17:01:19,013 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.604194641113281e-05 sec
-2026-02-02 17:01:19,080 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013494491577148438 sec
-2026-02-02 17:01:19,080 [DEBUG] Finished tracing + transforming absolute for pjit in 8.296966552734375e-05 sec
-2026-02-02 17:01:19,080 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001609325408935547 sec
-2026-02-02 17:01:19,085 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00017499923706054688 sec
-2026-02-02 17:01:19,085 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006320476531982422 sec
-2026-02-02 17:01:19,086 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001819133758544922 sec
-2026-02-02 17:01:19,086 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005910396575927734 sec
-2026-02-02 17:01:19,088 [DEBUG] Finished tracing + transforming sign for pjit in 7.987022399902344e-05 sec
-2026-02-02 17:01:19,088 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001499652862548828 sec
-2026-02-02 17:01:19,101 [DEBUG] Finished tracing + transforming fn for pjit in 0.00045800209045410156 sec
-2026-02-02 17:01:19,102 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.793571472167969e-05 sec
-2026-02-02 17:01:19,169 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.988380432128906e-05 sec
-2026-02-02 17:01:19,169 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017786026000976562 sec
-2026-02-02 17:01:19,171 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00012803077697753906 sec
-2026-02-02 17:01:19,171 [DEBUG] Finished tracing + transforming _where for pjit in 0.0004279613494873047 sec
-2026-02-02 17:01:19,171 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013208389282226562 sec
-2026-02-02 17:01:19,199 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0002219676971435547 sec
-2026-02-02 17:01:19,200 [DEBUG] Finished tracing + transforming _mean for pjit in 0.0008251667022705078 sec
-2026-02-02 17:01:19,200 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00021982192993164062 sec
-2026-02-02 17:01:19,200 [DEBUG] Finished tracing + transforming _var for pjit in 0.001741170883178711 sec
-2026-02-02 17:01:19,201 [DEBUG] Finished tracing + transforming _std for pjit in 0.0020139217376708984 sec
-2026-02-02 17:01:19,201 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001201629638671875 sec
-2026-02-02 17:01:19,201 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.0001499652862548828 sec
-2026-02-02 17:01:19,202 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016999244689941406 sec
-2026-02-02 17:01:19,202 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00018286705017089844 sec
-2026-02-02 17:01:19,202 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.0001709461212158203 sec
-2026-02-02 17:01:19,203 [DEBUG] Finished tracing + transforming _mean for pjit in 0.0003540515899658203 sec
-2026-02-02 17:01:19,204 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 1.001115083694458 sec
-2026-02-02 17:01:19,214 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:01:19,220 [DEBUG] Finished tracing + transforming ravel for pjit in 7.796287536621094e-05 sec
-2026-02-02 17:01:19,220 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0006222724914550781 sec
-2026-02-02 17:01:19,220 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.0011858940124511719 sec
-2026-02-02 17:01:19,221 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.0016703605651855469 sec
-2026-02-02 17:01:19,222 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001590251922607422 sec
-2026-02-02 17:01:19,222 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015401840209960938 sec
-2026-02-02 17:01:19,223 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012302398681640625 sec
-2026-02-02 17:01:19,223 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00018596649169921875 sec
-2026-02-02 17:01:19,224 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00011992454528808594 sec
-2026-02-02 17:01:19,224 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00011801719665527344 sec
-2026-02-02 17:01:19,245 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016689300537109375 sec
-2026-02-02 17:01:19,245 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001537799835205078 sec
-2026-02-02 17:01:19,246 [DEBUG] Finished tracing + transforming fn for pjit in 0.00022125244140625 sec
-2026-02-02 17:01:19,247 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001220703125 sec
-2026-02-02 17:01:19,247 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001239776611328125 sec
-2026-02-02 17:01:19,248 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001220703125 sec
-2026-02-02 17:01:19,250 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001270771026611328 sec
-2026-02-02 17:01:19,251 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001220703125 sec
-2026-02-02 17:01:19,260 [DEBUG] Finished tracing + transforming ravel for pjit in 6.604194641113281e-05 sec
-2026-02-02 17:01:19,261 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0011219978332519531 sec
-2026-02-02 17:01:19,261 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0021209716796875 sec
-2026-02-02 17:01:19,264 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015687942504882812 sec
-2026-02-02 17:01:19,265 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012803077697753906 sec
-2026-02-02 17:01:19,265 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001220703125 sec
-2026-02-02 17:01:19,269 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016379356384277344 sec
-2026-02-02 17:01:19,285 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003001689910888672 sec
-2026-02-02 17:01:19,285 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.698204040527344e-05 sec
-2026-02-02 17:01:19,290 [DEBUG] Finished tracing + transforming ravel for pjit in 6.794929504394531e-05 sec
-2026-02-02 17:01:19,290 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0005459785461425781 sec
-2026-02-02 17:01:19,291 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.0011789798736572266 sec
-2026-02-02 17:01:19,291 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.0016121864318847656 sec
-2026-02-02 17:01:19,293 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001590251922607422 sec
-2026-02-02 17:01:19,294 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001270771026611328 sec
-2026-02-02 17:01:19,295 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001361370086669922 sec
-2026-02-02 17:01:19,295 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001227855682373047 sec
-2026-02-02 17:01:19,298 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001270771026611328 sec
-2026-02-02 17:01:19,298 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012111663818359375 sec
-2026-02-02 17:01:19,318 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0008671283721923828 sec
-2026-02-02 17:01:19,390 [DEBUG] Finished tracing + transforming ravel for pjit in 7.081031799316406e-05 sec
-2026-02-02 17:01:19,391 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0006096363067626953 sec
-2026-02-02 17:01:19,391 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0015649795532226562 sec
-2026-02-02 17:01:19,634 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.4196021556854248 sec
-2026-02-02 17:01:19,635 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:01:19,635 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:01:21,749 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.1142451763153076 sec
-2026-02-02 17:01:21,750 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
-2026-02-02 17:01:21,758 [DEBUG] Starting new HTTP connection (1): localhost:8001
-2026-02-02 17:01:22,018 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:22,022 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:22,022 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
-2026-02-02 17:01:22,023 [DEBUG] Starting new HTTP connection (1): localhost:8001
-2026-02-02 17:01:25,441 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:28,814 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:28,819 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:01:28,836 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:28,841 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:01:32,594 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:36,889 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:36,892 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:01:36,898 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:36,903 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:40,478 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:01:44,609 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:44,613 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:01:44,623 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:44,629 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:50,667 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:01:54,486 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:54,490 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:01:54,495 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:54,502 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:01:57,875 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:01,161 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:01,165 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:01,176 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:01,182 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:04,544 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:08,240 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:08,243 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:08,258 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:08,262 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:12,530 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:15,663 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:15,668 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:15,674 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:15,689 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:20,015 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:23,102 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:23,105 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:23,113 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:23,118 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:26,965 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:32,916 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:32,924 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:32,930 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:32,937 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:36,431 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:40,242 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:40,246 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:40,260 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:40,265 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:44,060 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:49,022 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:02:49,030 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:49,036 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:49,041 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:53,690 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:56,356 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:56,360 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:02:56,367 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:02:56,373 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:00,041 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:03,830 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:03:03,841 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:03,856 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:03,862 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:06,911 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:11,215 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:11,219 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:11,226 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:11,232 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:15,550 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:19,510 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:19,514 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:19,520 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:19,525 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:23,484 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:27,898 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:27,912 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.0022079944610595703 sec
-2026-02-02 17:03:27,914 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(bool[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
-2026-02-02 17:03:27,933 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.018801212310791016 sec
-2026-02-02 17:03:27,940 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:03:27,942 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:03:27,979 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.036863088607788086 sec
-2026-02-02 17:03:27,985 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.0014348030090332031 sec
-2026-02-02 17:03:27,988 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(bool[1])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:03:27,992 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.003984928131103516 sec
-2026-02-02 17:03:27,994 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:03:27,994 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:03:28,009 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.014671087265014648 sec
-2026-02-02 17:03:28,014 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.00025081634521484375 sec
-2026-02-02 17:03:28,015 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(int32[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
-2026-02-02 17:03:28,019 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.003386974334716797 sec
-2026-02-02 17:03:28,020 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:03:28,021 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:03:28,032 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.010893106460571289 sec
-2026-02-02 17:03:28,033 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.00019097328186035156 sec
-2026-02-02 17:03:28,033 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(int32[1])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:03:28,034 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.0014140605926513672 sec
-2026-02-02 17:03:28,035 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:03:28,035 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:03:28,042 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.006553173065185547 sec
-2026-02-02 17:03:28,951 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.897791862487793 sec
-2026-02-02 17:03:28,961 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:03:29,277 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.31543898582458496 sec
-2026-02-02 17:03:29,278 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:03:29,278 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:03:31,266 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 1.9881339073181152 sec
-2026-02-02 17:03:31,268 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:31,273 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:31,276 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:35,789 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:39,356 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:39,358 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:39,362 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:39,365 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:43,080 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:03:47,069 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:47,072 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:47,081 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:47,087 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:51,031 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:03:53,901 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:03:53,904 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:03:53,910 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:03:53,915 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:03:59,087 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:03,111 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:03,115 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:03,124 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:03,129 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:08,005 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:11,114 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:11,131 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:11,137 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:11,142 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:16,534 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:19,397 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:04:19,399 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:19,404 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:19,407 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:24,057 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:28,301 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:28,303 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:28,309 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:28,314 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:32,513 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:35,581 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:35,586 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:35,593 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:35,598 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:40,185 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:45,030 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:45,033 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:45,060 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:45,065 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:49,731 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:53,084 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:53,087 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:04:53,094 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:53,098 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:04:56,982 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:01,386 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:01,392 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:01,399 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:01,404 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:05,081 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:08,256 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:08,259 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:08,279 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:08,284 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:12,553 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:20,638 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:20,641 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:20,647 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:20,653 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:24,634 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:32,026 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:32,034 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:32,058 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:32,062 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:35,792 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:39,483 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:39,486 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:39,490 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:39,495 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:44,149 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:05:47,259 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:47,263 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:47,282 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:47,286 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:49,878 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:53,142 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:53,146 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:05:53,152 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:53,158 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:05:58,119 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:01,085 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:01,089 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:01,108 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:01,114 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:05,973 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:06:08,189 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:09,251 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 1.0183932781219482 sec
-2026-02-02 17:06:09,271 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:06:09,637 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.36500978469848633 sec
-2026-02-02 17:06:09,639 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:06:09,639 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:06:11,902 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.262726068496704 sec
-2026-02-02 17:06:15,106 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:19,419 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:19,424 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:19,444 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:19,449 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:23,267 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:26,278 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:26,282 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:26,287 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:26,294 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:06:29,169 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:31,968 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:31,971 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:31,986 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:31,991 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:34,953 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:38,260 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:38,265 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:38,271 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:38,276 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:41,636 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:47,167 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:47,171 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:47,194 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:47,198 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:51,245 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:54,438 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:06:54,440 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:06:54,443 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:06:54,446 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:06:56,766 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:00,272 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:00,275 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:00,291 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:00,297 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:10,167 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:15,704 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:07:15,707 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:15,724 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:15,728 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:28,232 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:31,298 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:31,302 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:31,311 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:31,317 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:36,829 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:40,208 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:40,211 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:40,217 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:40,223 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:45,064 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:07:48,911 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:48,915 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:48,921 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:48,926 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:51,779 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:54,948 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:54,951 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:07:54,957 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:54,962 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:57,078 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:07:59,293 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:59,301 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:07:59,306 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:08:02,738 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:07,564 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:07,576 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:07,582 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:07,587 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:11,237 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:15,137 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:15,140 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:15,148 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:15,151 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:18,488 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:22,358 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:22,367 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:22,374 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:22,379 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:23,409 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.9958279132843018 sec
-2026-02-02 17:08:23,429 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
-2026-02-02 17:08:23,773 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.34337401390075684 sec
-2026-02-02 17:08:23,775 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
-2026-02-02 17:08:23,775 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
-2026-02-02 17:08:26,169 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.392578125 sec
-2026-02-02 17:08:30,083 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:33,766 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:33,769 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:33,782 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:33,787 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:37,963 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:08:41,857 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:41,860 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:41,865 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:41,869 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:44,935 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:08:48,609 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:48,611 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:48,615 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:48,618 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:52,434 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:08:56,088 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:56,092 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:08:56,098 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:08:56,104 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:00,905 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:05,401 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:05,407 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:05,428 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:05,433 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:10,321 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:14,419 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:14,423 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:14,429 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:14,436 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:18,923 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:23,954 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:23,959 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:23,982 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:23,987 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:28,649 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:31,930 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:31,933 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:31,939 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:31,945 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:35,307 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:38,378 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:38,380 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:38,386 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:38,391 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:43,018 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:46,263 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:46,266 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:46,272 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:46,278 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:49,183 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:52,400 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:52,404 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:52,418 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:09:52,423 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:55,689 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:59,475 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:59,478 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:09:59,484 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:09:59,489 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:05,106 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:08,602 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:08,605 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:08,617 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:08,622 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:11,069 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:14,730 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:14,733 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:14,739 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:14,744 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:19,190 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:22,515 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:22,518 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:22,524 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:22,530 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:26,303 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:29,070 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:29,075 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:29,091 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:29,097 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:32,755 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:36,041 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:36,045 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:36,052 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:36,058 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
-2026-02-02 17:10:40,433 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:44,837 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:44,844 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:44,853 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:44,858 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:49,861 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:53,060 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:53,063 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:10:53,069 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:53,074 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:10:57,802 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:11:01,708 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:11:01,712 [DEBUG] Resetting dropped connection: localhost
-2026-02-02 17:11:01,718 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
-2026-02-02 17:11:01,724 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:04,503 [DEBUG] Finished tracing + transforming _unstack for pjit in 0.00027680397033691406 sec
+2026-02-03 15:47:04,503 [DEBUG] Compiling _unstack for with global shapes and types [ShapedArray(int32[2,100000,4])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:47:04,506 [DEBUG] Finished jaxpr to MLIR module conversion jit(_unstack) in 0.0023140907287597656 sec
+2026-02-03 15:47:04,506 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:47:04,506 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:47:04,527 [DEBUG] Finished XLA compilation of jit(_unstack) in 0.020261049270629883 sec
+2026-02-03 15:47:11,553 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0008041858673095703 sec
+2026-02-03 15:47:11,555 [DEBUG] Finished tracing + transforming _threefry_seed for pjit in 0.006083011627197266 sec
+2026-02-03 15:47:11,556 [DEBUG] Compiling _threefry_seed for with global shapes and types [ShapedArray(int32[])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:47:11,563 [DEBUG] Finished jaxpr to MLIR module conversion jit(_threefry_seed) in 0.006822824478149414 sec
+2026-02-03 15:47:11,565 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:47:11,565 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:47:11,589 [DEBUG] Finished XLA compilation of jit(_threefry_seed) in 0.023319005966186523 sec
+2026-02-03 15:47:11,596 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0006442070007324219 sec
+2026-02-03 15:47:11,597 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0005130767822265625 sec
+2026-02-03 15:47:11,598 [DEBUG] Finished tracing + transforming clip for pjit in 0.002061128616333008 sec
+2026-02-03 15:47:11,599 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00044798851013183594 sec
+2026-02-03 15:47:11,600 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0004248619079589844 sec
+2026-02-03 15:47:11,600 [DEBUG] Finished tracing + transforming clip for pjit in 0.001688241958618164 sec
+2026-02-03 15:47:11,601 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002193450927734375 sec
+2026-02-03 15:47:11,602 [DEBUG] Finished tracing + transforming fn for pjit in 0.00029206275939941406 sec
+2026-02-03 15:47:11,602 [DEBUG] Finished tracing + transforming fn for pjit in 0.00028204917907714844 sec
+2026-02-03 15:47:11,603 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021886825561523438 sec
+2026-02-03 15:47:11,604 [DEBUG] Finished tracing + transforming _randint for pjit in 0.009042024612426758 sec
+2026-02-03 15:47:11,607 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002701282501220703 sec
+2026-02-03 15:47:11,607 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003490447998046875 sec
+2026-02-03 15:47:11,609 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0005578994750976562 sec
+2026-02-03 15:47:11,609 [DEBUG] Finished tracing + transforming _where for pjit in 0.001251220703125 sec
+2026-02-03 15:47:11,609 [DEBUG] Finished tracing + transforming _take for pjit in 0.0033659934997558594 sec
+2026-02-03 15:47:11,612 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.0002281665802001953 sec
+2026-02-03 15:47:11,614 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002949237823486328 sec
+2026-02-03 15:47:11,615 [DEBUG] Finished tracing + transforming ravel for pjit in 0.00015282630920410156 sec
+2026-02-03 15:47:11,616 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017690658569335938 sec
+2026-02-03 15:47:11,617 [DEBUG] Finished tracing + transforming fn for pjit in 0.00033783912658691406 sec
+2026-02-03 15:47:11,618 [DEBUG] Finished tracing + transforming fn for pjit in 0.00026702880859375 sec
+2026-02-03 15:47:11,618 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00026416778564453125 sec
+2026-02-03 15:47:11,620 [DEBUG] Finished tracing + transforming _squeeze for pjit in 7.295608520507812e-05 sec
+2026-02-03 15:47:11,639 [DEBUG] Finished tracing + transforming _take for pjit in 0.000720977783203125 sec
+2026-02-03 15:47:11,641 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014472007751464844 sec
+2026-02-03 15:47:11,642 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014710426330566406 sec
+2026-02-03 15:47:11,642 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001399517059326172 sec
+2026-02-03 15:47:11,643 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013709068298339844 sec
+2026-02-03 15:47:11,643 [DEBUG] Finished tracing + transforming _randint for pjit in 0.0027751922607421875 sec
+2026-02-03 15:47:11,646 [DEBUG] Finished tracing + transforming _shuffle for pjit in 0.00030303001403808594 sec
+2026-02-03 15:47:11,653 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013709068298339844 sec
+2026-02-03 15:47:11,654 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.508827209472656e-05 sec
+2026-02-03 15:47:11,654 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019788742065429688 sec
+2026-02-03 15:47:11,655 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001380443572998047 sec
+2026-02-03 15:47:11,655 [DEBUG] Finished tracing + transforming ravel for pjit in 7.510185241699219e-05 sec
+2026-02-03 15:47:11,656 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002849102020263672 sec
+2026-02-03 15:47:11,659 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013685226440429688 sec
+2026-02-03 15:47:11,661 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.678436279296875e-05 sec
+2026-02-03 15:47:11,664 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015282630920410156 sec
+2026-02-03 15:47:11,666 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002319812774658203 sec
+2026-02-03 15:47:11,667 [DEBUG] Finished tracing + transforming op for pjit in 0.00036215782165527344 sec
+2026-02-03 15:47:11,667 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00026917457580566406 sec
+2026-02-03 15:47:11,667 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.0018680095672607422 sec
+2026-02-03 15:47:11,669 [DEBUG] Finished tracing + transforming remainder for pjit in 0.0006458759307861328 sec
+2026-02-03 15:47:11,678 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020503997802734375 sec
+2026-02-03 15:47:11,678 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015425682067871094 sec
+2026-02-03 15:47:11,679 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001373291015625 sec
+2026-02-03 15:47:11,681 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00018310546875 sec
+2026-02-03 15:47:11,681 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012803077697753906 sec
+2026-02-03 15:47:11,710 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.00036978721618652344 sec
+2026-02-03 15:47:11,727 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016498565673828125 sec
+2026-02-03 15:47:11,727 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001552104949951172 sec
+2026-02-03 15:47:11,728 [DEBUG] Finished tracing + transforming op for pjit in 0.0001380443572998047 sec
+2026-02-03 15:47:11,728 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014901161193847656 sec
+2026-02-03 15:47:11,729 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002288818359375 sec
+2026-02-03 15:47:11,729 [DEBUG] Finished tracing + transforming _where for pjit in 0.000492095947265625 sec
+2026-02-03 15:47:11,729 [DEBUG] Finished tracing + transforming floor_divide for pjit in 0.002240896224975586 sec
+2026-02-03 15:47:11,729 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002028942108154297 sec
+2026-02-03 15:47:11,730 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 5.602836608886719e-05 sec
+2026-02-03 15:47:11,730 [DEBUG] Finished tracing + transforming _squeeze for pjit in 5.3882598876953125e-05 sec
+2026-02-03 15:47:11,731 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002551078796386719 sec
+2026-02-03 15:47:11,731 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006160736083984375 sec
+2026-02-03 15:47:11,732 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00016307830810546875 sec
+2026-02-03 15:47:11,732 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005779266357421875 sec
+2026-02-03 15:47:11,733 [DEBUG] Finished tracing + transforming _power for pjit in 0.002716064453125 sec
+2026-02-03 15:47:11,734 [DEBUG] Finished tracing + transforming fn for pjit in 0.0002429485321044922 sec
+2026-02-03 15:47:11,735 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0001919269561767578 sec
+2026-02-03 15:47:11,735 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00019407272338867188 sec
+2026-02-03 15:47:11,736 [DEBUG] Finished tracing + transforming _reduce_all for pjit in 0.00015997886657714844 sec
+2026-02-03 15:47:11,736 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0002601146697998047 sec
+2026-02-03 15:47:11,736 [DEBUG] Finished tracing + transforming _where for pjit in 0.000614166259765625 sec
+2026-02-03 15:47:11,737 [DEBUG] Finished tracing + transforming ravel for pjit in 6.389617919921875e-05 sec
+2026-02-03 15:47:11,737 [DEBUG] Finished tracing + transforming _argmax for pjit in 0.0002560615539550781 sec
+2026-02-03 15:47:11,738 [DEBUG] Finished tracing + transforming right_shift for pjit in 0.00013113021850585938 sec
+2026-02-03 15:47:11,739 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002009868621826172 sec
+2026-02-03 15:47:11,739 [DEBUG] Finished tracing + transforming ravel for pjit in 9.179115295410156e-05 sec
+2026-02-03 15:47:11,747 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00021696090698242188 sec
+2026-02-03 15:47:11,748 [DEBUG] Finished tracing + transforming fn for pjit in 0.00020575523376464844 sec
+2026-02-03 15:47:11,748 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015211105346679688 sec
+2026-02-03 15:47:11,751 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001659393310546875 sec
+2026-02-03 15:47:11,754 [DEBUG] Finished tracing + transforming fn for pjit in 0.00016999244689941406 sec
+2026-02-03 15:47:11,754 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001552104949951172 sec
+2026-02-03 15:47:11,761 [DEBUG] Finished tracing + transforming absolute for pjit in 9.822845458984375e-05 sec
+2026-02-03 15:47:11,763 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.7738037109375e-05 sec
+2026-02-03 15:47:11,763 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001628398895263672 sec
+2026-02-03 15:47:11,764 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005729198455810547 sec
+2026-02-03 15:47:11,767 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00016617774963378906 sec
+2026-02-03 15:47:11,768 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002219676971435547 sec
+2026-02-03 15:47:11,771 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00014972686767578125 sec
+2026-02-03 15:47:11,773 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020074844360351562 sec
+2026-02-03 15:47:11,802 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00017213821411132812 sec
+2026-02-03 15:47:11,811 [DEBUG] Finished tracing + transforming fn for pjit in 0.00015020370483398438 sec
+2026-02-03 15:47:11,811 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001418590545654297 sec
+2026-02-03 15:47:11,811 [DEBUG] Finished tracing + transforming _where for pjit in 0.00045418739318847656 sec
+2026-02-03 15:47:12,335 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017523765563964844 sec
+2026-02-03 15:47:12,336 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001628398895263672 sec
+2026-02-03 15:47:12,336 [DEBUG] Finished tracing + transforming _squeeze for pjit in 6.103515625e-05 sec
+2026-02-03 15:47:12,404 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013303756713867188 sec
+2026-02-03 15:47:12,404 [DEBUG] Finished tracing + transforming absolute for pjit in 8.296966552734375e-05 sec
+2026-02-03 15:47:12,405 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001621246337890625 sec
+2026-02-03 15:47:12,409 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.0001609325408935547 sec
+2026-02-03 15:47:12,409 [DEBUG] Finished tracing + transforming _where for pjit in 0.0006427764892578125 sec
+2026-02-03 15:47:12,410 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00016117095947265625 sec
+2026-02-03 15:47:12,410 [DEBUG] Finished tracing + transforming _where for pjit in 0.0005643367767333984 sec
+2026-02-03 15:47:12,412 [DEBUG] Finished tracing + transforming sign for pjit in 8.082389831542969e-05 sec
+2026-02-03 15:47:12,412 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001518726348876953 sec
+2026-02-03 15:47:12,426 [DEBUG] Finished tracing + transforming fn for pjit in 0.0005598068237304688 sec
+2026-02-03 15:47:12,426 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 6.508827209472656e-05 sec
+2026-02-03 15:47:12,490 [DEBUG] Finished tracing + transforming <lambda> for pjit in 8.988380432128906e-05 sec
+2026-02-03 15:47:12,491 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001728534698486328 sec
+2026-02-03 15:47:12,492 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 0.00012683868408203125 sec
+2026-02-03 15:47:12,492 [DEBUG] Finished tracing + transforming _where for pjit in 0.0004317760467529297 sec
+2026-02-03 15:47:12,492 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013017654418945312 sec
+2026-02-03 15:47:12,521 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.0002219676971435547 sec
+2026-02-03 15:47:12,521 [DEBUG] Finished tracing + transforming _mean for pjit in 0.0008208751678466797 sec
+2026-02-03 15:47:12,522 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00025081634521484375 sec
+2026-02-03 15:47:12,522 [DEBUG] Finished tracing + transforming _var for pjit in 0.0017757415771484375 sec
+2026-02-03 15:47:12,522 [DEBUG] Finished tracing + transforming _std for pjit in 0.0020599365234375 sec
+2026-02-03 15:47:12,522 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012111663818359375 sec
+2026-02-03 15:47:12,523 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.00014400482177734375 sec
+2026-02-03 15:47:12,523 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001628398895263672 sec
+2026-02-03 15:47:12,523 [DEBUG] Finished tracing + transforming _reduce_sum for pjit in 0.00018405914306640625 sec
+2026-02-03 15:47:12,524 [DEBUG] Finished tracing + transforming true_divide for pjit in 0.0001571178436279297 sec
+2026-02-03 15:47:12,524 [DEBUG] Finished tracing + transforming _mean for pjit in 0.0003247261047363281 sec
+2026-02-03 15:47:12,526 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.9355041980743408 sec
+2026-02-03 15:47:12,535 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:47:12,543 [DEBUG] Finished tracing + transforming ravel for pjit in 7.390975952148438e-05 sec
+2026-02-03 15:47:12,543 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0006029605865478516 sec
+2026-02-03 15:47:12,548 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.006065845489501953 sec
+2026-02-03 15:47:12,549 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.006575822830200195 sec
+2026-02-03 15:47:12,550 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0003509521484375 sec
+2026-02-03 15:47:12,550 [DEBUG] Finished tracing + transforming fn for pjit in 0.00025177001953125 sec
+2026-02-03 15:47:12,551 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013494491577148438 sec
+2026-02-03 15:47:12,552 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00020503997802734375 sec
+2026-02-03 15:47:12,552 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012969970703125 sec
+2026-02-03 15:47:12,552 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013208389282226562 sec
+2026-02-03 15:47:12,568 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002918243408203125 sec
+2026-02-03 15:47:12,568 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0002608299255371094 sec
+2026-02-03 15:47:12,569 [DEBUG] Finished tracing + transforming fn for pjit in 0.0003249645233154297 sec
+2026-02-03 15:47:12,570 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001308917999267578 sec
+2026-02-03 15:47:12,570 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.0001327991485595703 sec
+2026-02-03 15:47:12,571 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012612342834472656 sec
+2026-02-03 15:47:12,573 [DEBUG] Finished tracing + transforming fn for pjit in 0.00013184547424316406 sec
+2026-02-03 15:47:12,574 [DEBUG] Finished tracing + transforming fn for pjit in 0.0001289844512939453 sec
+2026-02-03 15:47:12,584 [DEBUG] Finished tracing + transforming ravel for pjit in 8.20159912109375e-05 sec
+2026-02-03 15:47:12,585 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0014002323150634766 sec
+2026-02-03 15:47:12,586 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.002064943313598633 sec
+2026-02-03 15:47:12,589 [DEBUG] Finished tracing + transforming fn for pjit in 0.00018405914306640625 sec
+2026-02-03 15:47:12,590 [DEBUG] Finished tracing + transforming fn for pjit in 0.00014090538024902344 sec
+2026-02-03 15:47:12,590 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013399124145507812 sec
+2026-02-03 15:47:12,594 [DEBUG] Finished tracing + transforming fn for pjit in 0.00017380714416503906 sec
+2026-02-03 15:47:12,610 [DEBUG] Finished tracing + transforming fn for pjit in 0.00029015541076660156 sec
+2026-02-03 15:47:12,610 [DEBUG] Finished tracing + transforming _broadcast_arrays for pjit in 6.604194641113281e-05 sec
+2026-02-03 15:47:12,615 [DEBUG] Finished tracing + transforming ravel for pjit in 6.890296936035156e-05 sec
+2026-02-03 15:47:12,615 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0005359649658203125 sec
+2026-02-03 15:47:12,616 [DEBUG] Finished tracing + transforming _threefry_split_original for pjit in 0.0011260509490966797 sec
+2026-02-03 15:47:12,616 [DEBUG] Finished tracing + transforming _threefry_split for pjit in 0.001569986343383789 sec
+2026-02-03 15:47:12,618 [DEBUG] Finished tracing + transforming fn for pjit in 0.00023603439331054688 sec
+2026-02-03 15:47:12,619 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012683868408203125 sec
+2026-02-03 15:47:12,620 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00013184547424316406 sec
+2026-02-03 15:47:12,620 [DEBUG] Finished tracing + transforming <lambda> for pjit in 0.00012111663818359375 sec
+2026-02-03 15:47:12,622 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012373924255371094 sec
+2026-02-03 15:47:12,623 [DEBUG] Finished tracing + transforming fn for pjit in 0.00012087821960449219 sec
+2026-02-03 15:47:12,649 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0005209445953369141 sec
+2026-02-03 15:47:12,722 [DEBUG] Finished tracing + transforming ravel for pjit in 7.081031799316406e-05 sec
+2026-02-03 15:47:12,722 [DEBUG] Finished tracing + transforming threefry_2x32 for pjit in 0.0005979537963867188 sec
+2026-02-03 15:47:12,723 [DEBUG] Finished tracing + transforming _threefry_random_bits_original for pjit in 0.0011589527130126953 sec
+2026-02-03 15:47:12,965 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.42862486839294434 sec
+2026-02-03 15:47:12,965 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:47:12,965 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:47:14,966 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.0009870529174805 sec
+2026-02-03 15:47:14,967 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2026-02-03 15:47:14,978 [DEBUG] Starting new HTTP connection (1): localhost:8001
+2026-02-03 15:47:15,196 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:15,199 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:15,199 [DEBUG] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2026-02-03 15:47:15,200 [DEBUG] Starting new HTTP connection (1): localhost:8001
+2026-02-03 15:47:19,517 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:22,972 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:22,980 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:47:22,988 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:22,994 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:47:28,190 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:32,390 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:32,395 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:47:32,406 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:32,411 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:36,903 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:41,295 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:41,299 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:47:41,305 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:41,313 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:49,432 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:52,974 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:52,979 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:47:52,990 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:52,995 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:55,738 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:58,193 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:58,196 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:47:58,201 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:47:58,207 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:02,914 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:06,142 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:06,152 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:06,169 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:06,175 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:10,539 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:13,556 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:13,561 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:13,569 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:13,582 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:17,236 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:19,666 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:19,669 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:19,675 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:19,681 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:24,588 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:29,546 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:29,559 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:29,575 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:29,580 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:33,007 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:36,619 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:36,623 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:36,629 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:36,635 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:39,153 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:42,225 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:42,229 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:42,235 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:42,241 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:44,683 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:48,548 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:48,552 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:48,561 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:48,568 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:51,851 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:54,989 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:48:54,993 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:48:54,999 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:55,006 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:48:59,224 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:01,886 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:01,891 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:01,899 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:01,904 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:05,543 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:09,888 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:09,901 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:09,914 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:09,919 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:13,349 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:18,370 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:18,375 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:18,381 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:18,387 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:24,736 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:27,143 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:27,153 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.0012481212615966797 sec
+2026-02-03 15:49:27,156 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(bool[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
+2026-02-03 15:49:27,170 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.013259172439575195 sec
+2026-02-03 15:49:27,171 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:49:27,171 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:49:27,200 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.028024911880493164 sec
+2026-02-03 15:49:27,201 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.00026416778564453125 sec
+2026-02-03 15:49:27,202 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(bool[1])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:49:27,204 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.0020318031311035156 sec
+2026-02-03 15:49:27,205 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:49:27,205 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:49:27,213 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.008142232894897461 sec
+2026-02-03 15:49:27,218 [DEBUG] Finished tracing + transforming dynamic_slice for pjit in 0.0002491474151611328 sec
+2026-02-03 15:49:27,218 [DEBUG] Compiling dynamic_slice for with global shapes and types [ShapedArray(int32[2]), ShapedArray(int32[], weak_type=True)]. Argument mapping: (GSPMDSharding({replicated}), GSPMDSharding({replicated})).
+2026-02-03 15:49:27,220 [DEBUG] Finished jaxpr to MLIR module conversion jit(dynamic_slice) in 0.0016090869903564453 sec
+2026-02-03 15:49:27,220 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:49:27,220 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:49:27,228 [DEBUG] Finished XLA compilation of jit(dynamic_slice) in 0.00727081298828125 sec
+2026-02-03 15:49:27,229 [DEBUG] Finished tracing + transforming squeeze for pjit in 0.00021791458129882812 sec
+2026-02-03 15:49:27,229 [DEBUG] Compiling squeeze for with global shapes and types [ShapedArray(int32[1])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:49:27,231 [DEBUG] Finished jaxpr to MLIR module conversion jit(squeeze) in 0.002076864242553711 sec
+2026-02-03 15:49:27,232 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:49:27,232 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:49:27,238 [DEBUG] Finished XLA compilation of jit(squeeze) in 0.005706071853637695 sec
+2026-02-03 15:49:28,081 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.8313279151916504 sec
+2026-02-03 15:49:28,090 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:49:28,411 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.32082295417785645 sec
+2026-02-03 15:49:28,412 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:49:28,412 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:49:30,403 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 1.9908759593963623 sec
+2026-02-03 15:49:30,405 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:30,410 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:30,413 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:34,591 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:38,569 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:38,575 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:38,581 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:38,587 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:43,772 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:47,463 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:47,467 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:47,481 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:47,490 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:51,473 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:55,343 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:49:55,348 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:49:55,355 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:55,362 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:49:59,130 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:01,816 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:01,820 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:01,826 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:01,833 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:06,306 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:09,879 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:09,883 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:09,895 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:09,901 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:14,080 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:16,945 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:16,949 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:16,955 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:16,961 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:21,813 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:25,705 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:25,709 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:25,721 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:25,727 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:29,661 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:34,252 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:34,256 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:34,279 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:34,284 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:37,195 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:40,584 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:40,588 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:40,594 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:40,600 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:45,338 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:50:49,056 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:49,062 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:49,075 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:49,080 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:54,027 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:59,445 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:59,450 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:50:59,455 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:50:59,461 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:03,634 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:08,508 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:08,521 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:08,536 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:08,543 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:13,095 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:17,040 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:17,047 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:17,059 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:17,065 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:22,501 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:26,611 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:26,616 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:26,628 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:26,634 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:31,901 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:35,387 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:35,392 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:35,398 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:35,403 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:38,669 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:41,674 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:41,678 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:41,694 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:41,699 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:45,934 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:49,416 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:49,419 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:49,424 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:49,429 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:52,790 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:51:56,274 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:57,257 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.9253108501434326 sec
+2026-02-03 15:51:57,276 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:51:57,621 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.34433484077453613 sec
+2026-02-03 15:51:57,623 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:51:57,623 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:51:59,833 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.2096710205078125 sec
+2026-02-03 15:51:59,835 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:51:59,845 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:51:59,848 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:03,041 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:07,475 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:07,492 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:52:07,507 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:07,514 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:52:14,402 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:18,393 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:18,397 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:52:18,402 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:18,408 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:26,392 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:36,046 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:36,052 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:52:36,071 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:36,076 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:45,694 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:50,542 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:50,546 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:52:50,553 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:50,558 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:52:57,817 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:00,858 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:00,862 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:00,885 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:00,890 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:04,138 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:08,606 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:08,620 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:08,634 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:08,640 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:12,678 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:15,227 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:15,231 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:15,237 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:15,242 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:17,676 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:21,604 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:21,608 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:21,616 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:21,621 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:24,237 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:27,721 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:27,724 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:27,729 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:27,735 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:30,826 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:34,831 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:34,834 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:34,838 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:34,843 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:38,471 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:41,404 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:41,408 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:41,419 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:41,424 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:44,712 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:47,752 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:47,756 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:47,761 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:47,765 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:51,181 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:54,660 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:53:54,662 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:54,675 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:54,680 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:57,412 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:59,987 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:59,989 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:53:59,993 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:53:59,997 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:03,456 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:54:07,989 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:07,994 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:08,011 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:08,016 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:10,317 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:14,690 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:14,694 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:14,700 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:14,706 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:17,284 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:19,637 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:19,661 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:54:19,666 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:22,196 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:24,565 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:24,574 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:24,580 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:27,982 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:30,918 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:31,917 [DEBUG] Finished tracing + transforming duplicate_evaluate for pjit in 0.9284160137176514 sec
+2026-02-03 15:54:31,937 [DEBUG] Compiling duplicate_evaluate for with global shapes and types [ShapedArray(uint32[2])]. Argument mapping: (GSPMDSharding({replicated}),).
+2026-02-03 15:54:32,286 [DEBUG] Finished jaxpr to MLIR module conversion jit(duplicate_evaluate) in 0.34688806533813477 sec
+2026-02-03 15:54:32,288 [DEBUG] get_compile_options: num_replicas=1 num_partitions=1 device_assignment=[[CpuDevice(id=0)]]
+2026-02-03 15:54:32,288 [DEBUG] get_compile_options XLA-AutoFDO profile: using XLA-AutoFDO profile version -1
+2026-02-03 15:54:34,518 [DEBUG] Finished XLA compilation of jit(duplicate_evaluate) in 2.2298617362976074 sec
+2026-02-03 15:54:34,521 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:34,527 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:34,529 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:38,791 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:41,851 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:41,855 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:41,873 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:41,877 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:46,660 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:54:51,461 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:51,471 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:51,485 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:51,489 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:55,041 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:54:58,365 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:54:58,376 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:54:58,389 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:54:58,394 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:03,198 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:05,528 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:05,546 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:05,563 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:05,570 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:09,919 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:13,391 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:13,394 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:13,399 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:13,402 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:16,257 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:20,060 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:20,066 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:20,084 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:20,096 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:23,949 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:26,366 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:26,368 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:26,375 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:26,378 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:29,906 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:33,158 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:33,162 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:33,182 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:33,187 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:36,452 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:40,023 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:40,027 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:40,034 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:40,038 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:43,577 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:46,364 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:46,366 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:46,371 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:46,374 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:53,098 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:55:58,043 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:58,047 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:55:58,055 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:55:58,060 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:02,528 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:05,500 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:05,504 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:05,519 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:05,524 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:08,800 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:11,758 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:11,760 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:11,765 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:11,773 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:15,840 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:19,448 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:19,453 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:19,459 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:19,464 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:22,565 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:26,820 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:26,825 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:26,836 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:26,841 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:30,094 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:34,190 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:34,194 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:34,202 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:34,215 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:37,470 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:40,436 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 178
+2026-02-03 15:56:40,439 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:40,445 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:40,453 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:43,517 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:46,549 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:46,553 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:46,559 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:46,566 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:49,960 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:53,453 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:53,461 [DEBUG] Resetting dropped connection: localhost
+2026-02-03 15:56:53,473 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:53,479 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:56:57,326 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177
+2026-02-03 15:57:00,404 [DEBUG] http://localhost:8001 "POST /make_bid HTTP/1.1" 200 177

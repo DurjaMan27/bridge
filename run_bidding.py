@@ -2,13 +2,13 @@ import jax
 import argparse
 import subprocess
 import time
-import collections
 import threading
 import numpy as np
 from pathlib import Path
 import os # Import os for environment check
 from pgx.bridge_bidding import BridgeBidding
 from src.eval_manual import make_simple_duplicate_evaluate
+from src.utils.lps_tracker import lps_tracker
 from src.utils.progress_tracker import _bid_counter, reset_counter
 # Import both callback types
 from src.callback_baseline import make_callback_baseline_agent
@@ -97,23 +97,7 @@ def inspect_outliers(table_info, batch_start):
             print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
             print("-" * 30)
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--use_server", action="store_true", help="Start agent_server and route bids via HTTP")
-    parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL (must match uvicorn host/port)")
-    
-    # Arguments for agent selection
-    parser.add_argument("--team1_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
-                        help="Agent type for Team 1 (NS)")
-    parser.add_argument("--team2_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
-                        help="Agent type for Team 2 (EW)")
-    
-    args = parser.parse_args()
-
-    print("These are the args: ", args)
-
-    eval_env = BridgeBidding("data/dds_results/test_000.npy")
-
+def reset_logs():
     # reset debug_log.txt
     with open('src/logs/debug_log.txt', 'w') as f:
         pass
@@ -126,7 +110,82 @@ def main():
 
     current.write_text("")
 
-    # rng = jax.random.PRNGKey(0) 
+def run_batch_set(args_for_eval, eval_env, total_envs, batch_size, reverse: bool):
+    all_imps = []
+    all_stderrs = []
+    all_winrate = []
+    
+    # ... (Batch processing loop remains the same)
+    for batch_start in range(0, total_envs, batch_size):
+        batch_end = min(batch_start + batch_size, total_envs)
+
+        batch_rng = jax.random.PRNGKey(batch_start + 12345)
+        print(f"Processing envs {batch_start}-{batch_end}")
+
+        if not reverse:
+            duplicate_evaluate = make_simple_duplicate_evaluate(
+                eval_env,
+                team1_activation=args_for_eval[0],
+                team1_model_type=args_for_eval[1],
+                team2_activation=args_for_eval[2],
+                team2_model_type=args_for_eval[3],
+                num_eval_envs = batch_end - batch_start,
+                team1_server_url=args_for_eval[4],
+                team2_server_url=args_for_eval[5],
+            )
+        else:
+            duplicate_evaluate = make_simple_duplicate_evaluate(
+                eval_env,
+                team1_activation=args_for_eval[2],
+                team1_model_type=args_for_eval[3],
+                team2_activation=args_for_eval[0],
+                team2_model_type=args_for_eval[1],
+                num_eval_envs = batch_end - batch_start,
+                team1_server_url=args_for_eval[5],
+                team2_server_url=args_for_eval[4]
+            )
+
+        # JIT compilation occurs here
+        duplicate_evaluate = jax.jit(duplicate_evaluate)
+
+        log, tablea_info, tableb_info = duplicate_evaluate(
+            team1_params=None,
+            team2_params=None,
+            rng_key=batch_rng,
+        )
+
+        # --- ADD THIS CALL HERE ---
+        print(f"Checking for outliers in batch {batch_start}...")
+        inspect_outliers(tablea_info, batch_start)
+        # --------------------------
+
+        all_imps.append(float(log[0]))
+        all_stderrs.append(float(log[1]))
+        all_winrate.append(float(log[2]))
+
+    final_imp = np.average(all_imps)
+    final_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2)) / len(all_stderrs)
+    final_winrate = np.average(all_winrate)
+
+    return final_imp, final_stderr, final_winrate, tablea_info, tableb_info
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use_server", action="store_true", help="Start agent_server and route bids via HTTP")
+    parser.add_argument("--server_url", default="http://localhost:8001", help="Agent server URL (must match uvicorn host/port)")
+    parser.add_argument("--team1_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
+                        help="Agent type for Team 1 (NS)")
+    parser.add_argument("--team2_agent", default="baseline", choices=["baseline", "llm", "DeepMind", "FAIR"], 
+                        help="Agent type for Team 2 (EW)")
+    
+    args = parser.parse_args()
+
+    # Reset tracker before the run
+    lps_tracker.reset()
+
+    print("These are the args: ", args)
+
+    eval_env = BridgeBidding("data/dds_results/test_000.npy")
 
     server_process = None
     try:
@@ -166,27 +225,20 @@ def main():
 
 
         # --- Determine the agents and their configuration ---
-
-        # 1. Get the agent callbacks (which contain the logic/server routing)
         team1_action = get_agent_callback(args.team1_agent, args.server_url if args.use_server else None)
         team2_action = get_agent_callback(args.team2_agent, args.server_url if args.use_server else None)
-        
-        # 2. Extract model type string for logging/eval (always the agent type string for these)
+
         team1_model_type = args.team1_agent
         team2_model_type = args.team2_agent
 
-        # 3. Server URL is only passed if --use_server is true
         team1_server_url = args.server_url if args.use_server else None
         team2_server_url = args.server_url if args.use_server else None
 
 
         # --- Start Evaluation ---
-
         reset_counter()
-        # Start heartbeat thread for rate monitoring
         threading.Thread(target=heartbeat, daemon=True).start()
 
-        # total_envs, batch_size = 80, 10
         total_envs, batch_size = 4, 2
         # 1024, 64
 
@@ -199,88 +251,14 @@ def main():
             team2_server_url,
         )
 
-        all_imps = []
-        all_stderrs = []
-        all_winrate = []
-        
-        # ... (Batch processing loop remains the same)
-        for batch_start in range(0, total_envs, batch_size):
-            batch_end = min(batch_start + batch_size, total_envs)
+        final_imp, final_stderr, final_winrate, tablea_info, tableb_info = run_batch_set(
+            args_for_eval, eval_env, total_envs, batch_size, reverse=False
+        )
 
-            batch_rng = jax.random.PRNGKey(batch_start + 12345)
-            print(f"Processing envs {batch_start}-{batch_end}")
+        reverse_final_imp, reverse_final_stderr, reverse_final_winrate, reverse_tablea_info, reverse_tableb_info = run_batch_set(
+            args_for_eval, eval_env, total_envs, batch_size, reverse=True
+        )
 
-            duplicate_evaluate = make_simple_duplicate_evaluate(
-                eval_env,
-                team1_activation=args_for_eval[0],
-                team1_model_type=args_for_eval[1],
-                team2_activation=args_for_eval[2],
-                team2_model_type=args_for_eval[3],
-                num_eval_envs = batch_end - batch_start,
-                team1_server_url=args_for_eval[4],
-                team2_server_url=args_for_eval[5],
-            )
-
-            # JIT compilation occurs here
-            duplicate_evaluate = jax.jit(duplicate_evaluate)
-
-            log, tablea_info, tableb_info = duplicate_evaluate(
-                team1_params=None,
-                team2_params=None,
-                rng_key=batch_rng,
-            )
-
-            # --- ADD THIS CALL HERE ---
-            print(f"Checking for outliers in batch {batch_start}...")
-            inspect_outliers(tablea_info, batch_start)
-            # --------------------------
-
-            all_imps.append(float(log[0]))
-            all_stderrs.append(float(log[1]))
-            all_winrate.append(float(log[2]))
-
-        final_imp = np.average(all_imps)
-        final_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2)) / len(all_stderrs)
-        final_winrate = np.average(all_winrate)
-
-        reverse_imps = []
-        reverse_stderrs = []
-        reverse_winrate = []
-
-        # ... (Batch processing loop remains the same)
-        for batch_start in range(0, total_envs, batch_size):
-            batch_end = min(batch_start + batch_size, total_envs)
-
-            batch_rng = jax.random.PRNGKey(batch_start + 12345)
-            print(f"Processing envs {batch_start}-{batch_end}")
-
-            duplicate_evaluate = make_simple_duplicate_evaluate(
-                eval_env,
-                team1_activation=args_for_eval[2],
-                team1_model_type=args_for_eval[3],
-                team2_activation=args_for_eval[0],
-                team2_model_type=args_for_eval[1],
-                num_eval_envs = batch_end - batch_start,
-                team1_server_url=args_for_eval[5],
-                team2_server_url=args_for_eval[4]
-            )
-
-            # JIT compilation occurs here
-            duplicate_evaluate = jax.jit(duplicate_evaluate)
-
-            reverse_log, reverse_tablea_info, reverse_tableb_info = duplicate_evaluate(
-                team1_params=None,
-                team2_params=None,
-                rng_key=batch_rng,
-            )
-
-            reverse_imps.append(float(reverse_log[0]))
-            reverse_stderrs.append(float(reverse_log[1]))
-            reverse_winrate.append(float(reverse_log[2]))
-
-        reverse_final_imp = np.average(reverse_imps)
-        reverse_final_stderr = np.sqrt(np.sum(np.array(reverse_stderrs)**2)) / len(reverse_stderrs)
-        reverse_final_winrate = np.average(reverse_winrate)
 
         print("-" * 50)
         print(f"Total bids processed: {_bid_counter['count']}")
@@ -308,4 +286,5 @@ def main():
 
 
 if __name__ == "__main__":
+    reset_logs()
     main()

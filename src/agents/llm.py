@@ -8,6 +8,7 @@ from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from src.utils.state import AgentMockState
+from src.utils.lps_tracker import lps_tracker
 
 load_dotenv()
 
@@ -110,169 +111,27 @@ class LLMAgent():
         
         # All agent calls are assumed to be non-parametric (like baseline)
         self.params = None
-        TWO_ONE_AGGRESSIVE_STANDARD = (
-            "You and your partner follow an aggressive 2/1 Game Forcing bidding system. "
-            "Bids are commitments, not suggestions. Forcing bids must be responded to.",
-
-            "Opening bids: 1 of a suit shows 12-21 HCP (5+ cards in majors, 3+ in minors). "
-            "1NT opening shows 15-17 HCP and a balanced hand with no 5-card major.",
-
-            "2/1 principle: A 2-level response to a 1-level suit opening (e.g. 1H-2C, 1S-2D) "
-            "shows 12+ HCP, 4+ cards in the bid suit, and is game-forcing. "
-            "After a 2/1 bid, neither partner may pass until game is reached or clearly ruled out.",
-
-            "1NT responses to a major opening (1H-1NT or 1S-1NT) show 6-11 HCP, are not forcing, "
-            "and deny 3+ card support for opener's major. This bid limits the hand.",
-
-            "Raising partner's major: Single raise (to 2 of the major) shows 6-9 HCP and 3+ support. "
-            "Limit raise (to 3 of the major) shows 10-12 HCP and 4+ support. "
-            "Direct game raise (to 4 of the major) shows 13+ HCP or strong distribution and ends exploration.",
-
-            "After a 2/1 response, opener rebids to describe shape first, strength second. "
-            "Rebidding a suit shows extra length, bidding a new suit shows 4+ cards, "
-            "and notrump rebids show balanced hands (2NT ≈ 18-19, 3NT ≈ 15-17 with stoppers).",
-
-            "General aggression rules: With approximately 25+ combined HCP, bid game. "
-            "Do not stop in partscore after a 2/1 sequence. Prefer showing shape with new suits "
-            "over repeating notrump when unbalanced.",
-
-            "Interpretation rules: New suits are natural. Failure to raise partner's suit implies lack of support. "
-            "Passing is only allowed after explicitly non-forcing bids.",
-
-            "If multiple interpretations are possible, assume partner is maximum for their bid, "
-            "assume bids are natural, and choose the action that keeps the auction game-forcing."
-        )
-        # self.system_prompt = (
-        #     "You are a World-Class Bridge Engine."
-        #     + "\n".join(TWO_ONE_AGGRESSIVE_STANDARD)
-        #     + "\n### CRITICAL CONTEXT-AWARE STRATEGY:\n"
-
-        #     ### OPENING BID AUTHORITY (MANDATORY):
-        #     "When you are the opening bidder (no prior bids in the auction):"
-        #     "- You MUST NOT invent or derive an opening bid from first principles."
-        #     "- You MUST choose from a restricted, predefined opening set."
-        #     "- Treat opening as selecting the least exploitable signal, not as hand expression."
-        #     "You are allowed to open ONLY with one of the following actions:"
-        #     "- PASS"
-        #     "- 1C"
-        #     "- 1D"
-        #     "- 1H"
-        #     "- 1S"
-        #     "- 1NT"
-        #     "All other opening bids (2C, 2D, weak twos, preempts, jump openings) are DISALLOWED unless explicitly instructed elsewhere."
-        #     "Your task when opening is:"
-        #     "- Evaluate which allowed opening minimizes expected IMP loss against the baseline,"
-        #     "- NOT to maximize descriptive accuracy."
-            
-        #     # 1. WHEN WE OPEN THE BIDDING (1st/2nd position)
-        #     "**IF I AM THE OPENING SIDE (I or partner opened first):**\n"
-        #     "A. OPENING SELECTION (EVALUATIVE, NOT CREATIVE):"
-        #     "When choosing an opening bid from the allowed set:"
-        #     "- Use HCP and shape ONLY to decide between PASS, 1NT, or 1 of a suit."
-        #     "- Borderline hands (11-12 HCP) should bias toward PASS unless:"
-        #     "- A 5-card major is present, OR"
-        #     "- The hand is unbalanced (singleton or void)."
-        #     "Do NOT downgrade openings due to fear of later commitment. Opening does not promise extras."
-        #     "An opening bid is not a promise of strength beyond its minimum range. Subsequent actions, not the opening, define commitment."
-            
-        #     "B. RESPONSE TO COMPETITION (DEFENSIVE):\n"
-        #     "   - If baseline overcalls: They are often light. DOUBLE with:\n"
-        #     "     * 4+ cards in their suit with A/K\n"
-        #     "     * 13+ HCP total\n"
-        #     "   - Do NOT stretch to show a second suit without 15+ HCP\n"
-        #     "   - After our opening and baseline interference: Assume partner is minimum unless they bid again voluntarily. A voluntary second action by partner implies extra values or shape.\n"
-            
-        #     "C. GAME BIDDING (CAUTIOUS):\n"
-        #     "   - After our opening, require 26+ combined HCP for game\n"
-        #     "   - Prefer 3NT over 5m unless exceptional fit\n"
-        #     "   - Stop in 2M when combined HCP < 24\n"
-            
-        #     # 2. WHEN BASELINE OPENS FIRST (OUR STRENGTH)
-        #     "**IF OPPONENTS (BASELINE) OPEN FIRST:**\n"
-        #     "A. OVERCALL AGGRESSION (MAXIMUM):\n"
-        #     "   - Overcall at 1-level with: 8+ HCP, 5+ card suit\n"
-        #     "   - Overcall at 2-level with: 10+ HCP, good 5+ suit\n"
-        #     "   - Jump overcall (2M over 1m): 15-17 HCP, 6+ good suit\n"
-            
-        #     "B. PENALTY DOUBLES (EXPLOITATIVE):\n"
-        #     "   - DOUBLE baseline's 1NT (15-17) with: 15+ HCP balanced\n"
-        #     "   - DOUBLE their suit bids with: 4+ trumps including 2 honors\n"
-        #     "   - Baseline overbids frequently—punish it\n"
-            
-        #     "C. PART-SCORE BATTLES (DOMINATE):\n"
-        #     "   - Compete to 3-level with 9+ card fit\n"
-        #     "   - Sacrifice at 4-level if non-vulnerable vs vulnerable\n"
-            
-        #     # 3. VULNERABILITY ADJUSTMENTS
-        #     "**VULNERABILITY SPECIFICS:**\n"
-        #     "   - NON-VUL (White) when opening: Conservative preempts, avoid -200\n"
-        #     "   - VUL (Red) when opening: Sound openings, bid thin games (40%)\n"
-        #     "   - NON-VUL when defending: Aggressive sacrifices, push them\n"
-        #     "   - VUL when defending: Take safe penalties, bid solid games\n"
-            
-        #     # 4. PARTNERSHIP LOGIC
-        #     "**PARTNERSHIP INFERENCE:**\n"
-        #     "   - When partner passes initially: They have 0-5 HCP\n"
-        #     "   - When partner responds 1NT: They have 6-10 HCP, no fit\n"
-        #     "   - When partner makes a 2/1: They have 12+ HCP—force to game\n"
-
-        #     "\nOUTPUT FORMAT (JSON ONLY):\n"
-        #     "{{\n"
-        #     "  'context': 'Opening side or Defending side?',\n"
-        #     "  'hand_evaluation': 'HCP, Quick Tricks, Shape, Seat, Vulnerability',\n"
-        #     "  'system_state': 'Auction interpretation with HCP ranges',\n"
-        #     "  'strategy_chosen': 'Which specific strategy above applies?',\n"
-        #     "  'mental_simulation': 'If I bid X, likely outcomes given context',\n"
-        #     "  'bid': 'EXACT_BID_STRING'\n"
-        #     "}}"
-        # )
         self.system_prompt = (
-            "You are an expert bridge bidding agent. Before each bid, you must complete a structured analysis.\n"
-            
-            "### REQUIRED ANALYSIS STEPS:\n"
-            
-            "**STEP 1: HAND EVALUATION**\n"
-            "- Count HCP (A=4, K=3, Q=2, J=1)\n"
-            "- Count distribution points (5-card suit +1, 6-card +2, etc.)\n"
-            "- Identify your longest suit(s)\n"
-            "- Note vulnerability (Vul/Non-vul)\n"
-            
-            "**STEP 2: AUCTION ANALYSIS**\n"
-            "- What has partner shown? (HCP range and shape)\n"
-            "- What have opponents shown? (HCP range and shape)\n"
-            "- Is this a forcing auction or can I pass?\n"
-            "- What is partner's likely HCP range?\n"
-            
-            "**STEP 3: PARTNERSHIP STRENGTH**\n"
-            "- My HCP: X\n"
-            "- Partner's likely range: Y to Z HCP\n"
-            "- Combined minimum: X + Y\n"
-            "- Combined maximum: X + Z\n"
-            
-            "**STEP 4: CONTRACT TARGET**\n"
-            "- If combined 25+ HCP → Bid game (3NT/4M/5m)\n"
-            "- If combined 23-24 HCP → Invite game (2NT/3M)\n"
-            "- If combined <23 HCP → Stop in part-score\n"
-            "- If combined 33+ HCP → Consider slam (BUT ONLY IF PARTNER SHOWED EXTRAS)\n"
-            
-            "**STEP 5: BID SELECTION**\n"
-            "- Available bids that match target level\n"
-            "- Choose bid that best describes hand\n"
-            "- Prefer major suits over minors for game\n"
-            "- Prefer 3NT over 5m unless 9+ card fit\n"
-            
-            "**STEP 6: SAFETY CHECK**\n"
-            "- Am I overbidding? (combined HCP too low for this level?)\n"
-            "- Am I underbidding? (missing game with 25+ combined?)\n"
-            "- Could this go down badly? (going to 5-level on 23 HCP?)\n"
-            
-            "\nOUTPUT FORMAT (JSON - COMPLETE ALL FIELDS):\n"
+            "You are an expert contract bridge player acting as a Bidding Agent. "
+            "Your primary objective is to select the optimal bid that maximizes the expected IMP score. "
+            "Rather than adhering to a single rigid system, apply expert bridge logic to deduce the "
+            "specific bidding systems and point ranges being employed by both your partner and your "
+            "opponents based on the auction history. "
+            "Analyze the current vulnerability, your partner's implied holdings, the opponents' "
+            "tactical actions, and your 13-card hand (including distribution and high-card strength). "
+            "Adjust your strategy dynamically to exploit opponent tendencies and support your partner. "
+            "You must prioritize reaching a 'Makeable' contract. "
+            "Do not jump to a Small Slam (6-level) or Grand Slam (7-level) unless you have deduced that your partnership holds at least 33-37 combined High Card Points. "
+            "Avoid bidding at the 7-level if the opponents have shown strength, as a Doubled penalty is catastrophic. "
+            "Do not bid at the 5, 6, or 7 level unless your partner has shown significant strength (e.g., via a Jump Shift or a Cue Bid). "
+            "A penalty of -2000 points is far worse than missing a slam. "
+            "\nOUTPUT FORMAT (JSON ONLY):\n"
             "{{\n"
-            "  'my_hcp': 'Number',\n"
-            "  'partner_range': 'X-Y HCP based on bids',\n"
-            "  'combined_min_max': 'Min-Max combined HCP',\n"
-            "  'target_level': 'Part-score/Invite/Game/Slam',\n"
-            "  'reasoning': 'Why this bid is correct',\n"
+            "  'context': 'Opening side or Defending side?',\n"
+            "  'hand_evaluation': 'HCP, Quick Tricks, Shape, Seat, Vulnerability',\n"
+            "  'system_state': 'Auction interpretation with HCP ranges',\n"
+            "  'strategy_chosen': 'Which specific strategy above applies?',\n"
+            "  'mental_simulation': 'If I bid X, likely outcomes given context',\n"
             "  'bid': 'EXACT_BID_STRING'\n"
             "}}"
         )
@@ -391,48 +250,6 @@ class LLMAgent():
             {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": user_query}
         ]
-        
-        # try:
-        #     completion = self.client.chat.completions.create(
-        #         model=self.model_name,
-        #         messages=messages,
-        #         temperature=0.0,  # Use deterministic output for testing
-        #         response_format={"type": "json_object"} # Enforce JSON output
-        #     )
-            
-        #     # 1. Parse the JSON response
-        #     raw_content = completion.choices[0].message.content
-        #     try:
-        #         response_data = json.loads(raw_content)
-        #         reasoning = response_data.get("imp_rationale", "No reasoning provided.")
-        #         bid = response_data.get("bid", "Pass") # Default to Pass if key missing
-                
-        #         # 2. Print the reasoning and bid for debugging
-        #         print(f"\n[LLM Reasoning]: {reasoning}")
-        #         print(f"[LLM Bid]: {bid}\n")
-                
-        #     except json.JSONDecodeError:
-        #         logger.error(f"LLM returned invalid JSON: {raw_content}. Falling back to 'Pass'.")
-        #         bid = "Pass"
-
-        #     # 3. Clean up whitespace/quotes (Standard Logic)
-        #     bid = str(bid).replace('"', '').replace("'", '').strip()
-            
-        #     # 4. Check if the bid is valid and legal (Standard Logic)
-        #     if bid not in self._BID_TO_INDEX:
-        #         logger.error(f"LLM returned unknown bid: '{bid}'. Falling back to 'Pass'.")
-        #         action_idx = self._BID_TO_INDEX["Pass"]
-        #     else:
-        #         action_idx = self._BID_TO_INDEX[bid]
-
-        #         # Ensure the chosen action is actually legal
-        #         if not state.legal_action_mask[action_idx]:
-        #             logger.error(f"LLM chose illegal bid '{bid}'. Legal options: {self._format_bidding_history(state.legal_action_mask)}. Falling back to 'Pass'.")
-        #             action_idx = self._BID_TO_INDEX["Pass"]
-
-        # except Exception as e:
-        #     logger.error(f"OpenAI API call failed: {e}. Returning 'Pass' as fallback.")
-        #     action_idx = self._BID_TO_INDEX["Pass"]
 
         try:
             response = self.client.chat.completions.create(
@@ -445,11 +262,8 @@ class LLMAgent():
             content = response.choices[0].message.content
             
             # --- DIAGNOSTIC LOGGING ---
-            # We log BEFORE we return, so we capture the raw thought process
             parsed_content = json.loads(content)
             bid_str = parsed_content.get("bid", "Pass")
-            
-            # Map string back to index
             action_idx = self._BID_TO_INDEX.get(bid_str, 0)
 
             # Validity Check
@@ -465,6 +279,82 @@ class LLMAgent():
             logger.error(f"LLM Error: {e}")
             DiagnosticLogger.log_turn(state, messages, f"ERROR: {str(e)}", "Pass")
             action_idx = 0
+
+        try:
+            # 1. Initialize Error Dict
+            errors = {
+                'SV': 0, 'SC': 0, 'IA': 0, 
+                'OG': 0, 'MG': 0, 'FH': 0, 
+                'ID': 0, 'VB': 0, 'MSN': 0
+            }
+
+            # 2. Mathematical Checks (HCP/Fit)
+            # You need the hand data. state.deal should exist if passed correctly.
+            my_hcp, _, _ = self._get_hand_stats(state.observation)
+            
+            # Example: Check Overbidding Game (OG)
+            # If bid level >= 4 and Combined HCP < 24
+            # (You'll need to parse partner's HCP from previous reasoning or assume average)
+            if action_idx >= 18: # 4C or higher
+                # strict check: if my_hcp < 10 (assuming partner has ~12 max for non-forcing)
+                if my_hcp < 8: # Conservative threshold example
+                    errors['OG'] = 1
+
+            # 3. Illegal Action (IA)
+            if state.legal_action_mask[action_idx] == 0:
+                errors['IA'] = 1
+
+            # 4. Logic Parsing (SV, SC, etc.)
+            # You must perform regex on 'reasoning_text' here.
+            # Example:
+            reasoning_text = parsed_content["reasoning"].lower() if "reasoning" in parsed_content else ""
+            if "no fit" in reasoning_text and action_idx in [5,6,10,11]: # Bidding major
+                errors['SV'] = 1
+
+            # 1. SE - Over-Aggressive
+            # Criteria: Bidding Game (Level 4+ or 3NT) with Combined HCP < 21 (User Spec)
+            # We try to parse "combined_min_max" from the LLM's own JSON, or estimate it.
+            combined_hcp_est = 0
+            if "combined_min_max" in parsed_content:
+                try:
+                    # Parse "20-22" -> 21
+                    rangestr = parsed_content["combined_min_max"].replace("HCP", "").strip()
+                    low = int(rangestr.split("-")[0])
+                    combined_hcp_est = low
+                except:
+                    combined_hcp_est = 25 # Benefit of doubt
+            
+            is_game_bid = (action_idx == 17) or (action_idx >= 18) # 3NT or 4C+
+            if is_game_bid and combined_hcp_est < 21 and combined_hcp_est > 0:
+                 errors['SE_Aggressive'] = 1
+
+            # 2. SE - Wrong Strain
+            # Criteria: Bidding NT (1NT, 2NT, 3NT...) when reasoning mentions a "Major fit"
+            nt_bids = [7, 12, 17, 22, 27, 32, 37]
+            if action_idx in nt_bids:
+                if "major fit" in reasoning_text or "fit in heart" in reasoning_text or "fit in spade" in reasoning_text:
+                    # Valid exception: If reasoning says "Major fit but stoppers..." (Context is hard)
+                    # For now, strict check:
+                    errors['SE_WrongStrain'] = 1
+
+            # 3. SE - Passive
+            # Criteria: Passing when reasoning admits a "Fit" and Opponents are bidding
+            # Check if opponents have bid (look at bidding_history, non-zero values)
+            opponents_active = np.any(state._bidding_history > 0) 
+            if action_idx == 0: # Pass
+                # Look for triggers in reasoning
+                has_fit_reasoning = "10-card fit" in reasoning_text or "9-card fit" in reasoning_text or "strong fit" in reasoning_text
+                if has_fit_reasoning and opponents_active:
+                    errors['SE_Passive'] = 1
+
+            # 5. Record to Tracker
+            board_id = hash(state.observation.tobytes()) 
+            lps_tracker.record_hand(board_id, errors)
+
+        except Exception as e:
+            # Don't let tracking crash the bidding
+            print(f"LPS Tracking Error: {e}")
+        # --- LPS TRACKING END ---
         
         # For LLM, we return a one-hot distribution (100% confidence in the chosen bid)
         pi_probs = np.zeros(38, dtype=np.float32)

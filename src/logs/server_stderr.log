@@ -1,304 +1,272 @@
-INFO:     Started server process [44234]
+INFO:     Started server process [96523]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 4
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
 INFO:     Baseline Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 5
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 5
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
+INFO:     Baseline Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 7
 INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 9
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 5
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 12
-INFO:     LLM Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     Baseline Agent bid calculated: Action 4
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 10
-INFO:     LLM Agent bid calculated: Action 20
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 9
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 12
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 10
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 6
 INFO:     Baseline Agent bid calculated: Action 3
-INFO:     LLM Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 3
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 9
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 17
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 15
+INFO:     Baseline Agent bid calculated: Action 9
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 3
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 20
-INFO:     Baseline Agent bid calculated: Action 14
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 12
-INFO:     Baseline Agent bid calculated: Action 16
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 17
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 6
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 3
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 3
-INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 8
-INFO:     LLM Agent bid calculated: Action 4
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 13
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 9
-INFO:     LLM Agent bid calculated: Action 11
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 13
-INFO:     LLM Agent bid calculated: Action 14
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 4
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 4
 INFO:     Baseline Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 5
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 5
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 7
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 7
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 9
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 5
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 20
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 12
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 20
 INFO:     Baseline Agent bid calculated: Action 4
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 6
+INFO:     Baseline Agent bid calculated: Action 15
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 10
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 7
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 9
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 12
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 6
 INFO:     Baseline Agent bid calculated: Action 3
-INFO:     LLM Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 5
-INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 15
 INFO:     Baseline Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 4
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 17
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 20
 INFO:     Baseline Agent bid calculated: Action 9
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 12
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 9
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 6
-INFO:     Baseline Agent bid calculated: Action 14
-INFO:     LLM Agent bid calculated: Action 6
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 15
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 3
-INFO:     LLM Agent bid calculated: Action 13
-INFO:     LLM Agent bid calculated: Action 3
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 4
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     LLM Agent bid calculated: Action 9
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 21
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 INFO:     LLM Agent bid calculated: Action 0
 INFO:     Baseline Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
+INFO:     Baseline Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+LLM Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+INFO:     LLM Agent bid calculated: Action 0
+INFO:     Baseline Agent bid calculated: Action 8
 INFO:     Baseline Agent bid calculated: Action 9
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 7
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 12
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 14
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 14
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 19
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 17
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     Baseline Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
-INFO:     LLM Agent bid calculated: Action 0
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [44234]
+INFO:     Finished server process [96523]

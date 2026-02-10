@@ -1,296 +1,264 @@
-INFO:     127.0.0.1:54576 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54576 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54580 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54580 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54584 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54584 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54587 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54587 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54592 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54592 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54596 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54596 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54601 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54601 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54605 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54605 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54608 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54608 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54612 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54612 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54615 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54615 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54619 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54619 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54624 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54624 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54627 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54627 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54631 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54631 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54634 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54634 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54638 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54638 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54642 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54642 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54645 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54645 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54650 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54650 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54653 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54653 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54657 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54657 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54662 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54662 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54666 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54666 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54673 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54673 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54677 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54677 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54683 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54683 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54690 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54690 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54694 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54694 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54697 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54697 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54704 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54704 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54710 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54710 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54713 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54713 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54717 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54717 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54727 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54727 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54732 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54732 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54735 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54735 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54739 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54739 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54743 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54743 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54747 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54747 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54752 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54752 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54758 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54758 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54762 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54762 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54765 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54765 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54769 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54769 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54773 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54773 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54776 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54776 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54782 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54782 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54788 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54788 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54793 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54793 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54797 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54797 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54808 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54824 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54824 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54828 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54828 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54831 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54831 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54836 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54836 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54839 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54839 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54844 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54844 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54847 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54847 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54853 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54853 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54858 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54858 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54861 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54861 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54865 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54865 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54870 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54870 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54873 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54873 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54879 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54879 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54882 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54882 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54886 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54886 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54889 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54889 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54892 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54892 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54896 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54896 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54901 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54901 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54577 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+LPS Tracking Error: cannot access local variable 'parsed_content' where it is not associated with a value
+INFO:     127.0.0.1:63446 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "POST /make_bid HTTP/1.1" 200 OK

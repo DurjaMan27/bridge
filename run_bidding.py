@@ -50,48 +50,73 @@ def decode_action(action_idx):
     }
     return mapping.get(int(action_idx), "??")
 
-def inspect_outliers(table_info, batch_start):
-    """Prints details of any environment with suspicious scores."""
+def inspect_outliers(table_info, batch_start, reversed: bool):
+    """Prints details of any environment with suspicious scores and logs them to LPS."""
     # Convert JAX arrays to numpy for easier iteration
     rewards = np.array(table_info.rewards)
     bidding_histories = np.array(table_info.bidding_history)
     last_bids = np.array(table_info.last_bid)
     
     for i in range(rewards.shape[0]):
-        # Check if North's score is an outlier (adjust 1500 threshold as needed)
+        # Check if North's score is an outlier (High variance "lucky" or "unlucky" swings)
         if abs(rewards[i, 0]) > 1500:
+            contract_idx = last_bids[i] # Adjusted index logic slightly based on typical PGX format
+            contract_name = decode_action(contract_idx) # Assuming this helper exists in your scope
 
-            contract_idx = last_bids[i] + 3 if last_bids[i] != -1 else -1
-            contract_name = decode_action(contract_idx)
-
-            print(f"\n[ALERT] Outlier detected at Env {batch_start + i}")
+            print(f"\n[ALERT] High Variance Swing detected at Env {batch_start + i}")
             print(f"Final Contract: {contract_name} (X:{table_info.call_x[i]})")
             print(f"Rewards [N, S, E, W]: {rewards[i]}")
             
-            # Decode the auction
             history = [decode_action(bid) for bid in bidding_histories[i] if bid != -1]
             print(f"Auction: {' -> '.join(history)}")
             
-            # Identify the final contract
-            # contract = decode_action(table_info.last_bid[i] + 3)
             was_doubled = " (X)" if table_info.call_x[i] else ""
             was_redoubled = " (XX)" if table_info.call_xx[i] else ""
             print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
             print("-" * 30)
-        elif rewards[i,0] < -5:
-            contract_idx = last_bids[i] + 3 if last_bids[i] != -1 else -1
+
+        # Check for Strategic Failures (The "WE FAILED HERE" Block)
+        elif (not reversed and rewards[i,0] < -5) or (reversed and rewards[i, 2] < -5): # Using your specific threshold
+            
+            # --- NEW: RECORD STRATEGIC OUTCOME FAILURE ---
+            # This sends the negative score to the tracker to penalize the final verdict
+            if not reversed:
+                lps_tracker.record_outcome(float(rewards[i, 0]))
+            else:
+                lps_tracker.record_outcome(float(rewards[i, 2]))
+            # ---------------------------------------------
+
+            contract_idx = last_bids[i]
             contract_name = decode_action(contract_idx)
 
             print(f"\n[ALERT] WE FAILED HEREEEEE detected at Env {batch_start + i}")
             print(f"Final Contract: {contract_name} (X:{table_info.call_x[i]})")
             print(f"Rewards [N, S, E, W]: {rewards[i]}")
             
-            # Decode the auction
             history = [decode_action(bid) for bid in bidding_histories[i] if bid != -1]
             print(f"Auction: {' -> '.join(history)}")
             
-            # Identify the final contract
-            # contract = decode_action(table_info.last_bid[i] + 3)
+            was_doubled = " (X)" if table_info.call_x[i] else ""
+            was_redoubled = " (XX)" if table_info.call_xx[i] else ""
+            print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
+            print("-" * 30)
+
+        elif (not reversed and rewards[i, 0] > 5) or (reversed and rewards[i, 2] > 5):
+            if not reversed:
+                lps_tracker.record_outcome(float(rewards[i, 0]))
+            else:
+                lps_tracker.record_outcome(float(rewards[i, 2]))
+
+            contract_idx = last_bids[i]
+            contract_name = decode_action(contract_idx) # Ensure you have this helper or use ACTION_TO_STRING
+            
+            print(f"\n[SUCCESS] STRATEGIC BRILLIANCE detected at Env {batch_start + i}")
+            print(f"Final Contract: {contract_name} (X:{table_info.call_x[i]})")
+            print(f"Rewards [N, S, E, W]: {rewards[i]}")
+            
+            history = [decode_action(bid) for bid in bidding_histories[i] if bid != -1]
+            print(f"Auction: {' -> '.join(history)}")
+            
             was_doubled = " (X)" if table_info.call_x[i] else ""
             was_redoubled = " (XX)" if table_info.call_xx[i] else ""
             print(f"Final Contract: {contract_name}{was_doubled}{was_redoubled} by Player {table_info.last_bidder[i]}")
@@ -114,6 +139,8 @@ def run_batch_set(args_for_eval, eval_env, total_envs, batch_size, reverse: bool
     all_imps = []
     all_stderrs = []
     all_winrate = []
+
+    lps_tracker.reset()
     
     # ... (Batch processing loop remains the same)
     for batch_start in range(0, total_envs, batch_size):
@@ -154,10 +181,8 @@ def run_batch_set(args_for_eval, eval_env, total_envs, batch_size, reverse: bool
             rng_key=batch_rng,
         )
 
-        # --- ADD THIS CALL HERE ---
         print(f"Checking for outliers in batch {batch_start}...")
-        inspect_outliers(tablea_info, batch_start)
-        # --------------------------
+        inspect_outliers(tablea_info, batch_start, reverse)
 
         all_imps.append(float(log[0]))
         all_stderrs.append(float(log[1]))
@@ -166,6 +191,42 @@ def run_batch_set(args_for_eval, eval_env, total_envs, batch_size, reverse: bool
     final_imp = np.average(all_imps)
     final_stderr = np.sqrt(np.sum(np.array(all_stderrs)**2)) / len(all_stderrs)
     final_winrate = np.average(all_winrate)
+
+    final_lps, efficiency, decisions, penalties = lps_tracker.get_final_metrics()
+        
+    avg_outcome_penalty = penalties / max(1, decisions)
+    avg_logic_error = final_lps - avg_outcome_penalty
+    
+    print("\n" + "="*60)
+    print("AGENT PERFORMANCE REPORT")
+    print("="*60)
+    print(f"Decisions Analyzed:       {decisions}")
+    print("-" * 60)
+    
+    print(f"1. COMPLIANCE (LPS):      {final_lps:.2f} (Target: 0.0)")
+    print(f"   |__ Logic Errors:      {avg_logic_error:.2f} (Syntax/Rules violations)")
+    print(f"   |__ Outcome Penalties: {avg_outcome_penalty:.2f} (From 'WE FAILED HERE' losses)")
+    
+    if avg_logic_error > 0.5:
+        print("   >>> DIAGNOSIS: Fix your Prompt Syntax/JSON formatting first.")
+    elif avg_outcome_penalty > 0.5:
+        print("   >>> DIAGNOSIS: Syntax is good, but Strategy is losing games.")
+        
+    print("-" * 60)
+    print(f"2. STRATEGY (EFF):        {efficiency:.2f} (Target: > 5.0)")
+    print(f"   (Measures positive IMP wins per logic error)")
+    print("-" * 60)
+    
+    # Final Verification Logic
+    if final_lps < 1.0 and efficiency > 5.0:
+            print("OVERALL STATUS: PROMPT IS WORKING (Clean & Winning)")
+    elif final_lps > 5.0 and efficiency > 5.0:
+            print("OVERALL STATUS: DANGEROUS (Winning via Hallucinations)")
+    elif final_lps < 1.0 and efficiency < 1.0:
+            print("OVERALL STATUS: TOO PASSIVE (Follows rules but loses)")
+    else:
+            print("OVERALL STATUS: NEEDS IMPROVEMENT")
+    print("="*60)
 
     return final_imp, final_stderr, final_winrate, tablea_info, tableb_info
 
@@ -179,9 +240,6 @@ def main():
                         help="Agent type for Team 2 (EW)")
     
     args = parser.parse_args()
-
-    # Reset tracker before the run
-    lps_tracker.reset()
 
     print("These are the args: ", args)
 
